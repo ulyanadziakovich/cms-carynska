@@ -1727,7 +1727,8 @@
       "openMenu": "Otwórz menu",
       "closeMenu": "Zamknij menu",
       "widgetGuestOne": "Gość",
-      "widgetGuestMany": "Gości"
+      "widgetGuestMany": "Gości",
+      "pizzaUrl": "https://carynska.app-tapporder.ngastro.lsisoftware.net/zpc-skorka-spolka-jawna/products?group=af95-0528-1b1b-4b7a"
     },
     "badges": [
       {
@@ -1902,7 +1903,9 @@
       "fbTabFacebook": "Facebook",
       "fbTabInstagram": "Instagram",
       "fbTabReviews": "Opinie",
-      "fbFollow": "Obserwuj na Facebooku"
+      "fbFollow": "Obserwuj na Facebooku",
+      "fbUrl": "https://www.facebook.com/przystancarynska/",
+      "igUrl": "https://www.instagram.com/carynskaprzystan/"
     },
     "noclegi-pokoje": {
       "heroTag": "Zakwaterowanie",

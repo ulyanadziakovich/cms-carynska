@@ -19,7 +19,7 @@ export function buildForms(d, templates, ctx) {
     [k, v && !Array.isArray(v) && typeof v.heroImage === 'string' ? { ...v, heroImage: ctx.img(v.heroImage) } : v]))
   const hero = (h) => ({ heroTag: h.tag ?? '', heroTitle: h.title ?? '', heroImage: h.image ? ctx.img(h.image) : null })
   return {
-    ustawienia: { ...t.ustawienia, logo: ctx.img('/images/logonew.png'), footerLogo: ctx.img(c.kontakt.logo.src), menuBackground: ctx.img('/images/solina2.avif'), pizzaDzial: ctx.dzial('Tawerna'),
+    ustawienia: { ...t.ustawienia, logo: ctx.img('/images/logonew.png'), footerLogo: ctx.img(c.kontakt.logo.src), menuBackground: ctx.img('/images/solina2.avif'),
       badges: t.badges.map((b) => ({ image: ctx.img(b.src), alt: b.alt, href: b.href ?? '' })) },
     kontakt: {
       ...t.kontakt, address: c.kontakt.address, mapQuery: c.kontakt.mapQuery.replace(/\+/g, ' '), email: c.kontakt.email,

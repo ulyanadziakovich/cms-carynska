@@ -49,7 +49,7 @@ export default [
         callTitle: text('Przycisk „Zadzwoń”: tytuł'),
         callSubtitle: text('Przycisk „Zadzwoń”: podtytuł', 'Np. „Wybierz dział”.'),
         pizzaLabel: text('Przycisk zamawiania pizzy', 'Na zdjęciu strony głównej i na stronie Tawerny, np. „🍕 Zamów pizzę”.'),
-        pizzaDzial: dzial('Dział dla przycisku pizzy', 'Numer, pod który dzwoni przycisk zamawiania pizzy.'),
+        pizzaUrl: link('Przycisk pizzy: link do zamówień online'),
       },
       'Stopka': {
         copyright: text('Prawa autorskie', 'Strona wstawi bieżący rok w miejsce {rok}.'),
@@ -181,6 +181,7 @@ export default [
         fbTag: text('Napis nad tytułem'), fbTitle: area('Tytuł', '', 2), fbBody: area('Tekst', '', 3),
         fbTabFacebook: text('Zakładka: Facebook'), fbTabInstagram: text('Zakładka: Instagram'), fbTabReviews: text('Zakładka: Opinie'),
         fbFollow: text('Przycisk obserwowania'),
+        fbUrl: link('Adres strony na Facebooku', 'Też źródło okienka z postami.'), igUrl: link('Adres profilu na Instagramie'),
       },
     },
   },

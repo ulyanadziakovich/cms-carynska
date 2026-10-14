@@ -48,7 +48,7 @@ export default defineCollection({
           "callTitle",
           "callSubtitle",
           "pizzaLabel",
-          "pizzaDzial"
+          "pizzaUrl"
         ],
         "Stopka": [
           "copyright"
@@ -267,24 +267,12 @@ export default defineCollection({
         "description": "Na zdjęciu strony głównej i na stronie Tawerny, np. „🍕 Zamów pizzę”."
       }
     },
-    "pizzaDzial": {
-      "type": "record",
+    "pizzaUrl": {
+      "type": "text",
       "options": {
         "required": false,
-        "label": "Dział dla przycisku pizzy",
-        "description": "Numer, pod który dzwoni przycisk zamawiania pizzy.",
-        "collection": "dzialy",
-        "populate": true,
-        "fields": {
-          "id": true,
-          "name": true,
-          "tag": true,
-          "phone": true,
-          "email": true,
-          "desc": true
-        },
-        "recordLabel": "name",
-        "clearable": true
+        "label": "Przycisk pizzy: link do zamówień online",
+        "placeholder": "np. /atrakcje albo https://…"
       }
     },
     "copyright": {

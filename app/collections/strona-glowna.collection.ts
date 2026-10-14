@@ -66,7 +66,9 @@ export default defineCollection({
           "fbTabFacebook",
           "fbTabInstagram",
           "fbTabReviews",
-          "fbFollow"
+          "fbFollow",
+          "fbUrl",
+          "igUrl"
         ]
       }
     ]
@@ -465,6 +467,23 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Przycisk obserwowania"
+      }
+    },
+    "fbUrl": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Adres strony na Facebooku",
+        "description": "Też źródło okienka z postami.",
+        "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
+    "igUrl": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Adres profilu na Instagramie",
+        "placeholder": "np. /atrakcje albo https://…"
       }
     }
   }
