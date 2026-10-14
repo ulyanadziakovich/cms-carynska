@@ -1,12 +1,14 @@
-// Wgrywa zdjęcia/pliki z ../carynska/public i wypełnia wszystkie formularze.
-//   CMS_EMAIL=… CMS_PASSWORD=… npm run import [-- http://localhost:4322 ../carynska]
+// Wgrywa zdjęcia/pliki z scripts/import/files i wypełnia wszystkie formularze.
+//   npm run import [-- http://localhost:4322]   (logowanie z .env.import: CMS_EMAIL, CMS_PASSWORD)
 // Można uruchamiać wielokrotnie: pliki i działy są dopasowywane po nazwie.
 import { existsSync, readFileSync } from 'node:fs'
-import { basename, extname, resolve } from 'node:path'
+import { basename, extname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { DZIALY, buildForms } from './map.mjs'
 
 const base = process.argv[2] ?? 'http://localhost:4322'
-const site = resolve(process.argv[3] ?? '../carynska')
+// Pliki startowe (dawne public/ strony) — ścieżki w data.json są względem tego katalogu.
+const site = fileURLToPath(new URL('./files', import.meta.url))
 const d = JSON.parse(readFileSync(new URL('./data.json', import.meta.url), 'utf8'))
 
 const login = await fetch(`${base}/api/login`, { method: 'POST', headers: { 'content-type': 'application/json' },
@@ -27,14 +29,14 @@ const MIME = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png',
 async function upload(publicPath) {
   const name = basename(publicPath)
   if (existing.has(name.toLowerCase())) return existing.get(name.toLowerCase())
-  // Stare dane wskazują też pliki, których nigdy nie było w public/ — strona ich
+  // Stare dane wskazują też pliki, których nigdy nie było na stronie — strona ich
   // i tak nie pokazywała, więc pole zostaje puste.
-  if (!existsSync(`${site}/public${publicPath}`)) {
+  if (!existsSync(`${site}${publicPath}`)) {
     console.warn('! brak pliku, pole zostanie puste:', publicPath)
     return null
   }
   const form = new FormData()
-  form.append('$file', new Blob([readFileSync(`${site}/public${publicPath}`)], { type: MIME[extname(name).toLowerCase()] }), name)
+  form.append('$file', new Blob([readFileSync(`${site}${publicPath}`)], { type: MIME[extname(name).toLowerCase()] }), name)
   form.append('directory', 'import/')
   const rec = await api('collections/uploads', { method: 'POST', body: form })
   existing.set(name.toLowerCase(), rec.id)
