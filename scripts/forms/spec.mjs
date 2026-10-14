@@ -268,11 +268,13 @@ export default [
       'Wypożyczalnia': {
         waterTag: text('Napis nad tytułem'), waterTitle: text('Tytuł'), waterBody: area('Tekst', '', 4),
         waterItems: repeater('Rodzaje sprzętu', '', 'Dodaj rodzaj', { icon: select('Ikona', '', ICONS), label: text('Nazwa'), desc: area('Opis', '', 2) }),
+        waterImages: gallery('Zdjęcia obok opisu', '', 'atrakcje/'),
         waterPricingTitle: text('Nagłówek cennika'),
         waterPricing: priceGroups('Cennik wypożyczalni', ''),
       },
       'Flota': {
         fleetTitle: text('Nagłówek'), noPatentLabel: text('Etykieta „bez patentu”'), unitsLabel: text('Podpis: jednostki'), specLink: text('Link do specyfikacji'),
+        unitsCount: text('Liczba jednostek na liście', 'Strona wstawi liczbę w miejsce {liczba}, np. „{liczba} jednostki”.'),
         fleet: repeater('Jednostki', '', 'Dodaj jednostkę', {
           type: text('Rodzaj', 'Np. „Jacht żaglowy”.'), name: text('Nazwa'), units: lines('Nazwy jednostek'),
           capacity: number('Liczba osób'), price: text('Cena'), patent: checkbox('Wymaga patentu'),
@@ -288,6 +290,7 @@ export default [
       'Aktywny dzień': {
         landTag: text('Napis nad tytułem'), landTitle: text('Tytuł'), landBody: area('Tekst', '', 3),
         landItems: repeater('Atrakcje', '', 'Dodaj atrakcję', { icon: select('Ikona', '', ICONS), label: text('Nazwa'), desc: area('Opis', '', 2) }),
+        landImages: gallery('Zdjęcia obok opisu', '', 'atrakcje/'),
       },
       'Dla grup': {
         groupsTag: text('Napis nad tytułem'), groupsTitle: text('Tytuł'), groupsBody: area('Tekst', '', 3),

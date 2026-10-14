@@ -62,7 +62,8 @@ export function buildForms(d, templates, ctx) {
       dzial: ctx.dzial('Noclegi'),
     },
     atrakcje: {
-      ...t.atrakcje, ...hero(d.atrakcje.hero), intro: paras(d.atrakcje.intro),
+      ...hero(d.atrakcje.hero), intro: paras(d.atrakcje.intro), ...t.atrakcje,
+      waterImages: ctx.gallery(t.atrakcje.waterImages), landImages: ctx.gallery(t.atrakcje.landImages),
       waterTag: d.atrakcje.water.tag, waterTitle: d.atrakcje.water.title, waterBody: d.atrakcje.water.body,
       waterItems: d.atrakcje.water.items, waterPricing: priceGroups(d.atrakcje.water.pricing),
       fleet: d.atrakcje.water.fleet.map(({ id, ...f }) => ({ ...f, units: ls(f.units), specs: ls(f.specs), href: f.href ?? '' })),

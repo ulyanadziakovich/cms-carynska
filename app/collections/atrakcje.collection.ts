@@ -31,6 +31,7 @@ export default defineCollection({
           "waterTitle",
           "waterBody",
           "waterItems",
+          "waterImages",
           "waterPricingTitle",
           "waterPricing"
         ],
@@ -39,6 +40,7 @@ export default defineCollection({
           "noPatentLabel",
           "unitsLabel",
           "specLink",
+          "unitsCount",
           "fleet"
         ],
         "Bosmanat": [
@@ -55,7 +57,8 @@ export default defineCollection({
           "landTag",
           "landTitle",
           "landBody",
-          "landItems"
+          "landItems",
+          "landImages"
         ],
         "Dla grup": [
           "groupsTag",
@@ -167,6 +170,14 @@ export default defineCollection({
         }
       }
     },
+    "waterImages": {
+      "type": "gallery",
+      "options": {
+        "required": false,
+        "label": "Zdjęcia obok opisu",
+        "directory": "atrakcje/"
+      }
+    },
     "waterPricingTitle": {
       "type": "text",
       "options": {
@@ -250,6 +261,14 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Link do specyfikacji"
+      }
+    },
+    "unitsCount": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Liczba jednostek na liście",
+        "description": "Strona wstawi liczbę w miejsce {liczba}, np. „{liczba} jednostki”."
       }
     },
     "fleet": {
@@ -511,6 +530,14 @@ export default defineCollection({
             }
           }
         }
+      }
+    },
+    "landImages": {
+      "type": "gallery",
+      "options": {
+        "required": false,
+        "label": "Zdjęcia obok opisu",
+        "directory": "atrakcje/"
       }
     },
     "groupsTag": {

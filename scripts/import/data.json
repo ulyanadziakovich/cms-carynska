@@ -1959,7 +1959,36 @@
       "unitsLabel": "Jednostki",
       "specLink": "Specyfikacja producenta →",
       "waterPricingTitle": "Cennik wypożyczalni",
-      "marinaPricingTitle": "Cennik usług"
+      "marinaPricingTitle": "Cennik usług",
+      "unitsCount": "{liczba} jednostki",
+      "waterImages": [
+        {
+          "src": "/images/saturn25-jezero.webp",
+          "alt": "Jacht Saturn 25 na Jeziorze Solińskim"
+        },
+        {
+          "src": "/images/solina2.avif",
+          "alt": "Żaglówki"
+        },
+        {
+          "src": "/images/kajaki-sprzet-wodny.jpg",
+          "alt": "Kajaki i żaglówki na jeziorze Solińskim"
+        }
+      ],
+      "landImages": [
+        {
+          "src": "/images/aquapark-baseny.jpg",
+          "alt": "Mini-aquapark i baseny przy przystani"
+        },
+        {
+          "src": "/images/plac-zabaw.jpg",
+          "alt": "Plac zabaw nad mariną"
+        },
+        {
+          "src": "/images/gondola-solina.jpg",
+          "alt": "Kolejka gondolowa Solina"
+        }
+      ]
     },
     "zaplanuj-pobyt": {
       "heroTag": "Przystań Caryńska",
