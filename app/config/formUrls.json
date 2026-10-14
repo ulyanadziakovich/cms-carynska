@@ -1,3 +1,18 @@
 {
-  "test-formularza": "/"
+  "ustawienia": "/",
+  "kontakt": "/#kontakt",
+  "menu-strony": "/",
+  "strona-glowna": "/",
+  "noclegi-pokoje": "/noclegi/pokoje",
+  "noclegi-cennik": "/noclegi/cennik",
+  "noclegi-jacht": "/noclegi/jacht",
+  "atrakcje": "/atrakcje",
+  "zaplanuj-pobyt": "/zaplanuj-pobyt",
+  "tawerna": "/tawerna",
+  "galeria": "/galeria",
+  "grupy": "/grupy",
+  "projekty": "/projekty",
+  "regulamin": "/regulamin",
+  "regulamin-wypozyczalni": "/regulamin-wypozyczalni",
+  "wzor-umowy-jachtu": "/wzor-umowy-jachtu"
 }

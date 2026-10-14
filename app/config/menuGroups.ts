@@ -6,5 +6,41 @@ export interface MenuGroup {
 }
 
 export const MENU_GROUPS: MenuGroup[] = [
-  { label: 'Test', items: [{ collection: 'test-formularza', label: 'Formularz testowy' }] },
+  { label: 'Strona główna', items: [{ collection: 'strona-glowna', label: 'Baner, sekcje, opinie' }] },
+  {
+    label: 'Noclegi',
+    items: [
+      { collection: 'noclegi-pokoje', label: 'Pokoje i apartamenty' },
+      { collection: 'noclegi-cennik', label: 'Cennik' },
+      { collection: 'noclegi-jacht', label: 'Hotel na wodzie (jachty)' },
+    ],
+  },
+  {
+    label: 'Atrakcje',
+    items: [
+      { collection: 'atrakcje', label: 'Wypożyczalnia, bosmanat, aktywny dzień' },
+      { collection: 'zaplanuj-pobyt', label: 'Zaplanuj pobyt' },
+    ],
+  },
+  { label: 'Tawerna', items: [{ collection: 'tawerna', label: 'Teksty i menu' }] },
+  { label: 'Galeria', items: [{ collection: 'galeria', label: 'Zdjęcia' }] },
+  { label: 'Grupy', items: [{ collection: 'grupy', label: 'Oferta i cennik dla grup' }] },
+  { label: 'Projekty', items: [{ collection: 'projekty', label: 'Fundusze i harmonogram' }] },
+  {
+    label: 'Dokumenty',
+    items: [
+      { collection: 'regulamin', label: 'Regulamin' },
+      { collection: 'regulamin-wypozyczalni', label: 'Regulamin wypożyczalni' },
+      { collection: 'wzor-umowy-jachtu', label: 'Wzór umowy jachtu' },
+    ],
+  },
+  {
+    label: 'Ustawienia wspólne',
+    items: [
+      { collection: 'dzialy', label: 'Działy i telefony' },
+      { collection: 'kontakt', label: 'Kontakt, przelew i nasze obiekty' },
+      { collection: 'menu-strony', label: 'Menu strony' },
+      { collection: 'ustawienia', label: 'Logo, rezerwacje i teksty wspólne' },
+    ],
+  },
 ]
