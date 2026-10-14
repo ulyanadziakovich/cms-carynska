@@ -84,15 +84,16 @@ export function buildForms(d, templates, ctx) {
     galeria: { ...t.galeria, categories: t.galeria.categories.map((k) => ({ label: k.label, photos: ctx.gallery(k.photos) })) },
     grupy: (() => {
       const g = d.noclegi.grupy, p = g.pricing
+      const { extraIcons, ...grupyTexts } = t.grupy
       return {
-        ...t.grupy, heroTag: g.tag, heroTitle: g.title, 
+        ...grupyTexts, heroTag: g.tag, heroTitle: g.title, 
         sections: g.sections.map((s) => ({ ...s, note: s.note ?? '' })),
         pricingTag: p.tag, minPersons: p.minPersons, bonuses: p.bonuses, cols: ls(p.cols),
         rows: p.rows.map((r) => ({ type: r.type, values: ls(r.values) })),
         includesHb: ls(p.includes.hb), includesFb: ls(p.includes.fb), footnote: p.includes.footnote, notes: ls(p.notes), legal: p.legal,
-        extras: p.extras.map((e) => ({ category: e.category, note: e.note ?? '', items: e.items })),
+        extras: p.extras.map((e, i) => ({ category: e.category, note: e.note ?? '', icon: extraIcons[i], items: e.items })),
         capacityRooms: g.capacity.rooms, totalRooms: g.capacity.totalRooms, beds: g.capacity.beds, maxOccupancy: g.capacity.maxOccupancy,
-        halls: g.capacity.halls, dzial: ctx.dzial('Biuro'),
+        halls: g.capacity.halls, dzial: ctx.dzial('Noclegi'),
       }
     })(),
     projekty: {

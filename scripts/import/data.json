@@ -2213,16 +2213,28 @@
         }
       ],
       "offerKicker": "Organizujemy",
-      "minPersonsLabel": "",
+      "minPersonsLabel": "Min. {liczba} osób",
       "colRate": "Stawka",
       "hbLabel": "half board",
       "fbLabel": "full board",
       "notesTitle": "Ważne informacje",
       "extrasTitle": "Opcje dodatkowe",
-      "mealsLabel": "Wyżywienie",
       "capacityTitle": "Baza noclegowa",
       "inquiryTitle": "Zapytaj o ofertę",
-      "inquiryCta": "Wyślij zapytanie"
+      "inquiryCta": "Wyślij zapytanie",
+      "hbCode": "HB",
+      "fbCode": "FB",
+      "itemsOne": "pozycja",
+      "itemsMany": "pozycje",
+      "totalRoomsLabel": "Łącznie pokoi",
+      "bedsLabel": "Łóżek",
+      "maxOccupancyLabel": "Max. gości",
+      "extraIcons": [
+        "utensils",
+        "bus",
+        "flame",
+        "music"
+      ]
     },
     "projekty": {
       "programName": "Rozwój Przedsiębiorczości i Innowacje",

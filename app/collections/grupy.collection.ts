@@ -36,8 +36,10 @@ export default defineCollection({
           "colRate",
           "cols",
           "rows",
+          "hbCode",
           "hbLabel",
           "includesHb",
+          "fbCode",
           "fbLabel",
           "includesFb",
           "footnote",
@@ -47,15 +49,19 @@ export default defineCollection({
         ],
         "Opcje dodatkowe": [
           "extrasTitle",
-          "mealsLabel",
+          "itemsOne",
+          "itemsMany",
           "extras"
         ],
         "Baza noclegowa": [
           "capacityTitle",
           "capacityRooms",
           "totalRooms",
+          "totalRoomsLabel",
           "beds",
+          "bedsLabel",
           "maxOccupancy",
+          "maxOccupancyLabel",
           "halls"
         ],
         "Zapytanie": [
@@ -175,7 +181,8 @@ export default defineCollection({
       "type": "text",
       "options": {
         "required": false,
-        "label": "Podpis min. liczby osób"
+        "label": "Podpis min. liczby osób",
+        "description": "Strona wstawi liczbę w miejsce {liczba}."
       }
     },
     "bonuses": {
@@ -245,6 +252,14 @@ export default defineCollection({
         }
       }
     },
+    "hbCode": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Skrót HB",
+        "description": "Duże litery na karcie, np. „HB”."
+      }
+    },
     "hbLabel": {
       "type": "text",
       "options": {
@@ -260,6 +275,14 @@ export default defineCollection({
         "label": "W cenie HB",
         "description": "Jedna pozycja w linii.",
         "rows": 5
+      }
+    },
+    "fbCode": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Skrót FB",
+        "description": "Np. „FB”."
       }
     },
     "fbLabel": {
@@ -317,12 +340,20 @@ export default defineCollection({
         "label": "Nagłówek"
       }
     },
-    "mealsLabel": {
+    "itemsOne": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Etykieta wyżywienia",
-        "description": "Np. „Wyżywienie”."
+        "label": "Licznik: 1 pozycja",
+        "description": "Słowo po liczbie 1."
+      }
+    },
+    "itemsMany": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Licznik: więcej pozycji",
+        "description": "Słowo po liczbie większej niż 1."
       }
     },
     "extras": {
@@ -344,6 +375,21 @@ export default defineCollection({
             "options": {
               "required": false,
               "label": "Uwaga (opcjonalnie)"
+            }
+          },
+          "icon": {
+            "type": "select",
+            "options": {
+              "required": false,
+              "label": "Ikona",
+              "choices": {
+                "utensils": "Sztućce",
+                "bus": "Autokar",
+                "flame": "Ognisko",
+                "music": "Muzyka",
+                "star": "Gwiazdka"
+              },
+              "clearable": true
             }
           },
           "items": {
@@ -426,6 +472,13 @@ export default defineCollection({
         "label": "Pokoi razem"
       }
     },
+    "totalRoomsLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: pokoi razem"
+      }
+    },
     "beds": {
       "type": "number",
       "options": {
@@ -433,11 +486,25 @@ export default defineCollection({
         "label": "Miejsc noclegowych"
       }
     },
+    "bedsLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: łóżek"
+      }
+    },
     "maxOccupancy": {
       "type": "number",
       "options": {
         "required": false,
         "label": "Maks. osób z dostawkami"
+      }
+    },
+    "maxOccupancyLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: maks. gości"
       }
     },
     "halls": {
