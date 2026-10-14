@@ -432,6 +432,7 @@ export default [
       'Plik i przyciski': {
         pdf: file('Plik PDF do pobrania'), pdfLabel: text('Przycisk pobierania'),
         cta: text('Dodatkowy przycisk (opcjonalnie)'), ctaHref: link('Dokąd prowadzi dodatkowy przycisk'),
+        buttonsAtEnd: checkbox('Przyciski pod treścią', 'Zaznaczone: przyciski na końcu dokumentu. Puste: nad treścią.'),
       },
     },
   })),

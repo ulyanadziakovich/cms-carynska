@@ -2251,7 +2251,8 @@
       "pdf": "/dokumenty/regulamin-przystan-carynska.pdf",
       "pdfLabel": "Pobierz regulamin (PDF)",
       "cta": "",
-      "ctaHref": ""
+      "ctaHref": "",
+      "buttonsAtEnd": false
     },
     "regulamin-wypozyczalni": {
       "kicker": "Informacje",
@@ -2262,7 +2263,8 @@
       "pdf": "/dokumenty/regulamin-wypozyczalni.pdf",
       "pdfLabel": "Pobierz regulamin (PDF)",
       "cta": "",
-      "ctaHref": ""
+      "ctaHref": "",
+      "buttonsAtEnd": false
     },
     "wzor-umowy-jachtu": {
       "kicker": "Dokumenty",
@@ -2273,7 +2275,8 @@
       "pdf": "/dokumenty/wzor-umowy-najmu-jachtu.pdf",
       "pdfLabel": "Pobierz wzór umowy (PDF)",
       "cta": "Zobacz jachty",
-      "ctaHref": "/noclegi/jacht"
+      "ctaHref": "/noclegi/jacht",
+      "buttonsAtEnd": true
     }
   }
 }

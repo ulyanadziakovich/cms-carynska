@@ -29,7 +29,8 @@ export default defineCollection({
           "pdf",
           "pdfLabel",
           "cta",
-          "ctaHref"
+          "ctaHref",
+          "buttonsAtEnd"
         ]
       }
     ]
@@ -113,6 +114,14 @@ export default defineCollection({
         "required": false,
         "label": "Dokąd prowadzi dodatkowy przycisk",
         "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
+    "buttonsAtEnd": {
+      "type": "checkbox",
+      "options": {
+        "required": false,
+        "label": "Przyciski pod treścią",
+        "description": "Zaznaczone: przyciski na końcu dokumentu. Puste: nad treścią."
       }
     }
   }
