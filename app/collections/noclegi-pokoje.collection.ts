@@ -31,11 +31,16 @@ export default defineCollection({
           "rooms"
         ],
         "Napisy": [
+          "crumbParent",
+          "crumbCurrent",
           "labelSize",
           "labelMax",
           "labelAmenities",
+          "occupancyValue",
+          "amenitiesCount",
           "questions",
           "cta",
+          "ctaHref",
           "dzial"
         ]
       }
@@ -159,6 +164,21 @@ export default defineCollection({
         }
       }
     },
+    "crumbParent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: nazwa działu",
+        "description": "Mały link nad treścią, np. „Noclegi”."
+      }
+    },
+    "crumbCurrent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: ta strona"
+      }
+    },
     "labelSize": {
       "type": "text",
       "options": {
@@ -180,6 +200,22 @@ export default defineCollection({
         "label": "Podpis: wyposażenie"
       }
     },
+    "occupancyValue": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Liczba osób w szczegółach",
+        "description": "Strona wstawi liczbę w miejsce {liczba}, np. „{liczba} osoby”."
+      }
+    },
+    "amenitiesCount": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Liczba udogodnień na karcie",
+        "description": "Strona wstawi liczbę w miejsce {liczba}."
+      }
+    },
     "questions": {
       "type": "text",
       "options": {
@@ -193,6 +229,14 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Przycisk rezerwacji"
+      }
+    },
+    "ctaHref": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Dokąd prowadzi przycisk rezerwacji",
+        "placeholder": "np. /atrakcje albo https://…"
       }
     },
     "dzial": {

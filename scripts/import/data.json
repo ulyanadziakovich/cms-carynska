@@ -1728,7 +1728,9 @@
       "closeMenu": "Zamknij menu",
       "widgetGuestOne": "Gość",
       "widgetGuestMany": "Gości",
-      "pizzaUrl": "https://carynska.app-tapporder.ngastro.lsisoftware.net/zpc-skorka-spolka-jawna/products?group=af95-0528-1b1b-4b7a"
+      "pizzaUrl": "https://carynska.app-tapporder.ngastro.lsisoftware.net/zpc-skorka-spolka-jawna/products?group=af95-0528-1b1b-4b7a",
+      "photoN": "Zdjęcie {liczba}",
+      "maxPersons": "max {liczba} os."
     },
     "badges": [
       {
@@ -1914,7 +1916,12 @@
       "labelMax": "Maksymalnie",
       "labelAmenities": "Wyposażenie",
       "questions": "Masz pytania o pokoje lub dostępność?",
-      "cta": "Sprawdź dostępność"
+      "cta": "Sprawdź dostępność",
+      "crumbParent": "Noclegi",
+      "crumbCurrent": "Pokoje & Apartamenty",
+      "occupancyValue": "{liczba} osoby",
+      "amenitiesCount": "{liczba} udogodnień",
+      "ctaHref": "https://www.booking.com/hotel/pl/przystan-carynska.pl.html"
     },
     "noclegi-cennik": {
       "heroTag": "Noclegi",
@@ -1930,7 +1937,10 @@
       "colApt": "Apt.",
       "extrasTitle": "Usługi dodatkowe",
       "contactTitle": "Rezerwacje i pytania",
-      "cta": "Sprawdź dostępność"
+      "cta": "Sprawdź dostępność",
+      "crumbParent": "Noclegi",
+      "crumbCurrent": "Cennik",
+      "ctaHref": "https://www.booking.com/hotel/pl/przystan-carynska.pl.html"
     },
     "noclegi-jacht": {
       "kicker": "Unikalne doświadczenie",
@@ -1939,7 +1949,9 @@
       "detailsLink": "Szczegóły →",
       "onBoard": "Na pokładzie",
       "seasonPricing": "Cennik sezonowy",
-      "callCta": "Zadzwoń i zarezerwuj"
+      "callCta": "Zadzwoń i zarezerwuj",
+      "crumbParent": "Noclegi",
+      "crumbCurrent": "Hotel na wodzie"
     },
     "atrakcje": {
       "fleetTitle": "Nasza flota",

@@ -44,7 +44,7 @@ export function buildForms(d, templates, ctx) {
       googleUrl: c.reviews.googleUrl, reviews: c.reviews.items.map((r) => ({ ...r, badge: r.badge ?? '' })),
     },
     'noclegi-pokoje': {
-      ...t['noclegi-pokoje'], ...hero(d.noclegi.hero), heroSubtitle: d.noclegi.hero.subtitle, intro: paras(d.noclegi.intro),
+      ...hero(d.noclegi.hero), heroSubtitle: d.noclegi.hero.subtitle, ...t['noclegi-pokoje'], intro: paras(d.noclegi.intro),
       rooms: d.noclegi.rooms.map((r) => ({ slug: r.slug, tag: r.tag, title: r.title, size: r.size, occupancy: r.occupancy, desc: r.desc,
         amenities: ls(r.amenities), images: ctx.gallery(r.images.map((src) => ({ src, alt: `${r.tag} ${r.title}` }))) })),
       dzial: ctx.dzial('Noclegi'),

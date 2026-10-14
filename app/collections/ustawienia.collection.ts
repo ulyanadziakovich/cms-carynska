@@ -63,6 +63,8 @@ export default defineCollection({
           "close",
           "prevPhoto",
           "nextPhoto",
+          "photoN",
+          "maxPersons",
           "openMenu",
           "closeMenu"
         ]
@@ -360,6 +362,22 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Następne zdjęcie (dla czytników)"
+      }
+    },
+    "photoN": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Numer zdjęcia (dla czytników)",
+        "description": "Strona wstawi numer w miejsce {liczba}, np. „Zdjęcie {liczba}”."
+      }
+    },
+    "maxPersons": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Etykieta liczby osób na zdjęciu",
+        "description": "Strona wstawi liczbę w miejsce {liczba}, np. „max {liczba} os.”."
       }
     },
     "openMenu": {

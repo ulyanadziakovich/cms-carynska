@@ -42,7 +42,12 @@ export default defineCollection({
         "Kontakt": [
           "contactTitle",
           "cta",
+          "ctaHref",
           "dzial"
+        ],
+        "Okruszki": [
+          "crumbParent",
+          "crumbCurrent"
         ]
       }
     ]
@@ -236,6 +241,14 @@ export default defineCollection({
         "label": "Przycisk rezerwacji"
       }
     },
+    "ctaHref": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Dokąd prowadzi przycisk rezerwacji",
+        "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
     "dzial": {
       "type": "record",
       "options": {
@@ -254,6 +267,21 @@ export default defineCollection({
         },
         "recordLabel": "name",
         "clearable": true
+      }
+    },
+    "crumbParent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: nazwa działu",
+        "description": "Mały link nad treścią, np. „Noclegi”."
+      }
+    },
+    "crumbCurrent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: ta strona"
       }
     }
   }

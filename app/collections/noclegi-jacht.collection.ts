@@ -41,7 +41,9 @@ export default defineCollection({
           "onBoard",
           "seasonPricing",
           "callCta",
-          "dzial"
+          "dzial",
+          "crumbParent",
+          "crumbCurrent"
         ]
       }
     ]
@@ -292,6 +294,21 @@ export default defineCollection({
         },
         "recordLabel": "name",
         "clearable": true
+      }
+    },
+    "crumbParent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: nazwa działu",
+        "description": "Mały link nad treścią, np. „Noclegi”."
+      }
+    },
+    "crumbCurrent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: ta strona"
       }
     }
   }

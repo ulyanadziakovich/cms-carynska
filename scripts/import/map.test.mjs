@@ -60,3 +60,12 @@ test('pola zdjęć i plików wskazują wgrane pliki, nie surowe ścieżki', asyn
   for (const f of spec) check(Object.assign({}, ...Object.values(f.tabs)), forms[f.name], f.name)
   assert.deepEqual(bad, [])
 })
+test('teksty z szablonów strony mają pierwszeństwo przed starymi danymi', () => {
+  const bad = []
+  for (const [name, tpl] of Object.entries(d.templates)) {
+    if (!forms[name] || Array.isArray(tpl)) continue
+    for (const [k, v] of Object.entries(tpl))
+      if (typeof v === 'string' && !['heroImage', 'pdf'].includes(k) && typeof forms[name][k] === 'string' && forms[name][k] !== v) bad.push(`${name}.${k}`)
+  }
+  assert.deepEqual(bad, [])
+})
