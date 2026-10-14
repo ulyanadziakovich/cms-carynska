@@ -374,6 +374,13 @@ export default defineCollection({
                     "required": false,
                     "label": "Cena"
                   }
+                },
+                "note": {
+                  "type": "text",
+                  "options": {
+                    "required": false,
+                    "label": "Dopisek (opcjonalnie)"
+                  }
                 }
               }
             }

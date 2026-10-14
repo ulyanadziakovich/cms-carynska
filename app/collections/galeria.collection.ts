@@ -24,6 +24,7 @@ export default defineCollection({
           "heroImage"
         ],
         "Zdjęcia": [
+          "photosKicker",
           "allLabel",
           "emptyText",
           "categories"
@@ -55,6 +56,14 @@ export default defineCollection({
         "required": false,
         "label": "Zdjęcie w tle",
         "description": "Duże zdjęcie na górze podstrony."
+      }
+    },
+    "photosKicker": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Napis nad zdjęciami",
+        "description": "Np. „Zdjęcia”."
       }
     },
     "allLabel": {

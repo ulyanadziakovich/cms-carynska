@@ -1,0 +1,2220 @@
+{
+  "content": {
+    "nav": {
+      "links": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Features",
+          "href": "#features"
+        },
+        {
+          "label": "Contacts",
+          "href": "#contacts"
+        },
+        {
+          "label": "Contact",
+          "href": "#contact"
+        },
+        {
+          "label": "Login",
+          "href": "#login"
+        }
+      ],
+      "cta": {
+        "label": "Booking now",
+        "href": "#booking"
+      }
+    },
+    "hero": {
+      "title": "PRZYSTAŃ\nCARYŃSKA",
+      "subtitle": "Luksus w sercu Bieszczad",
+      "image": "/images/przystan-drone.jpg",
+      "images": [
+        "/images/przystan-drone.jpg",
+        "/images/przystan-drone-2.jpg",
+        "/images/przystan-drone-3.jpg"
+      ]
+    },
+    "noclegi": {
+      "tag": "Noclegi",
+      "title": "Wypoczynek\nw sercu natury",
+      "body": [
+        "Oferujemy 57 miejsc noclegowych w komfortowych pokojach i apartamentach z widokiem na jezioro Solina. Każde wnętrze zostało zaprojektowane z dbałością o detal — naturalne drewno, stonowane kolory, cisza Bieszczad.",
+        "Do dyspozycji gości: balkon lub taras, łazienka z prysznicem, bezpłatne WiFi oraz prywatny parking przy obiekcie."
+      ],
+      "cta": {
+        "label": "Sprawdź dostępność",
+        "href": "/noclegi/pokoje"
+      },
+      "rooms": [
+        {
+          "type": "Standart",
+          "image": "/images/hotel.png",
+          "capacity": "2 osoby",
+          "size": "22 m²",
+          "features": [
+            "Balkon",
+            "Widok na jezioro",
+            "WiFi"
+          ]
+        },
+        {
+          "type": "Standart Plus",
+          "image": "/images/solina2.avif",
+          "capacity": "2–3 osoby",
+          "size": "28 m²",
+          "view": "Jezioro & Góry",
+          "features": [
+            "Taras",
+            "WiFi",
+            "Minibar"
+          ]
+        },
+        {
+          "type": "Apartament",
+          "image": "/images/solina3.avif",
+          "capacity": "4 osoby",
+          "size": "42 m²",
+          "view": "Jezioro & Góry",
+          "features": [
+            "Taras panoramiczny",
+            "Salon",
+            "WiFi",
+            "Minibar",
+            "Jacuzzi"
+          ]
+        }
+      ]
+    },
+    "atrakcje": {
+      "tag": "Na jeziorze Solina",
+      "title": "Sailing &\nAtrakcje",
+      "body": "Żaglówki, łodzie elektryczne, kajaki, SUP i jachty do wynajęcia. Woda i Bieszczady — wszystko w jednym miejscu.",
+      "image": {
+        "src": "/images/solina3.avif",
+        "alt": "Atrakcje wodne na jeziorze Solina"
+      },
+      "cta": {
+        "label": "Zobacz wszystkie atrakcje",
+        "href": "/atrakcje"
+      },
+      "tiles": [
+        {
+          "id": "sprzet",
+          "tag": "Wypożyczalnia",
+          "title": "Sprzęt Wodny",
+          "icon": "/images/boat.svg",
+          "image": "/images/kajaki-sprzet-wodny.jpg",
+          "from": "left",
+          "modalTitle": "Wypożyczalnia sprzętu wodnego",
+          "modalBody": [
+            "Na jeziorze Solina czeka na Ciebie pełna flota sprzętu wodnego. Oferujemy wynajem żaglówek, łodzi elektrycznych, rowerków wodnych, kajaków oraz desek SUP.",
+            "Nasz bosmanat zapewnia pełne wsparcie techniczne i krótkie szkolenie dla początkujących. Jezioro Solina — jedno z największych sztucznych jezior w Polsce — oferuje idealne warunki do żeglugi i sportów wodnych przez cały sezon letni."
+          ],
+          "highlights": [
+            "Żaglówki",
+            "Łodzie elektryczne",
+            "Kajaki & SUP",
+            "Rowerki wodne",
+            "Mini aquapark"
+          ]
+        },
+        {
+          "id": "imprezy",
+          "tag": "Events",
+          "title": "Organizacja Imprez",
+          "icon": "/images/part.svg",
+          "image": "/images/organizacja-imprez.jpg",
+          "from": "right",
+          "modalTitle": "Idealne miejsce na event!",
+          "modalBody": [
+            "Ze względu na położenie w spokojnej, turystyczno-sportowej części Polańczyka, mniejsze tłumy i łatwy dojazd — Przystań Caryńska to idealne miejsce na organizację większych wydarzeń kulturalnych, sportowych i towarzyskich.",
+            "Posiadamy odpowiednie zaplecze noclegowe, gastronomiczne, duży parking oraz szeroką gamę atrakcji, która uświetni każdy wyjazd. Do dyspozycji mamy łodzie żaglowe, elektryczne, rowerki, kajaki oraz mini aquapark.",
+            "Przy współudziale lokalnych firm organizujemy gry i zabawy sportowe, warsztaty rękodzielnicze, off-road czy paintball. Dzięki współpracy z PKL Solina mamy możliwość sprzedaży biletów na kolejkę w preferencyjnych cenach.",
+            "Nasza kuchnia to duma przystani — serwujemy własne, domowe jedzenie przygotowane ze świeżych składników od lokalnych producentów. Restauracja przystosowana jest do przyjęć nawet na 110 osób."
+          ],
+          "highlights": [
+            "Wesela & uroczystości",
+            "Eventy firmowe",
+            "Paintball & off-road",
+            "Własna kuchnia",
+            "PKL Solina"
+          ]
+        },
+        {
+          "id": "zapora",
+          "tag": "Atrakcja regionu",
+          "title": "Zapora Solińska",
+          "icon": "/images/water.svg",
+          "image": "/images/tomasz-zielonka-i3R2ZUHukgw-unsplash.jpg",
+          "from": "left",
+          "modalTitle": "Zapora Solińska",
+          "modalBody": [
+            "Jesteśmy położeni w bezpośrednim sąsiedztwie jednej z największych atrakcji Bieszczad — Zapory Solińskiej. Imponująca budowla i rozległe jezioro tworzą unikalną scenerię, która zachwyca o każdej porze roku.",
+            "Dzięki współpracy z PKL Solina oferujemy naszym gościom bilety na kolejkę linową w preferencyjnych cenach — widok z góry na jezioro i otaczające Bieszczady to przeżycie, którego nie można przegapić.",
+            "Nasza lokalizacja w spokojnej części Polańczyka zapewnia łatwy dojazd i mniejsze tłumy niż w głównych punktach turystycznych regionu."
+          ],
+          "highlights": [
+            "Widok na zaporę",
+            "PKL Solina — kolejka",
+            "Bieszczadzkie szlaki",
+            "Spokojne położenie"
+          ]
+        },
+        {
+          "id": "grupy",
+          "tag": "Organizacja",
+          "title": "Dla Grup",
+          "icon": "/images/food.svg",
+          "image": "/images/aleksandar-andreev-Sk80Z2A7Ew0-unsplash.jpg",
+          "from": "right",
+          "modalTitle": "Pobyt w przystani dla każdego!",
+          "modalBody": [
+            "Przyjmujemy wycieczki, kolonie, zielone szkoły, obozy sportowe, pielgrzymki oraz wszystkie inne grupy zorganizowane — od dzieci po seniorów.",
+            "Organizujemy konferencje, wyjazdy firmowe, eventy, szkolenia, warsztaty i inne spotkania integracyjne. Wieczorne biesiady przy ognisku, muzyce i dobrym jedzeniu to nasza specjalność.",
+            "Organizujemy również imprezy okolicznościowe takie jak wesela, chrzciny, urodziny i inne — nasza restauracja przystosowana jest do przyjęć nawet na 110 osób i słynie z pysznej, domowej kuchni.",
+            "Mając na uwadze różnorodność potrzeb naszych klientów, do każdej grupy podchodzimy indywidualnie, tworząc ofertę najlepiej dopasowaną do Państwa potrzeb. Oferujemy pomoc w wyszukaniu przewodnika, transportu czy lokalnych atrakcji."
+          ],
+          "highlights": [
+            "Kolonie & zielone szkoły",
+            "Konferencje",
+            "Obozy sportowe",
+            "Parking dla autobusów gratis",
+            "Oferta indywidualna"
+          ]
+        }
+      ]
+    },
+    "kuchnia": {
+      "tag": "Tawerna",
+      "title": "Smaki\nBieszczad",
+      "body": [
+        "Nasza Tawerna to miejsce, gdzie regionalna kuchnia spotyka się z widokiem na jezioro Solina. Świeże składniki, lokalni producenci, smaki których nie zapomnisz.",
+        "Śniadania, obiady, kolacje oraz imprezy okolicznościowe — wszystko przygotowane z pasją w samym sercu Bieszczad."
+      ],
+      "cta": {
+        "label": "Zobacz menu",
+        "href": "/tawerna"
+      },
+      "image": {
+        "src": "/images/tawerna-bar.jpg",
+        "alt": "Tawerna Przystań Caryńska"
+      }
+    },
+    "reviews": {
+      "googleUrl": "https://www.google.com/maps/place/Przysta%C5%84+Cary%C5%84ska+w+Pola%C5%84czyku-Pizza+z+dostawa,+Noclegi,+Tawerna,+jachty,+SUP%27y,+elektryki+-/@49.36562,22.4265844,17z/data=!4m11!3m10!1s0x473d8344a6bc3099:0x94ef2a6c3e7dedfa!5m2!4m1!1i2!8m2!3d49.36562!4d22.4291647!9m1!1b1!16s%2Fg%2F1hc7nn1bm?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
+      "items": [
+        {
+          "name": "Stan. Jar.",
+          "badge": "Lokalny przewodnik",
+          "date": "3 tygodnie temu",
+          "stars": 4,
+          "text": "Pokoje czyste część z widokiem na Solinę obsługa przemiła jedzenie pyszne. Pani Kasia nasza wspaniała przewodniczka Bardzo jesteśmy zadowoleni Fajna grupa 45 osobowa z pod Poznania Pozdrawiamy polecamy..."
+        },
+        {
+          "name": "Hanna Sienkiewicz",
+          "badge": null,
+          "date": "4 tygodnie temu",
+          "stars": 5,
+          "text": "Polecam ten hotel gorąco to jest strzał w dziesiątkę dla każdych ludzi obsługa przemiła ☺️ Chciałabym jeszcze tu wrócić"
+        },
+        {
+          "name": "Sylwia Giełzak",
+          "badge": null,
+          "date": "miesiąc temu",
+          "stars": 4,
+          "text": "Super lokalizacja z przepięknym widokiem na jezioro solińskie, mili właściciele, polecam z całego ❤️"
+        },
+        {
+          "name": "Kamil Olech",
+          "badge": "Lokalny przewodnik",
+          "date": "9 miesięcy temu",
+          "stars": 5,
+          "text": "Polecam obiekt z całego serca, na pewno nieraz jeszcze tu wrócę. Klimatycznie, bardzo czysto — w łazienkach czuć aż świeżość, wszędzie cicho i spokojnie. Kącik do zabawy dla dzieci, jak i do gry dla dorosłych. Sympatyczna obsługa. Przepyszna kuchnia przyhotelowa — dania mają smak, wygląd, doprawione i niebywale gorące — miłe zaskoczenie! Piękne widoki z pokoju, jak i z restauracji. Obiekt w rozsądnej cenie na 6!"
+        }
+      ]
+    },
+    "kontakt": {
+      "address": "Polańczyk, ul. Równa 19",
+      "email": "przystan@carynska.pl",
+      "emailFirma": "zajazd@carynska.pl",
+      "mapQuery": "Przystan+Carynska+Polanczyk+Rowna+19",
+      "logo": {
+        "src": "/images/logo.png",
+        "alt": "Przystań Caryńska"
+      },
+      "departments": [
+        {
+          "tag": "Rezerwacje indywidualne",
+          "name": "Noclegi",
+          "desc": "Pokoje i apartamenty z widokiem na Solinę. Pytania o dostępność i pobyt.",
+          "phone": "+48 691 944 266",
+          "email": "przystan@carynska.pl"
+        },
+        {
+          "tag": "Restauracja",
+          "name": "Tawerna",
+          "desc": "Kuchnia regionalna, catering, eventy i dostawy na wynos.",
+          "phone": "+48 514 177 136"
+        },
+        {
+          "tag": "Przystań",
+          "name": "Bosmanat",
+          "desc": "Wynajem żaglówek, łodzi, kajaków i SUP na jeziorze Solina.",
+          "phone": "+48 536 700 537"
+        },
+        {
+          "tag": "Rezerwacje grupowe & sprawy firmy",
+          "name": "Biuro",
+          "desc": "Rezerwacje grupowe, eventy, konferencje oraz sprawy bieżące.",
+          "phone": "+48 609 620 565",
+          "email": "zajazd@carynska.pl"
+        }
+      ],
+      "social": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/PrzystanCarynska",
+          "icon": "facebook"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/przystan_carynska",
+          "icon": "instagram"
+        }
+      ],
+      "platforms": [
+        {
+          "label": "Booking.com",
+          "href": "https://www.booking.com/hotel/pl/przystan-carynska.pl.html"
+        },
+        {
+          "label": "TripAdvisor",
+          "href": "https://www.tripadvisor.com/Hotel_Review-g3176335-d28568069-Reviews-Przystan_Carynska_w_Polanczyku-Polanczyk_Subcarpathian_Province_Southern_Poland.html?m=19905"
+        },
+        {
+          "label": "Noclegowo.pl",
+          "href": "https://www.noclegowo.pl/polanczyk/r92298-przystan-carynska-osrodek-szkoleniowo-wypoczynkowy-w-polanczyku/"
+        },
+        {
+          "label": "e-nocleg.pl",
+          "href": "https://e-nocleg.pl/nocleg,unitra.html"
+        },
+        {
+          "label": "Nocowanie.pl",
+          "href": "https://www.nocowanie.pl/rezerwuj/1543039-przystan-carynska-dawniej-unitra-polanczyk/"
+        }
+      ],
+      "bank": {
+        "name": "ING Bank Śląski",
+        "account": "88 1050 1562 1000 0092 9290 1122",
+        "swift": "INGBPLPW",
+        "note": "W temacie przelewu prosimy podać: Przystań Caryńska, imię i nazwisko, termin pobytu, liczbę osób."
+      },
+      "siostrzaneObiekty": [
+        {
+          "name": "Zajazd Pod Caryńską",
+          "location": "Ustrzyki Górne",
+          "href": "https://www.carynska.pl",
+          "phone": "+48 511 311 552",
+          "email": "rezerwacje@carynska.pl",
+          "desc": "Nocleg w sercu Bieszczadzkiego Parku Narodowego."
+        },
+        {
+          "name": "Noclegi Terebowiec",
+          "location": "Ustrzyki Górne",
+          "href": "https://www.terebowiec.pl",
+          "phone": "+48 577 600 571",
+          "email": "noclegi@terebowiec.pl",
+          "desc": "Kameralne noclegi w Ustrzykach Górnych."
+        }
+      ]
+    }
+  },
+  "noclegi": {
+    "hero": {
+      "tag": "Noclegi",
+      "title": "57 miejsc noclegowych\nnad jeziorem Solina",
+      "subtitle": "Pokoje i apartamenty w Polańczyku",
+      "image": "/images/hotel.png"
+    },
+    "intro": [
+      "Przystań Caryńska to całoroczny ośrodek wypoczynkowo-szkoleniowy w Polańczyku, malowniczo położony ok. 200 m od Jeziora Solińskiego z widokiem na Bieszczady. Oferujemy 57 miejsc noclegowych w pokojach o podstawowym i podwyższonym standardzie oraz w apartamentach (łącznie 67 miejsc noclegowych z dostawkami).",
+      "Na naszych gości czeka: elegancka klimatyzowana jadalnia, nastrojowa kawiarnia z kominkiem, boisko do siatkówki, ogród z placem zabaw, wiatą biesiadną i miejscem na ognisko i grilla, wielofunkcyjna sala konferencyjna, stół bilardowy, stół do ping-ponga, piłkarzyki, kącik dla maluchów oraz monitorowany darmowy parking."
+    ],
+    "rooms": [
+      {
+        "slug": "pokoj-1-osobowy",
+        "tag": "Pokój 1-osobowy",
+        "title": "Standard",
+        "size": "16.85 m²",
+        "occupancy": 2,
+        "desc": "Przytulny pokój z widokiem na jezioro lub góry. Idealne rozwiązanie dla podróżujących solo lub par szukających komfortu w dobrej cenie.",
+        "amenities": [
+          "Balkon (widok na jezioro lub góry)",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka",
+          "Suszarka do włosów"
+        ],
+        "image": "/images/1os-pokoj.png",
+        "images": [
+          "/images/1os-pokoj.png",
+          "/images/1os-lazienka.png"
+        ]
+      },
+      {
+        "slug": "pokoj-2-osobowy",
+        "tag": "Pokój 2-osobowy",
+        "title": "Standard",
+        "size": "15–19 m²",
+        "occupancy": 3,
+        "desc": "Dwa łączone łóżka pojedyncze, balkon i pełne wyposażenie. W wybranych pokojach możliwość dostawki dla trzeciej osoby.",
+        "amenities": [
+          "Balkon (większość pokoi)",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka",
+          "Suszarka do włosów"
+        ],
+        "image": "/images/2os-std-sypialnia1.png",
+        "images": [
+          "/images/2os-std-sypialnia1.png",
+          "/images/2os-std-sypialnia2.png",
+          "/images/2os-std-salon.png",
+          "/images/2os-std-lazienka.png"
+        ]
+      },
+      {
+        "slug": "pokoj-2-osobowy-plus",
+        "tag": "Pokój 2-osobowy",
+        "title": "Standard Plus",
+        "size": "22 m²",
+        "occupancy": 4,
+        "desc": "Strefa dzienna z rozkładaną sofą oraz wydzielona nisza z łóżkiem dwuosobowym. Klimatyzacja ręczna i balkon z widokiem na jezioro lub góry.",
+        "amenities": [
+          "Balkon z widokiem na jezioro/góry",
+          "Klimatyzacja ręczna",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka"
+        ],
+        "image": "/images/2os-salon.png",
+        "images": [
+          "/images/2os-salon.png",
+          "/images/2os-sypialnia.png",
+          "/images/2os-lazienka.png"
+        ]
+      },
+      {
+        "slug": "studio-3-osobowe",
+        "tag": "Studio 3-osobowe",
+        "title": "Standard",
+        "size": "22–26 m²",
+        "occupancy": 5,
+        "desc": "Salon z rozkładaną sofą i sypialnia z dwoma łączonymi łóżkami. Przestronne, rodzinne wnętrze z balkonem w większości jednostek.",
+        "amenities": [
+          "Balkon (większość)",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka",
+          "Suszarka do włosów"
+        ],
+        "image": "/images/studio3-salon1.png",
+        "images": [
+          "/images/studio3-salon1.png",
+          "/images/studio3-lazienka.png",
+          "/images/studio3-sypialnia.png",
+          "/images/studio3-salon2.png"
+        ]
+      },
+      {
+        "slug": "studio-3-osobowe-plus",
+        "tag": "Studio 3-osobowe",
+        "title": "Standard Plus",
+        "size": "28 m²",
+        "occupancy": 5,
+        "desc": "Większa wersja studia z balkonem z widokiem na jezioro lub góry. Ten sam układ — wyższy standard wykończenia i piękna panorama.",
+        "amenities": [
+          "Balkon z widokiem na jezioro/góry",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka",
+          "Suszarka do włosów"
+        ],
+        "image": "/images/studio3-plus-sypialnia.png",
+        "images": [
+          "/images/studio3-plus-sypialnia.png",
+          "/images/studio3-plus-salon.png",
+          "/images/studio3-plus-lazienka.png"
+        ]
+      },
+      {
+        "slug": "apartament-5-osobowy",
+        "tag": "Apartament 5-osobowy",
+        "title": "Premium",
+        "size": "40 m²",
+        "occupancy": 6,
+        "desc": "Dwie osobne sypialnie z łączonymi łóżkami i obszerny salon z rozkładaną sofą. Szeroki balkon z panoramicznym widokiem na jezioro lub góry.",
+        "amenities": [
+          "Szeroki balkon (widok na jezioro/góry)",
+          "Dwie sypialnie",
+          "Salon z sofą",
+          "Łazienka z prysznicem",
+          "TV + WiFi",
+          "Czajnik + lodówka"
+        ],
+        "image": "/images/apt5-salon1.png",
+        "images": [
+          "/images/apt5-salon1.png",
+          "/images/apt5-sypialnia.png",
+          "/images/apt5-salon2.png",
+          "/images/apt5-lazienka.png"
+        ]
+      }
+    ],
+    "pricing": {
+      "note": "Ceny za dobę. Doba hotelowa: check-in 15:00, check-out 10:00. W sezonie i długie weekendy obowiązuje min. pobyt 3 noce.",
+      "rows": [
+        {
+          "type": "Pokój 1-osobowy Standard",
+          "p1": "—",
+          "p2": "260 zł",
+          "p3": "—",
+          "p4": "—",
+          "apt": "—"
+        },
+        {
+          "type": "Pokój 2-osobowy Standard",
+          "p1": "—",
+          "p2": "260 zł",
+          "p3": "390 zł",
+          "p4": "520 zł",
+          "apt": "—"
+        },
+        {
+          "type": "Pokój 2-osobowy Standard+",
+          "p1": "150 zł",
+          "p2": "280 zł",
+          "p3": "420 zł",
+          "p4": "—",
+          "apt": "—"
+        },
+        {
+          "type": "Studio 3-osobowe Standard",
+          "p1": "—",
+          "p2": "260 zł",
+          "p3": "390 zł",
+          "p4": "520 zł",
+          "apt": "—"
+        },
+        {
+          "type": "Studio 3-osobowe Standard+",
+          "p1": "—",
+          "p2": "280 zł",
+          "p3": "420 zł",
+          "p4": "—",
+          "apt": "—"
+        },
+        {
+          "type": "Apartament 5-osobowy",
+          "p1": "—",
+          "p2": "—",
+          "p3": "—",
+          "p4": "—",
+          "apt": "700 zł"
+        }
+      ],
+      "extras": [
+        {
+          "label": "Śniadanie",
+          "price": "38 zł / os."
+        },
+        {
+          "label": "Śniadanie (dzieci do 10 lat)",
+          "price": "28 zł / os."
+        },
+        {
+          "label": "Kolacja",
+          "price": "45 zł / os."
+        },
+        {
+          "label": "Kolacja (dzieci do 10 lat)",
+          "price": "35 zł / os."
+        },
+        {
+          "label": "Prowiant",
+          "price": "25 zł / szt."
+        },
+        {
+          "label": "Dostawka / rozkładana sofa",
+          "price": "110 zł / dobę"
+        },
+        {
+          "label": "Dziecko 2–10 lat (łóżko rodzica)",
+          "price": "90 zł / dobę"
+        },
+        {
+          "label": "Zwierzę domowe",
+          "price": "50 zł / dobę"
+        },
+        {
+          "label": "Opłata klimatyczna",
+          "price": "3 zł / os. / dobę"
+        }
+      ]
+    },
+    "grupy": {
+      "tag": "Grupy & Eventy",
+      "title": "Idealne miejsce\nna Twój event",
+      "sections": [
+        {
+          "title": "Idealne miejsce na event!",
+          "body": "Ze względu na położenie w spokojnej, turystyczno-sportowej części Polańczyka, mniejsze tłumy i łatwy dojazd – Przystań Caryńska to idealne miejsce na organizację większych wydarzeń kulturalnych, sportowych i towarzyskich. Posiadamy odpowiednie zaplecze noclegowe, gastronomiczne, duży parking oraz szeroką gamę atrakcji, która uświetni każdy wyjazd. Do dyspozycji mamy łodzie żaglowe, elektryczne, rowerki, kajaki oraz mini aquapark."
+        },
+        {
+          "title": "Pobyt w przystani dla każdego!",
+          "body": "Przyjmujemy wycieczki, kolonie, zielone szkoły, obozy sportowe, pielgrzymki oraz wszystkie inne grupy zorganizowane od dzieci po seniorów. Organizujemy konferencje, wyjazdy firmowe, eventy, szkolenia, warsztaty i inne spotkania integracyjne. Wieczorne biesiady przy ognisku, muzyce i dobrym jedzeniu to nasza specjalność. Organizujemy również imprezy okolicznościowe takie jak wesela, chrzciny, urodziny i inne – nasza restauracja przystosowana jest do przyjęć nawet na 110 osób i słynie z pysznej, domowej kuchni. W restauracji i na przystani gościmy również wycieczki objazdowe (spoza naszego ośrodka).",
+          "note": "Dla grup korzystających z naszych atrakcji i wyżywienia parking dla autobusów gratis."
+        },
+        {
+          "title": "Pobyt pełen atrakcji!",
+          "body": "Przy współudziale lokalnych firm organizujemy gry i zabawy sportowe, warsztaty rękodzielnicze, off-road czy paintball. Dzięki współpracy z PKL Solina mamy możliwość sprzedaży biletów na kolejkę, która jest niewątpliwie jedną z największych atrakcji regionu, w preferencyjnych cenach. Mając na uwadze różnorodność potrzeb Naszych klientów, do każdej grupy podchodzimy indywidualnie tworząc ofertę najlepiej dopasowaną do Państwa potrzeb. Oferujemy pomoc w wyszukaniu przewodnika, transportu czy lokalnych atrakcji."
+        }
+      ],
+      "pricing": {
+        "tag": "Cennik 2026",
+        "minPersons": 25,
+        "bonuses": [
+          {
+            "threshold": "Powyżej 30 osób",
+            "reward": "1 osoba gratis"
+          },
+          {
+            "threshold": "Powyżej 40 osób",
+            "reward": "2 osoby gratis"
+          }
+        ],
+        "cols": [
+          "Zielona szkoła (dzieci)",
+          "Ferie zimowe (dzieci)",
+          "Poza sezonem (dzieci)",
+          "Poza sezonem (dorośli)",
+          "W sezonie (7 lip – 28 sie)"
+        ],
+        "rows": [
+          {
+            "type": "Cena HB",
+            "values": [
+              "150 zł",
+              "—",
+              "150 zł",
+              "190 zł",
+              "indywidualnie"
+            ]
+          },
+          {
+            "type": "Cena FB",
+            "values": [
+              "170 zł",
+              "150 zł",
+              "170 zł",
+              "215 zł",
+              "indywidualnie"
+            ]
+          }
+        ],
+        "includes": {
+          "hb": [
+            "Nocleg",
+            "Śniadanie (bufet szwedzki, ok. 8:30–9:30)",
+            "Kolacja serwowana (ok. 18:00–19:00)",
+            "Parking monitorowany przy obiekcie",
+            "Wi-Fi"
+          ],
+          "fb": [
+            "Nocleg",
+            "Śniadanie (bufet szwedzki, ok. 8:30–9:30)",
+            "Obiad (zupa + drugie danie, ok. 14:00–15:00)",
+            "Kolacja serwowana (ok. 18:00–19:00)",
+            "Parking monitorowany przy obiekcie",
+            "Wi-Fi"
+          ],
+          "footnote": "Godziny posiłków są przykładowe — elastycznie podchodzimy do każdej grupy."
+        },
+        "notes": [
+          "Darmowy parking dla autokarów przy obiekcie.",
+          "Sprzęt przystani wodnej – 15% rabatu od cen standardowych.",
+          "Pobyt 1-nocny podnosi cenę oferty o 15 zł/os."
+        ],
+        "extras": [
+          {
+            "category": "Wyżywienie dodatkowe",
+            "items": [
+              {
+                "name": "Suchy prowiant",
+                "desc": "Bułka z serem żółtym, bułka z wędliną, owoc, baton, woda 0,5 l — idealna opcja na wycieczkę, w góry lub nad wodę.",
+                "price": "25 zł/szt."
+              },
+              {
+                "name": "Obiadokolacja tradycyjna",
+                "desc": "Zupa, drugie danie, kompot.",
+                "price": "40 zł/os."
+              },
+              {
+                "name": "Obiadokolacja regionalna",
+                "desc": "Zupa, drugie danie, kompot.",
+                "price": "45 zł/os."
+              }
+            ]
+          },
+          {
+            "category": "Grupy objazdowe (nienocujące)",
+            "note": "Parking do 6 h gratis.",
+            "items": [
+              {
+                "name": "Obiad dwudaniowy",
+                "desc": "Zupa, drugie danie, kompot.",
+                "price": "Dzieci od 25 zł / Dorośli od 35 zł"
+              },
+              {
+                "name": "Przerwa kawowa ciągła",
+                "desc": "Kawa, herbata, woda mineralna, ciasteczka kruche, owoce, ciasto domowe.",
+                "price": "30 zł/os."
+              }
+            ]
+          },
+          {
+            "category": "Wieczory & Ogniska",
+            "items": [
+              {
+                "name": "Ognisko",
+                "desc": "Kiełbasa, ziemniaczek pieczony z masłem czosnkowym, napoje w dzbankach, chleb, smalec, pikle, ketchup, musztarda, drzewo.",
+                "price": "50 zł/os."
+              },
+              {
+                "name": "Grill",
+                "desc": "Karkówka, kiełbasa, sałatka grecka, ziemniaczki pieczone, oscypek z żurawiną, napoje, chleb, smalec, pikle, ketchup, musztarda.",
+                "price": "100 zł/os."
+              },
+              {
+                "name": "Watra Bojkowska",
+                "desc": "Szynka pieczona ogniem żywym z kaszą maszczoną skwarkami i kapustą zasmażaną, grule z sosem czosnkowym, kawa, herbata, pikle, smalczyk, powidła, gorące trunki lokalne (100 ml/os.).",
+                "price": "70 zł/os. · 85 zł/os."
+              },
+              {
+                "name": "Kolacja Chłopska I",
+                "desc": "Szwedzki stół: kaszanka z cebulką, żurek staropolski, kociołek gulaszu, zimne półmiski wędlin regionalnych i serów, sałatka, powidła, kawa, herbata, pikle, pajda.",
+                "price": "80 zł/os.",
+                "note": "Podawana wyłącznie przy zamówieniu obiadokolacji."
+              },
+              {
+                "name": "Kolacja Chłopska II",
+                "desc": "Szwedzki stół: kaszanka z cebulką, zimne półmiski wędlin regionalnych i serów, sałatka, powidła, pikle, pajda.",
+                "price": "100 zł/os.",
+                "note": "Podawana wyłącznie przy zamówieniu obiadokolacji."
+              },
+              {
+                "name": "Kolacja Bojkowska",
+                "desc": "Szwedzki stół: barszcz ukraiński, żur staropolski, pierogi po bojkowsku, gulasz, pieczeń, bandury, kasza, kapusta, zimne półmiski, sery regionalne, sałatki, powidła, ciasto domowe, napoje, kawa, herbata.",
+                "price": "120 zł/os."
+              }
+            ]
+          },
+          {
+            "category": "Sala & Rozrywka",
+            "items": [
+              {
+                "name": "Sala konferencyjna",
+                "desc": "Pełny węzeł multimediów + flipchart.",
+                "price": "50 zł/h"
+              },
+              {
+                "name": "Kapela WATRA",
+                "desc": "W przypadku dostępności.",
+                "price": "1 620 zł (do 4 h) · 2 000 zł/wieczór"
+              },
+              {
+                "name": "DJ",
+                "desc": "Wraz z salą.",
+                "price": "1 200 zł/wieczór"
+              }
+            ]
+          }
+        ],
+        "legal": "Cennik nie jest ofertą handlową w rozumieniu Kodeksu Cywilnego. Przystań Caryńska zastrzega sobie prawo do zmian cen, o czym informuje klienta w momencie potwierdzenia rezerwacji."
+      },
+      "capacity": {
+        "rooms": [
+          {
+            "count": 10,
+            "label": "pokoi dwuosobowych"
+          },
+          {
+            "count": 7,
+            "label": "pokoi trzyosobowych"
+          },
+          {
+            "count": 2,
+            "label": "apartamentów pięcioosobowych"
+          },
+          {
+            "count": 1,
+            "label": "pokój czteroosobowy"
+          },
+          {
+            "count": 1,
+            "label": "pokój jednoosobowy"
+          }
+        ],
+        "totalRooms": 21,
+        "beds": 56,
+        "maxOccupancy": 73,
+        "halls": [
+          {
+            "name": "Sala restauracyjna",
+            "seats": "60 osób"
+          },
+          {
+            "name": "Sala konferencyjna",
+            "seats": "60 osób (80 w układzie kinowym)"
+          }
+        ]
+      }
+    },
+    "cta": {
+      "phone": "+48 691 944 266",
+      "email": "przystan@carynska.pl"
+    }
+  },
+  "atrakcje": {
+    "hero": {
+      "tag": "Atrakcje",
+      "title": "Woda, góry\ni przygoda",
+      "image": "/images/przystan-drone-3.jpg"
+    },
+    "intro": [
+      "Nasza Przystań z rozbudowanym zapleczem rekreacyjno-sportowym to niezwykle atrakcyjne miejsce do plażowania, szczególnie przystosowane dla dzieci. Podczas wakacyjnych wieczorów często umilamy Wam czas muzyką na żywo!",
+      "Baseniki i dmuchane zjeżdżalnie, mała gastronomia, strefa gier i wypożyczalnia sprzętu wodnego sprawią, że będziecie tutaj często gościć podczas swojego wypoczynku. Polecamy również rejsy jachtami żaglowymi oraz komfortowymi łodziami elektrycznymi (samodzielne i ze sternikiem)."
+    ],
+    "water": {
+      "tag": "Wypożyczalnia sprzętu wodnego",
+      "title": "Na jeziorze Solińskim",
+      "body": "Czartery żaglówek z skipperem lub samodzielnie, łodzie elektryczne bez patentu, kajaki, SUP i pontony. Czynne od 8:30 do 19:00 (sesje: 8:30–13:30 i 14:00–19:00). Rezerwacje: +48 536 700 537.",
+      "items": [
+        {
+          "icon": "zaglowka",
+          "label": "Żaglówki & Jachty",
+          "desc": "Samodzielny rejs lub z skipperem. Czartery na Jezioro Solińskie."
+        },
+        {
+          "icon": "elektryczna",
+          "label": "Łodzie elektryczne",
+          "desc": "Bez patentu. Dla 8 osób. Cicha, ekologiczna przejażdżka."
+        },
+        {
+          "icon": "kajak",
+          "label": "Kajaki, SUP & Rowerki",
+          "desc": "Kajaki, deski SUP, rowerki wodne i pontony wiosłowe."
+        }
+      ],
+      "pricing": [
+        {
+          "category": "Sprzęt niesilnikowy",
+          "items": [
+            {
+              "label": "Kajak (2-osobowy)",
+              "price": "25 zł / godz. · 90 zł / dzień"
+            },
+            {
+              "label": "Deska SUP (2-osobowa)",
+              "price": "25 zł / godz. · 90 zł / dzień"
+            },
+            {
+              "label": "Rowerek wodny (4-osobowy)",
+              "price": "35 zł / godz. · 120 zł / dzień"
+            },
+            {
+              "label": "Ponton wiosłowy (4-osobowy)",
+              "price": "20 zł / godz. · 90 zł / dzień"
+            }
+          ]
+        },
+        {
+          "category": "Łodzie elektryczne (bez patentu)",
+          "note": "Sesje: 8:30–13:30 lub 14:00–19:00",
+          "items": [
+            {
+              "label": "Łódź 4-osobowa",
+              "price": "80 zł / godz. · 350 zł / dzień"
+            },
+            {
+              "label": "Łódź 8-os. — Holica, Połonina, Solina, Kabajka",
+              "price": "200 zł / godz. · 700 zł / 5h"
+            },
+            {
+              "label": "Łódź 8-os. Tarnica (rocznik 2024)",
+              "price": "250 zł / godz. · 800 zł / 5h"
+            }
+          ]
+        },
+        {
+          "category": "Jachty żaglowe",
+          "items": [
+            {
+              "label": "Omega „Łamaga\" (6 os.)",
+              "price": "230 zł / dzień"
+            },
+            {
+              "label": "Saturn 23 GT — 5 jednostek (5 os.)",
+              "price": "480 zł / dzień"
+            },
+            {
+              "label": "Saturn 25L „Caryńska\" (6 os.)",
+              "price": "530 zł / dzień"
+            }
+          ]
+        }
+      ],
+      "fleet": [
+        {
+          "id": "saturn23",
+          "type": "Jacht żaglowy",
+          "name": "Saturn 23 GT",
+          "units": [
+            "Okrąglik",
+            "Otryt",
+            "Rozsypaniec",
+            "Halicz",
+            "Dwernik"
+          ],
+          "capacity": 5,
+          "price": "480 zł / dzień",
+          "patent": true,
+          "desc": "Saturn 23GT to jednostka renomowanej stoczni Saturn Yachts — sportowa wersja turystycznego jachtu z nowoczesną linią i ostrymi kształtami. Doskonale zrównoważony i zwrotny, idealny do żeglowania w węższych częściach Soliny. Całe olinowanie sprowadzone do kokpitu pozwala na wygodne prowadzenie nawet jednej osobie.",
+          "specs": [
+            "4 koje we wnętrzu",
+            "Silnik elektryczny Haswing Vetura 5.0",
+            "Kuchnia gazowa + lodówka",
+            "Instalacja wody pitnej ze zlewozmywakiem",
+            "Toaleta chemiczna",
+            "Duża ilość schowków i bakist"
+          ],
+          "href": "https://alfea.pl/saturn-23/"
+        },
+        {
+          "id": "saturn25",
+          "type": "Jacht żaglowy — flagowa jednostka",
+          "name": "Saturn 25L „Caryńska\"",
+          "units": [
+            "Caryńska"
+          ],
+          "capacity": 6,
+          "price": "530 zł / dzień",
+          "patent": true,
+          "desc": "Flagowa jednostka Przystani Caryńskiej, największy jacht stoczni Saturn Yachts. Sportowa linia, doskonałe właściwości nautyczne i bardzo duży kokpit — idealna dla większych załóg. Perfekcyjnie zrównoważona żaglowo, niezwykle zwrotna.",
+          "specs": [
+            "4 koje (2 dwuosobowe + 2 jednoosobowe)",
+            "Silnik elektryczny Haswing Vetura 5.0",
+            "Kuchnia gazowa + lodówka",
+            "Instalacja wody pitnej ze zlewozmywakiem",
+            "Duża ilość schowków i bakist"
+          ],
+          "href": "https://alfea.pl/saturn-25-2/"
+        },
+        {
+          "id": "omega",
+          "type": "Jacht regatowo-turystyczny",
+          "name": "Omega „Łamaga\"",
+          "units": [
+            "Łamaga"
+          ],
+          "capacity": 6,
+          "price": "230 zł / dzień",
+          "patent": true,
+          "desc": "Legenda polskiego jachtingu — najpopularniejsza klasa regatowo-turystyczna w kraju. Wybitne właściwości nautyczne, lekkość prowadzenia i ogromny otwarty kokpit. Doskonały dla sportowców, grup znajomych i firm organizujących regaty integracyjne. Konstrukcja bezkabinowa — cała przestrzeń podpodporządkowana ergonomii żeglowania.",
+          "specs": [
+            "Komplet żagli (Grot + Fok)",
+            "Miecz uchylny i płetwa",
+            "Kamizelki asekuracyjne dla 6 osób",
+            "Długość kadłuba: 6,20 m · Szerokość: 1,80 m",
+            "Powierzchnia żagli: ok. 15 m²"
+          ]
+        },
+        {
+          "id": "elektryk8",
+          "type": "Łódź elektryczna (bez patentu)",
+          "name": "Łodzie 8-osobowe",
+          "units": [
+            "Połonina",
+            "Holica",
+            "Kabajka",
+            "Solina"
+          ],
+          "capacity": 8,
+          "price": "200 zł / godz. · 700 zł / 5h",
+          "patent": false,
+          "desc": "Ekskluzywne łodzie elektryczne na luksusowy relaks w strefie ciszy Jeziora Solińskiego. Nowoczesny napęd elektryczny — rejs odbywa się bezszelestnie, bez hałasu i spalin. Do prowadzenia nie potrzebujesz żadnych uprawnień — krótki instruktaż bosmana w zupełności wystarczy.",
+          "specs": [
+            "Pojemność: 8 osób",
+            "Komfortowe, tapicerowane kanapy",
+            "Stolik burtowy w centrum kokpitu",
+            "Zadaszenie Bimini (ochrona przed słońcem i deszczem)",
+            "Środki ratunkowe dla 8 osób"
+          ]
+        },
+        {
+          "id": "tarnica",
+          "type": "Łódź elektryczna (bez patentu) · rocznik 2024",
+          "name": "Tarnica",
+          "units": [
+            "Tarnica"
+          ],
+          "capacity": 8,
+          "price": "250 zł / godz. · 800 zł / 5h",
+          "patent": false,
+          "desc": "Najnowsza jednostka floty (rocznik 2024). Ekologiczny, bezszelestny silnik elektryczny — żegluga w strefie ciszy bez hałasu i spalin. Przestronny kokpit z wygodnymi kanapami, stolikiem i daszkiem Bimini. Brak wymaganych uprawnień — 15-minutowy instruktaż bosmana przed wypłynięciem.",
+          "specs": [
+            "Pojemność: 8 osób",
+            "Model 2024 — nowy",
+            "Kierownica i intuicyjna manetka gazu",
+            "Tapicerowane kanapy i stolik kokpitowy",
+            "Zadaszenie Bimini",
+            "Środki ratunkowe dla wszystkich pasażerów"
+          ]
+        }
+      ]
+    },
+    "marina": {
+      "tag": "Bosmanat",
+      "title": "Usługi przystani",
+      "body": "Pomost przyjmuje duże żaglówki i jachty. Wjazd na teren przystani jest bezpłatny i ogólnodostępny. Krótkoterminowe cumowanie do 6h w miejscu bosmanatu — bezpłatne.",
+      "amenities": [
+        "Prysznice i pralnia dla żeglarzy",
+        "Dostęp do prądu przy pomoście",
+        "Bezprzewodowy internet",
+        "Kamera online monitorująca pomost",
+        "Zaplecze sanitarne na miejscu",
+        "Dwa baseny rekreacyjne ze zjeżdżalniami i jacuzzi",
+        "Trawiasta plaża z widokiem na jezioro i góry",
+        "Letnie koncerty plenerowe — wstęp wolny"
+      ],
+      "pricing": [
+        {
+          "category": "Cumowanie",
+          "items": [
+            {
+              "label": "Cumowanie krótkoterminowe (do 6h)",
+              "price": "Bezpłatnie"
+            },
+            {
+              "label": "Cumowanie przy nabrzeżu (do 7 dni)",
+              "price": "50 zł / dobę"
+            },
+            {
+              "label": "Jacht nieczarterowy",
+              "price": "2 500 zł"
+            },
+            {
+              "label": "Jacht czarterowy",
+              "price": "3 500 zł"
+            }
+          ]
+        },
+        {
+          "category": "Slip / wodowanie",
+          "items": [
+            {
+              "label": "Skutery wodne (własny pojazd)",
+              "price": "30 zł"
+            },
+            {
+              "label": "Łodzie powyżej 4m (własny pojazd)",
+              "price": "50 zł"
+            },
+            {
+              "label": "Jachty do 7,5m",
+              "price": "150 zł"
+            },
+            {
+              "label": "Jachty powyżej 7,5m",
+              "price": "200 zł"
+            }
+          ]
+        },
+        {
+          "category": "Serwis i wyposażenie",
+          "items": [
+            {
+              "label": "Wynajem przyczepy (3h)",
+              "price": "150 zł"
+            },
+            {
+              "label": "Wynajem przyczepy (doba)",
+              "price": "300 zł"
+            },
+            {
+              "label": "Ożaglowanie / odożaglowanie",
+              "price": "150 zł"
+            },
+            {
+              "label": "Podnoszenie łodzi",
+              "price": "200 zł"
+            },
+            {
+              "label": "Prace stolarskie",
+              "price": "100 zł / godz."
+            },
+            {
+              "label": "Sprzątanie kabiny (do 7,5m)",
+              "price": "100 zł"
+            },
+            {
+              "label": "Sprzątanie kabiny (pow. 7,5m)",
+              "price": "150 zł"
+            },
+            {
+              "label": "Ozonowanie",
+              "price": "50 zł / godz."
+            }
+          ]
+        }
+      ],
+      "phone": "+48 536 700 537",
+      "images": [
+        {
+          "src": "/images/solina1.avif",
+          "alt": "Jezioro Solina z lotu ptaka"
+        },
+        {
+          "src": "/images/solina3.avif",
+          "alt": "Żaglówki na Solinie"
+        },
+        {
+          "src": "/images/solina4.avif",
+          "alt": "Widok na Bieszczady"
+        }
+      ]
+    },
+    "land": {
+      "tag": "Aktywny dzień",
+      "title": "Więcej niż woda",
+      "body": "Boisko wielofunkcyjne, korty tenisowe, szlaki górskie i atrakcje całego regionu — Bieszczady mają tu wiele do zaoferowania.",
+      "items": [
+        {
+          "icon": "plaza",
+          "label": "Baseny & Plaża",
+          "desc": "Dwa baseny rekreacyjne ze zjeżdżalniami, fontannami i jacuzzi. Trawiasta plaża z leżakami."
+        },
+        {
+          "icon": "trekking",
+          "label": "Boisko & Tenis",
+          "desc": "Nowoczesne boisko wielofunkcyjne (piłka nożna, koszykówka, siatkówka) oraz korty tenisowe z oświetleniem."
+        },
+        {
+          "icon": "koncert",
+          "label": "Atrakcje regionu",
+          "desc": "Zapora w Solinie, kolejka bieszczadzka, gondola, trasy MTB, quady, browary rzemieślnicze."
+        }
+      ]
+    },
+    "groups": {
+      "tag": "Dla grup",
+      "title": "Organizujemy eventy na wodzie",
+      "body": "Rejsy integracyjne, regaty firmowe, szkolenia żeglarskie. Przygotujemy program dopasowany do Twojej grupy — od kilku do kilkudziesięciu osób.",
+      "cta": {
+        "label": "Zapytaj o ofertę grupową",
+        "phone": "+48 536 700 537",
+        "email": "przystan@carynska.pl"
+      }
+    },
+    "contact": {
+      "phone": "+48 536 700 537",
+      "email": "przystan@carynska.pl"
+    }
+  },
+  "jacht": {
+    "hero": {
+      "image": "/images/solina4.avif",
+      "tag": "Hotel na wodzie",
+      "title": "Noc na jeziorze"
+    },
+    "intro": "Zaśnij kołysany falami Jeziora Solińskiego. Nasze jachty żaglowe to wyjątkowe zakwaterowanie — bez patentu, bez tłumów, z panoramą Bieszczadów tuż za burtą.",
+    "yachts": [
+      {
+        "id": "saturn-25",
+        "name": "Saturn 25 „Caryńska\"",
+        "tag": "Flagowy jacht",
+        "units": 1,
+        "image": "/images/saturn25-jezero.webp",
+        "gallery": [
+          "/images/saturn25-jezero.webp",
+          "/images/saturn25-kokpit.webp",
+          "/images/saturn25-kabina.webp",
+          "/images/saturn25-salon.webp",
+          "/images/saturn25-kuchnia.webp"
+        ],
+        "capacity": 8,
+        "cabins": 2,
+        "desc": "Największy jacht stoczni Saturn Yachts — Saturn 25 „Caryńska\". Sportowa linia robi ogromne wrażenie, a dzięki dużemu kokpitowi jest doskonałym wyborem nawet dla większych załóg. Doskonale zrównoważony i bardzo zwrotny. Całe olinowanie sprowadzone do kokpitu umożliwia prowadzenie jachtu nawet jednej osobie. Silnik elektryczny Haswing Vetura 5.0 na pawęży.",
+        "features": [
+          "WC chemiczne na pokładzie",
+          "Silnik elektryczny Haswing Vetura 5.0",
+          "Kuchenka gazowa",
+          "Lodówka",
+          "Instalacja wody pitnej z pompą elektryczną",
+          "Zlewozmywak + naczynia i akcesoria kuchenne",
+          "Instalacja elektryczna 12/220V",
+          "Radioodtwarzacz CD",
+          "Stolik w kokpicie",
+          "Rolfok + Lazy jack",
+          "Tent (zadaszenie)",
+          "Miecz uchylny",
+          "Drabinka rufowa",
+          "Środki ratunkowe, pagaj, bosak",
+          "4 koje (2 dwuosobowe + 2 jednoosobowe)",
+          "Nie wymaga patentu żeglarskiego"
+        ],
+        "pricing": [
+          {
+            "label": "Przed sezonem (do 31.05)",
+            "value": "430 zł / noc"
+          },
+          {
+            "label": "Weekend Majowy (30.04–03.05)",
+            "value": "530 zł / noc"
+          },
+          {
+            "label": "Sezon przedwakacyjny (1.06–25.06)",
+            "value": "480 zł / noc"
+          },
+          {
+            "label": "Weekend Boże Ciało (03.06–07.06)",
+            "value": "530 zł / noc"
+          },
+          {
+            "label": "Sezon wakacyjny (26.06–30.08)",
+            "value": "530 zł / noc"
+          },
+          {
+            "label": "Sezon powakacyjny (1.09–30.09)",
+            "value": "430 zł / noc"
+          },
+          {
+            "label": "Październikowe żeglowanie",
+            "value": "380 zł / noc"
+          }
+        ],
+        "price": "od 380 zł / noc",
+        "specs": [
+          {
+            "label": "Długość",
+            "value": "7,49 m"
+          },
+          {
+            "label": "Szerokość",
+            "value": "2,76 m"
+          },
+          {
+            "label": "Załoga max",
+            "value": "8 osób"
+          },
+          {
+            "label": "Wysokość w kabinie",
+            "value": "1,72 m"
+          },
+          {
+            "label": "Powierzchnia żagli",
+            "value": "31 m²"
+          },
+          {
+            "label": "Zanurzenie min/max",
+            "value": "0,32 / 1,42 m"
+          }
+        ]
+      },
+      {
+        "id": "saturn-23",
+        "name": "Saturn 23 GT",
+        "tag": "Jacht sportowo-turystyczny",
+        "units": 5,
+        "image": "/images/saturn23-salon.webp",
+        "gallery": [
+          "/images/saturn23-salon.webp",
+          "/images/saturn23-kuchnia.webp",
+          "/images/saturn23-wnetrze.webp",
+          "/images/saturn23-kokpit.webp",
+          "/images/saturn23-plan.webp"
+        ],
+        "capacity": 4,
+        "cabins": 1,
+        "desc": "Sportowa wersja jachtu turystycznego od renomowanej stoczni Saturn Yachts. Nowoczesna linia, ostre kształty i obszerny kokpit — doskonale zrównoważony i bardzo zwrotny, idealny do żeglowania w węższych częściach Soliny. Całe olinowanie sprowadzone do kokpitu umożliwia prowadzenie jachtu nawet jednej osobie. Silnik elektryczny Haswing Vetura 5.0 na pawęży.",
+        "features": [
+          "WC chemiczne na pokładzie",
+          "Silnik elektryczny Haswing Vetura 5.0",
+          "Kuchenka gazowa",
+          "Lodówka",
+          "Instalacja wody pitnej z pompą elektryczną",
+          "Zlewozmywak + naczynia i akcesoria kuchenne",
+          "Instalacja elektryczna 12/220V",
+          "Radioodtwarzacz CD",
+          "Stolik w kokpicie",
+          "Rolfok + Lazy jack",
+          "Tent (zadaszenie)",
+          "Miecz uchylny",
+          "Drabinka rufowa",
+          "Środki ratunkowe, pagaj, bosak",
+          "4 koje (2 jedno- + 1 dwuosobowa)",
+          "Nie wymaga patentu żeglarskiego"
+        ],
+        "pricing": [
+          {
+            "label": "Przed sezonem (do 31.05)",
+            "value": "380 zł / noc"
+          },
+          {
+            "label": "Weekend Majowy (30.04–03.05)",
+            "value": "480 zł / noc"
+          },
+          {
+            "label": "Sezon przedwakacyjny (1.06–25.06)",
+            "value": "430 zł / noc"
+          },
+          {
+            "label": "Weekend Boże Ciało (03.06–07.06)",
+            "value": "480 zł / noc"
+          },
+          {
+            "label": "Sezon wakacyjny (26.06–30.08)",
+            "value": "480 zł / noc"
+          },
+          {
+            "label": "Sezon powakacyjny (1.09–30.09)",
+            "value": "380 zł / noc"
+          },
+          {
+            "label": "Październikowe żeglowanie",
+            "value": "330 zł / noc"
+          }
+        ],
+        "price": "od 330 zł / noc",
+        "specs": [
+          {
+            "label": "Długość",
+            "value": "6,98 m"
+          },
+          {
+            "label": "Szerokość",
+            "value": "2,53 m"
+          },
+          {
+            "label": "Załoga max",
+            "value": "4 osoby"
+          },
+          {
+            "label": "Wysokość w kabinie",
+            "value": "1,6 m"
+          },
+          {
+            "label": "Powierzchnia żagli",
+            "value": "24,9 m²"
+          },
+          {
+            "label": "Zanurzenie min/max",
+            "value": "0,4 / 1,5 m"
+          }
+        ]
+      }
+    ],
+    "includes": [
+      "Dostęp do sanitariatów i pryszniców przystani",
+      "Obsługa bosmańska",
+      "Parking na terenie obiektu",
+      "Śniadanie w Tawernie (opcjonalnie)",
+      "Możliwość dowozu jedzenia z Tawerny na pokład"
+    ],
+    "note": "Rezerwacje jachtów przyjmujemy telefonicznie lub mailowo. Minimalna doba hotelowa od godz. 14:00 do 11:00.",
+    "contact": {
+      "phone": "+48 691 944 266",
+      "email": "przystan@carynska.pl"
+    }
+  },
+  "tawerna": {
+    "hero": {
+      "tag": "Tawerna",
+      "title": "Smaki\nBieszczad",
+      "image": "/images/tawerna-bar.jpg"
+    },
+    "intro": "Regionalna kuchnia polska z widokiem na jezioro Solina. Śniadania, obiady, kolacje i pizza z pieca — wszystko przygotowane z lokalnych składników w sercu Bieszczad.",
+    "menu": [
+      {
+        "category": "Śniadania",
+        "menuImage": "/images/menu-sniadania.svg",
+        "items": [
+          {
+            "name": "Szwedzki bufet",
+            "note": "dzieci w cenie obniżonej"
+          },
+          {
+            "name": "Jajecznica z kiełbasą"
+          },
+          {
+            "name": "Naleśniki"
+          },
+          {
+            "name": "Płatki zbożowe z mlekiem"
+          },
+          {
+            "name": "Tace śniadaniowe"
+          }
+        ]
+      },
+      {
+        "category": "Zupy",
+        "menuImage": "/images/menu-zupy.svg",
+        "items": [
+          {
+            "name": "Żurek staropolski z jajkiem i kiełbasą z chlebem"
+          },
+          {
+            "name": "Pomidorowa z makaronem"
+          },
+          {
+            "name": "Zupa dnia"
+          }
+        ]
+      },
+      {
+        "category": "Zakąski młodego Majtka",
+        "items": [
+          {
+            "name": "Frytki belgijskie"
+          },
+          {
+            "name": "Ziemniaczki opiekane"
+          },
+          {
+            "name": "Stripsy 4 szt."
+          },
+          {
+            "name": "Naleśniki z serem / powidłami / nutellą 1 szt."
+          },
+          {
+            "name": "Placki ziemniaczane ze śmietanką 2 szt."
+          },
+          {
+            "name": "Miruna (w ziołach lub panierowana 100g) z frytkami oraz surówką"
+          },
+          {
+            "name": "Kotlet z piersi kurczaka z frytkami oraz surówką"
+          }
+        ]
+      },
+      {
+        "category": "Zestawy dla Kapitana",
+        "items": [
+          {
+            "name": "Zestaw dnia (zupa + drugie danie)"
+          },
+          {
+            "name": "Burger wołowy",
+            "note": "pomidor, cebula, ogórek, sałata, cheddar, sos szefa, frytki"
+          },
+          {
+            "name": "Pierogi ukraińskie zapiekane z sosem czosnkowym"
+          },
+          {
+            "name": "Placki po „Bieszczadzku\" na wieprzowinie z zestawem surówek"
+          },
+          {
+            "name": "Kotlet schabowy po Polsku z kością z ziemniakami lub frytkami oraz surówką"
+          },
+          {
+            "name": "Kotlet z „piersi\" kurczaka z frytkami oraz surówką"
+          },
+          {
+            "name": "Portowa Bida — gulasz z kaszą hreczaną maszczoną skwarkami lub makaronem z ogóreczkiem"
+          },
+          {
+            "name": "Pierogi ukraińskie"
+          },
+          {
+            "name": "Ser zapiekany z żurawiną, frytkami oraz surówką"
+          },
+          {
+            "name": "Ser zapiekany + piwo lane"
+          }
+        ]
+      },
+      {
+        "category": "Rybki nie tylko z potoka",
+        "items": [
+          {
+            "name": "Pstrąg Kapitana (~280g, masło czosnkowe) z górskiej wody, frytki + surówki"
+          },
+          {
+            "name": "Miruna (~180g, w ziołach lub panierowana) z frytkami oraz surówką"
+          }
+        ]
+      },
+      {
+        "category": "Pizza Portowa z Pieca",
+        "items": [
+          {
+            "name": "1. Goła Margherita",
+            "note": "sos pomidorowy, mozzarella"
+          },
+          {
+            "name": "2. Cichy Wieprz",
+            "note": "sos pomidorowy, mozzarella, szynka, pieczarki"
+          },
+          {
+            "name": "3. Popołudniowa Bryza",
+            "note": "szynka, salami, pieczarki, suszone pomidory"
+          },
+          {
+            "name": "4. Osioł Portowy 🌶",
+            "note": "jalapeno, salami, oliwki"
+          },
+          {
+            "name": "5. Burza na Rufie 🌶",
+            "note": "jalapeno, salami, oliwki, suszone pomidory, cebula"
+          },
+          {
+            "name": "6. Bieszczadzki Port",
+            "note": "scypek, boczek, ogórek kiszony, cebula"
+          },
+          {
+            "name": "7. Pizza Caryńska",
+            "note": "scypek, szynka, kukurydza"
+          }
+        ]
+      },
+      {
+        "category": "Stripsy & Wings",
+        "items": [
+          {
+            "name": "Kubełek Strips 5 szt.",
+            "note": "5 stripsów w złocistej chrupiącej panierce"
+          },
+          {
+            "name": "Kubełek Strips 10 szt."
+          },
+          {
+            "name": "Kubełek Strips 15 szt."
+          },
+          {
+            "name": "Zestaw Strips 3/5 szt. + frytki"
+          },
+          {
+            "name": "Kubełek Wings 5 szt.",
+            "note": "5 skrzydełek w złocistej chrupiącej panierce"
+          },
+          {
+            "name": "Kubełek Wings 10 szt."
+          },
+          {
+            "name": "Kubełek Wings 15 szt."
+          },
+          {
+            "name": "Zestaw Wings 3/5 szt. + frytki"
+          },
+          {
+            "name": "Kubełek Mały (5 skrzydełek + 5 stripsów)"
+          },
+          {
+            "name": "Kubełek Średni (8 skrzydełek + 8 stripsów)"
+          },
+          {
+            "name": "Dodatkowy kawałek Strips"
+          },
+          {
+            "name": "Dodatkowy kawałek Wings"
+          }
+        ]
+      },
+      {
+        "category": "Dodatki",
+        "items": [
+          {
+            "name": "Frytki"
+          },
+          {
+            "name": "Ziemniaczki opiekane"
+          },
+          {
+            "name": "Ziemniaki gotowane"
+          },
+          {
+            "name": "Kasza gryczana"
+          },
+          {
+            "name": "Sosy (ketchup, czosnkowy, duński, serowy chilli, sriracha, tysiąca wysp)"
+          },
+          {
+            "name": "Dodatek do pizzy (szynka, salami, boczek, scypek, warzywa…)"
+          }
+        ]
+      }
+    ],
+    "delivery": {
+      "title": "Zamów z dostawą",
+      "body": "Dowieziemy prosto pod drzwi — zadzwoń i złóż zamówienie.",
+      "phone": "+48 514 177 136"
+    },
+    "contact": {
+      "phone": "+48 514 177 136",
+      "email": "przystan@carynska.pl"
+    }
+  },
+  "projekty": {
+    "hero": {
+      "tag": "Fundusze i projekty",
+      "title": "Rewitalizacja\nPrzystani Caryńska",
+      "image": "/images/przystan-drone-2.jpg"
+    },
+    "project": {
+      "title": "Rozwój Przedsiębiorczości i Innowacje: „Zwiększenie przychodów z działalności dzięki rewitalizacji Przystani Caryńska”",
+      "contract": "Umowa NORW.19.01.02-18-0006/22-001 w sprawie projektu w ramach schematu Innowacje w obszarze wód śródlądowych lub morskich programu „Rozwój Przedsiębiorczości i Innowacje” współfinansowanego ze środków Norweskiego Mechanizmu Finansowego 2014-2021, oś priorytetowa 19 Norweski Mechanizm Finansowy 2014-2021, działanie 19.1 Nowe Produkty i Inwestycje, poddziałanie 19.1.2 Innowacje w obszarze wód śródlądowych lub morskich – Blue growth.",
+      "body": [
+        "Przedmiotem projektu jest prowadzenie prac rewitalizacji i modernizacji Przystani Caryńska na brzegu jeziora Solińskiego. Planowane działania obejmują prace remontowo-budowlane, zakup nowego sprzętu, zagospodarowanie terenu oraz rozbudowę infrastruktury technicznej.",
+        "Projekt pozwoli na stworzenie atrakcyjnej przestrzeni rekreacyjnej nie tylko dla pojedynczych podróżujących, rodzin i dzieci, a również dla osób z niepełnosprawnościami. Wdrożone w ramach projektu innowacyjne rozwiązania doprowadzą do rozwoju działalności gospodarczej przedsiębiorcy, w szczególności wzrostu przychodów i zatrudnienia, oraz przyczynią się do zwiększenia konkurencyjności gospodarczej."
+      ],
+      "finance": [
+        {
+          "label": "Wydatki ogółem",
+          "value": "2 575 276,20 PLN"
+        },
+        {
+          "label": "Wydatki kwalifikowalne",
+          "value": "2 094 126,95 PLN"
+        },
+        {
+          "label": "W tym VAT",
+          "value": "0,00 PLN"
+        },
+        {
+          "label": "Dofinansowanie",
+          "value": "1 465 888,56 PLN"
+        },
+        {
+          "label": "% dofinansowania",
+          "value": "70%"
+        }
+      ]
+    },
+    "funds": {
+      "title": "Rola Funduszy Norweskich i Funduszy EOG",
+      "body": [
+        "Fundusze norweskie i fundusze EOG reprezentują wkład Norwegii w tworzenie Europy zielonej, konkurencyjnej i sprzyjającej integracji społecznej. W ramach funduszy norweskich i funduszy EOG Norwegia przyczynia się do ograniczenia nierówności społecznych i ekonomicznych oraz wzmocnienia relacji dwustronnych z państwami beneficjentami z Europy Środkowej i Południowej i obszaru Morza Bałtyckiego.",
+        "Norwegia ściśle współpracuje z UE w ramach Porozumienia o Europejskim Obszarze Gospodarczym (EOG). Wraz z pozostałymi darczyńcami Norwegia przekazała 3,3 miliarda euro w ramach kolejnych programów funduszy w latach 1994–2014. Fundusze norweskie są finansowane wyłącznie przez Norwegię i dostępne w państwach, które przystąpiły do UE po 2003 r. Fundusze norweskie na lata 2014-2021 wynoszą 1,25 miliarda euro."
+      ],
+      "links": [
+        {
+          "label": "www.eeagrants.org",
+          "href": "https://www.eeagrants.org"
+        },
+        {
+          "label": "www.norwaygrants.org",
+          "href": "https://www.norwaygrants.org"
+        }
+      ]
+    },
+    "timeline": {
+      "title": "Realizacja projektu",
+      "subtitle": "Zwiększenie przychodów z działalności dzięki rewitalizacji Przystani Caryńska",
+      "milestones": [
+        {
+          "date": "11 września 2023",
+          "title": "Dostawa 10 łodzi szkoleniowych klasy Optymist",
+          "body": "Realizacja zadania 21. Na podstawie umowy nr 02/2023 z dnia 11.09.2023 r. Wykonawca: Zakład Szkutniczy Banan Jacht Jarosław Banaszek dostarczył do naszej Przystani 10 łodzi szkoleniowych — pierwszy i bardzo ważny krok w realizacji projektu."
+        },
+        {
+          "date": "11 października 2023",
+          "title": "Zakup i montaż placu zabaw",
+          "body": "Realizacja zadania nr 16. W ramach umowy z dnia 20.09.2023 r. na terenie Przystani powstał nowy plac zabaw. Wykonawcą inwestycji została firma Ringpol Waldemar Kubiak."
+        },
+        {
+          "date": "22 października 2023",
+          "title": "Wizyta studyjna u norweskiego partnera projektu",
+          "body": "Podróż do norweskiego partnera projektu — Solneset Gard. Podczas pobytu odwiedziliśmy również inne miejsca, w tym mariny, w celu poznania dobrych praktyk oraz rozwiązań stosowanych w branży turystycznej i rolniczej przez organizacje działające w Norwegii. Dziękujemy za sprawną obsługę wizyty wykonawcy M-Travels Marcin Mazur."
+        },
+        {
+          "date": "30 października 2023",
+          "title": "Zakup łodzi kabinowej — Jacht Saturn 25",
+          "body": "Staliśmy się właścicielami nowoczesnej i funkcjonalnej łodzi kabinowej Saturn 25, dzięki której oferujemy gościom przygody na wodzie. Wykonawca: Przedsiębiorstwo Wielobranżowe Moto Plast Jerzy Stasiczak."
+        },
+        {
+          "date": "3 listopada 2023",
+          "title": "Montaż instalacji fotowoltaicznej",
+          "body": "Na Przystani zamontowano instalację fotowoltaiczną, redukującą emisję gazów cieplarnianych i zwiększającą samowystarczalność energetyczną obiektu. Wykonawca: Firma Handlowo-Usługowa „Pol-Bud” Sp. z o.o."
+        },
+        {
+          "date": "27 listopada 2023",
+          "title": "Platforma antypoślizgowa dla niepełnosprawnych i modernizacja budynków",
+          "body": "Odebrano platformę antypoślizgową zapewniającą dostęp do aktywności wodnych osobom z różnymi rodzajami niepełnosprawności (wykonawca: Katarzyna Streich Handel). Zakończono również prace modernizacyjne budynków toalet, bosmanki, pomieszczeń technicznych i wiaty (wykonawca: Nowbud Bartłomiej Nowak)."
+        },
+        {
+          "date": "28 listopada 2023",
+          "title": "Kamizelki ratunkowe dla dzieci i dorosłych",
+          "body": "Zakup kamizelek ratunkowych dla dzieci i asekuracyjnych dla dorosłych, wspierających bezpieczny wypoczynek nad wodą dla osób o różnych umiejętnościach pływackich. Dostawca: Olimp PW Kowalczyk K."
+        },
+        {
+          "date": "30 listopada 2023",
+          "title": "Remont parkingów i dróg dojazdowych",
+          "body": "Zakończono prace remontowe poprawiające infrastrukturę Przystani — naprawiono powierzchnię parkingów oraz drogi dojazdowe do atrakcji. Wykonawca: Nowbud Bartłomiej Nowak."
+        },
+        {
+          "date": "13 grudnia 2023",
+          "title": "Montaż 10 latarni solarnych",
+          "body": "Inwestycja przynosząca oszczędności kosztów, niezależność energetyczną, niskie koszty konserwacji oraz pozytywny wpływ na środowisko i społeczność lokalną."
+        },
+        {
+          "date": "7 lutego 2024",
+          "title": "3 nowe łodzie elektryczne Saturn 23 GT",
+          "body": "Do floty dołączyły 3 łodzie elektryczne Saturn 23 GT — ekologiczny napęd elektryczny umożliwiający zarówno klasyczny czarter, jak i czarter jachtu z opcją noclegu. Wykonawca: Przedsiębiorstwo Wielobranżowe Moto Plast Jerzy Stasiczak."
+        },
+        {
+          "date": "15 lutego 2024",
+          "title": "Kolejne 3 łodzie elektryczne",
+          "body": "Flota powiększyła się o kolejne 3 łodzie elektryczne, w tym Marine Time QX650 oraz Marion 750."
+        },
+        {
+          "date": "21 lutego 2024",
+          "title": "Mobilna scena koncertowa",
+          "body": "Odebrano mobilną scenę koncertową, umożliwiającą organizację własnych wydarzeń plenerowych. Wykonawca: Grand Event Promotion Sp. z o.o."
+        },
+        {
+          "date": "8 marca 2024",
+          "title": "4 kolejne łodzie elektryczne — 10 jednostek w sumie",
+          "body": "Wykonawca Przedsiębiorstwo Wielobranżowe Moto Plast Jerzy Stasiczak dostarczył 4 kolejne łodzie elektryczne — łącznie flota liczy już 10 jednostek o napędzie elektrycznym."
+        }
+      ]
+    }
+  },
+  "templates": {
+    "ustawienia": {
+      "siteName": "Przystań Caryńska",
+      "tagline": "Luksus w sercu Bieszczad",
+      "regionLine": "Polańczyk · Jezioro Solińskie · Bieszczady",
+      "bookingUrl": "https://panel.hotres.pl/v4_step1?oid=5426&lang=pl&ref=przystan.bieszczady.pl",
+      "bookingCta": "Booking now",
+      "widgetTitle": "Sprawdź dostępność",
+      "widgetCheckIn": "Check-in",
+      "widgetCheckOut": "Check-out",
+      "widgetArrival": "Przyjazd",
+      "widgetDeparture": "Wyjazd",
+      "widgetPickDate": "Wybierz datę",
+      "widgetGuests": "Goście",
+      "widgetLess": "Mniej",
+      "widgetMore": "Więcej",
+      "widgetReserve": "Rezerwuj",
+      "widgetReserveNow": "Rezerwuj teraz",
+      "topbarLabel": "Rezerwacje:",
+      "callTitle": "Zadzwoń do nas",
+      "callSubtitle": "Wybierz dział",
+      "pizzaLabel": "🍕 Zamów pizzę",
+      "copyright": "© {rok} Przystań Caryńska",
+      "breadcrumbHome": "Start",
+      "seeMore": "Zobacz →",
+      "details": "Szczegóły",
+      "close": "Zamknij",
+      "prevPhoto": "Poprzednie zdjęcie",
+      "nextPhoto": "Następne zdjęcie",
+      "openMenu": "Otwórz menu",
+      "closeMenu": "Zamknij menu"
+    },
+    "badges": [
+      {
+        "src": "/images/logo-parp.png",
+        "alt": "PARP Grupa PFR"
+      },
+      {
+        "src": "/images/logo-norway-grants.png",
+        "alt": "Norway Grants"
+      },
+      {
+        "src": "/images/certyfikat-dobrych-praktyk.png",
+        "alt": "Certyfikat Dobrych Praktyk"
+      },
+      {
+        "src": "/images/certyfikat-dobrych-praktyk-bon-turystyczny.jpg",
+        "alt": "Certyfikat Dobrych Praktyk - Bon Turystyczny"
+      },
+      {
+        "src": "/images/badge-dogs-cats-friendly.png",
+        "alt": "Dogs/cats friendly"
+      }
+    ],
+    "kontakt": {
+      "kicker": "Jezioro Solińskie · Bieszczady",
+      "title": "Kontakt",
+      "reservationsTitle": "Rezerwacje",
+      "formTitle": "Napisz do nas",
+      "formName": "Imię i nazwisko",
+      "formEmail": "Email",
+      "formPhone": "Telefon",
+      "formMessage": "Wiadomość",
+      "formSubmit": "",
+      "formThanks": "Dziękujemy!",
+      "formThanksText": "Odezwiemy się wkrótce.",
+      "bankTitle": "Dane do przelewu",
+      "bankLabel": "Bank",
+      "accountLabel": "Nr rachunku",
+      "swiftLabel": "SWIFT / BIC",
+      "sisterTitle": "Nasze obiekty"
+    },
+    "sisters": [
+      {
+        "image": "/images/zajazd-carynska.jpg",
+        "imageAlt": "Zajazd Pod Caryńską w Ustrzykach Górnych",
+        "cta": "Zobacz Zajazd",
+        "longDesc": "Nocleg w samym sercu Bieszczadzkiego Parku Narodowego — idealna baza wypadowa na Tarnicę, Połoninę Caryńską i najpiękniejsze szlaki regionu."
+      },
+      {
+        "image": "/images/terebowiec.jpg",
+        "imageAlt": "Noclegi Terebowiec w Ustrzykach Górnych",
+        "cta": "Zobacz Terebowiec",
+        "longDesc": "Komfortowe zakwaterowanie w Ustrzykach Górnych, blisko szlaków i najpiękniejszych zakątków Bieszczadów — świetny punkt startowy na górskie wędrówki."
+      }
+    ],
+    "menu": [
+      {
+        "label": "Noclegi",
+        "href": "/noclegi/pokoje",
+        "showDzialy": false,
+        "children": [
+          {
+            "label": "Pokoje & Apartamenty",
+            "href": "/noclegi/pokoje",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Hotel na wodzie",
+            "href": "/noclegi/jacht",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Cennik",
+            "href": "/noclegi/cennik",
+            "subtitle": "",
+            "external": false
+          }
+        ]
+      },
+      {
+        "label": "Atrakcje",
+        "href": "/atrakcje",
+        "showDzialy": false,
+        "children": [
+          {
+            "label": "Sprzęt wodny & Jezioro",
+            "href": "/atrakcje",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Cennik wypożyczalni",
+            "href": "/atrakcje#cennik",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Bosmanat",
+            "href": "/atrakcje#bosmanat",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Zaplanuj pobyt",
+            "href": "/zaplanuj-pobyt",
+            "subtitle": "",
+            "external": false
+          }
+        ]
+      },
+      {
+        "label": "Tawerna",
+        "href": "/tawerna",
+        "showDzialy": false,
+        "children": []
+      },
+      {
+        "label": "Galeria",
+        "href": "/galeria",
+        "showDzialy": false,
+        "children": []
+      },
+      {
+        "label": "Grupy",
+        "href": "/grupy",
+        "showDzialy": false,
+        "children": [
+          {
+            "label": "Oferta dla grup",
+            "href": "/grupy",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Cennik grup 2026",
+            "href": "/grupy#cennik",
+            "subtitle": "",
+            "external": false
+          },
+          {
+            "label": "Pojemność obiektu",
+            "href": "/grupy#capacity",
+            "subtitle": "",
+            "external": false
+          }
+        ]
+      },
+      {
+        "label": "Projekty",
+        "href": "/projekty",
+        "showDzialy": false,
+        "children": []
+      },
+      {
+        "label": "Kontakt",
+        "href": "/#contact",
+        "showDzialy": true,
+        "children": []
+      }
+    ],
+    "strona-glowna": {
+      "tileHint": "Kliknij, aby dowiedzieć się więcej",
+      "reviewsTag": "Opinie gości",
+      "reviewsTitle": "Co mówią nasi goście",
+      "reviewsAll": "Zobacz wszystkie opinie w Google",
+      "fbTag": "Aktualności",
+      "fbTitle": "Bądź na\nbieżąco",
+      "fbBody": "Najnowsze posty, wydarzenia i zdjęcia z Przystani Caryńskiej. Śledź nas na Facebooku i nie przegap żadnej atrakcji sezonu.",
+      "fbTabFacebook": "Facebook",
+      "fbTabInstagram": "Instagram",
+      "fbTabReviews": "Opinie",
+      "fbFollow": "Obserwuj na Facebooku"
+    },
+    "noclegi-pokoje": {
+      "heroTag": "Zakwaterowanie",
+      "heroTitle": "Pokoje & Apartamenty",
+      "labelSize": "Powierzchnia",
+      "labelMax": "Maksymalnie",
+      "labelAmenities": "Wyposażenie",
+      "questions": "Masz pytania o pokoje lub dostępność?",
+      "cta": "Sprawdź dostępność"
+    },
+    "noclegi-cennik": {
+      "heroTag": "Noclegi",
+      "heroTitle": "Cennik 2026",
+      "heroImage": "/images/hotel.png",
+      "kicker": "Ceny za dobę",
+      "tableTitle": "Cennik pokoi 2026",
+      "colType": "Rodzaj pokoju",
+      "col1": "1 os.",
+      "col2": "2 os.",
+      "col3": "3 os.",
+      "col4": "4 os.",
+      "colApt": "Apt.",
+      "extrasTitle": "Usługi dodatkowe",
+      "contactTitle": "Rezerwacje i pytania",
+      "cta": "Sprawdź dostępność"
+    },
+    "noclegi-jacht": {
+      "kicker": "Unikalne doświadczenie",
+      "includesTitle": "Co zawiera nocleg",
+      "seeDetails": "Zobacz szczegóły",
+      "detailsLink": "Szczegóły →",
+      "onBoard": "Na pokładzie",
+      "seasonPricing": "Cennik sezonowy",
+      "callCta": "Zadzwoń i zarezerwuj"
+    },
+    "atrakcje": {
+      "fleetTitle": "Nasza flota",
+      "noPatentLabel": "bez patentu",
+      "unitsLabel": "Jednostki",
+      "specLink": "Specyfikacja producenta →",
+      "waterPricingTitle": "Cennik wypożyczalni",
+      "marinaPricingTitle": "Cennik usług"
+    },
+    "zaplanuj-pobyt": {
+      "heroTag": "Przystań Caryńska",
+      "heroTitle": "Zaplanuj pobyt",
+      "heroImage": "/images/galeria-przystan-lotu-ptaka.png",
+      "aboutTitle": "O ośrodku",
+      "aboutBody": "<p>Przystań Caryńska to wyjątkowy, całoroczny ośrodek wypoczynkowy położony w samym sercu malowniczego Polańczyka, tuż nad brzegiem Jeziora Solińskiego. To idealne miejsce dla wszystkich, którzy pragną połączyć bieszczadzki spokój z komfortowym wypoczynkiem i licznymi atrakcjami. Ośrodek dysponuje 57 miejscami noclegowymi w przytulnych <a href=\"/noclegi/pokoje\">pokojach oraz nowoczesnych apartamentach</a>, z których okien roztacza się niezapomniany, kojący widok na taflę wody.</p><p>Sercem kompleksu jest klimatyczna <a href=\"/tawerna\">Tawerna</a>, znana z doskonałej kuchni. Serwujemy tam zarówno tradycyjne dania regionalne, jak i chrupiącą pizzę prosto z pieca, co pozwala zregenerować siły po dniu pełnym wrażeń. Dla miłośników aktywnego spędzania czasu przygotowaliśmy bogato wyposażoną <a href=\"/atrakcje\">wypożyczalnię sprzętu wodnego</a> – u nas z łatwością wyruszysz na wodną przygodę i odkryjesz najpiękniejsze zakątki Soliny. Dodatkową dawkę relaksu i rozrywki dla całych rodzin zapewnia nowoczesny <a href=\"/atrakcje\">mini-aquapark</a>, będący doskonałą alternatywą na każdą pogodę. Przystań Caryńska posiada również profesjonalne <a href=\"/grupy\">zaplecze konferencyjne</a>, dzięki czemu jest świetnym wyborem zarówno na rodzinne wakacje, jak i na organizację spotkań biznesowych czy integracyjnych w Bieszczadach.</p>",
+      "tilesTitle": "Odkryj obiekty przystani",
+      "tileCta": "Zobacz →",
+      "tiles": [
+        {
+          "title": "Pokoje & Apartamenty",
+          "tag": "Noclegi",
+          "desc": "57 miejsc noclegowych w przytulnych pokojach i nowoczesnych apartamentach z widokiem na wodę.",
+          "image": "/images/1os-pokoj.png",
+          "href": "/noclegi/pokoje"
+        },
+        {
+          "title": "Hotel na wodzie",
+          "tag": "Noclegi",
+          "desc": "Noc na jachcie żaglowym zacumowanym przy przystani — wyjątkowe zakwaterowanie na Jeziorze Solińskim.",
+          "image": "/images/saturn25-jezero.webp",
+          "href": "/noclegi/jacht"
+        },
+        {
+          "title": "Tawerna",
+          "tag": "Kuchnia",
+          "desc": "Tradycyjne dania regionalne i chrupiąca pizza prosto z pieca w klimatycznym wnętrzu.",
+          "image": "/images/tawerna-bar.jpg",
+          "href": "/tawerna"
+        },
+        {
+          "title": "Sprzęt wodny & Jezioro",
+          "tag": "Atrakcje",
+          "desc": "Żaglówki, łodzie elektryczne, kajaki, SUP i rowerki wodne — cała Solina w zasięgu ręki.",
+          "image": "/images/galeria-sup.png",
+          "href": "/atrakcje"
+        },
+        {
+          "title": "Mini-aquapark & Baseny",
+          "tag": "Atrakcje",
+          "desc": "Baseny rekreacyjne ze zjeżdżalniami i jacuzzi — relaks dla całych rodzin na każdą pogodę.",
+          "image": "/images/galeria-basen.png",
+          "href": "/atrakcje"
+        },
+        {
+          "title": "Grupy & Konferencje",
+          "tag": "Biznes & Integracja",
+          "desc": "Profesjonalne zaplecze konferencyjne, eventy firmowe, kolonie i spotkania integracyjne.",
+          "image": "/images/galeria-budynek.png",
+          "href": "/grupy"
+        }
+      ],
+      "sistersTitle": "Nasze obiekty w głębi Bieszczad",
+      "nearbyText": "Wybierasz się w Bieszczady? Zobacz, co ciekawego czeka w okolicy.",
+      "nearbyCta": "Sprawdź co się dzieje w pobliżu",
+      "nearbyHref": "https://bieszczady.plus/odkrywaj"
+    },
+    "tawerna": {
+      "bookKicker": "Przystań Caryńska",
+      "bookTitle": "Karta\nDań",
+      "bookName": "Tawerna Caryńska",
+      "bookSection": "Tawerna",
+      "bookEnd": "Smacznego!",
+      "bookPrev": "Poprzednia strona",
+      "bookNext": "Następna strona"
+    },
+    "galeria": {
+      "heroTag": "Galeria",
+      "heroTitle": "Przystań\nCaryńska",
+      "heroImage": "/images/solina1.avif",
+      "photosKicker": "Zdjęcia",
+      "allLabel": "Wszystkie",
+      "emptyText": "Więcej zdjęć wkrótce",
+      "categories": [
+        {
+          "label": "Noclegi",
+          "photos": [
+            {
+              "src": "/images/hotel.png",
+              "alt": "Nasz obiekt"
+            },
+            {
+              "src": "/images/galeria-budynek.png",
+              "alt": "Budynek"
+            }
+          ]
+        },
+        {
+          "label": "Tawerna",
+          "photos": [
+            {
+              "src": "/images/galeria-pstrag.png",
+              "alt": "Pstrąg z Tawerny"
+            },
+            {
+              "src": "/images/galeria-pizza.png",
+              "alt": "Pizza z pieca"
+            },
+            {
+              "src": "/images/galeria-sniadanie.png",
+              "alt": "Śniadania"
+            }
+          ]
+        },
+        {
+          "label": "Baseny",
+          "photos": [
+            {
+              "src": "/images/galeria-basen.png",
+              "alt": "Baseny"
+            },
+            {
+              "src": "/images/galeria-marina-baseny.png",
+              "alt": "Marina i baseny"
+            },
+            {
+              "src": "/images/aquapark-baseny.jpg",
+              "alt": "Mini-aquapark"
+            }
+          ]
+        },
+        {
+          "label": "Wypożyczalnia",
+          "photos": [
+            {
+              "src": "/images/solina2.avif",
+              "alt": "Żaglówki"
+            },
+            {
+              "src": "/images/kajaki-sprzet-wodny.jpg",
+              "alt": "Kajaki"
+            },
+            {
+              "src": "/images/galeria-sup.png",
+              "alt": "SUP na jeziorze"
+            },
+            {
+              "src": "/images/galeria-lodki-motorowe.png",
+              "alt": "Łodzie motorowe"
+            },
+            {
+              "src": "/images/galeria-dzieci-lodka.png",
+              "alt": "Rejs dla najmłodszych"
+            }
+          ]
+        },
+        {
+          "label": "Eventy & grupy",
+          "photos": [
+            {
+              "src": "/images/organizacja-imprez.jpg",
+              "alt": "Imprezy okolicznościowe"
+            },
+            {
+              "src": "/images/plac-zabaw.jpg",
+              "alt": "Plac zabaw"
+            }
+          ]
+        },
+        {
+          "label": "Przystań & okolica",
+          "photos": [
+            {
+              "src": "/images/galeria-przystan-lotu-ptaka.png",
+              "alt": "Przystań z lotu ptaka"
+            },
+            {
+              "src": "/images/przystan-drone-2.jpg",
+              "alt": "Poranek nad jeziorem"
+            },
+            {
+              "src": "/images/przystan-drone-3.jpg",
+              "alt": "Zatoka i marina"
+            },
+            {
+              "src": "/images/solina1.avif",
+              "alt": "Jezioro Solina"
+            },
+            {
+              "src": "/images/solina3.avif",
+              "alt": "Panorama"
+            },
+            {
+              "src": "/images/solina4.avif",
+              "alt": "Bieszczady"
+            },
+            {
+              "src": "/images/galeria-jezioro-zmierzch.png",
+              "alt": "Zmierzch nad jeziorem"
+            },
+            {
+              "src": "/images/galeria-panorama.png",
+              "alt": "Panorama zatoki"
+            },
+            {
+              "src": "/images/gondola-solina.jpg",
+              "alt": "Kolejka gondolowa"
+            }
+          ]
+        }
+      ]
+    },
+    "grupy": {
+      "heroImage": "/images/tawerna-bar.jpg",
+      "stats": [
+        {
+          "value": "73",
+          "label": "miejsca noclegowe"
+        },
+        {
+          "value": "110",
+          "label": "os. w restauracji"
+        },
+        {
+          "value": "2",
+          "label": "sale (rest. + konf.)"
+        },
+        {
+          "value": "25+",
+          "label": "min. osób w grupie"
+        }
+      ],
+      "offerKicker": "Organizujemy",
+      "minPersonsLabel": "",
+      "colRate": "Stawka",
+      "hbLabel": "half board",
+      "fbLabel": "full board",
+      "notesTitle": "Ważne informacje",
+      "extrasTitle": "Opcje dodatkowe",
+      "mealsLabel": "Wyżywienie",
+      "capacityTitle": "Baza noclegowa",
+      "inquiryTitle": "Zapytaj o ofertę",
+      "inquiryCta": "Wyślij zapytanie"
+    },
+    "projekty": {
+      "programName": "Rozwój Przedsiębiorczości i Innowacje",
+      "readMore": "Czytaj więcej",
+      "fundsKicker": "Fundusze EOG i Fundusze Norweskie",
+      "timelineKicker": "Realizacja projektu"
+    },
+    "regulamin": {
+      "kicker": "Informacje",
+      "title": "Regulamin",
+      "heroImage": "/images/hotel.png",
+      "lead": "Regulamin pobytu w ośrodku Przystań Caryńska w Polańczyku. Ostatnia aktualizacja: 2026.",
+      "body": "<h2>1. Postanowienia ogólne</h2><p>Niniejszy regulamin określa zasady świadczenia usług, odpowiedzialności oraz przebywania na terenie ośrodka Przystań Caryńska w Polańczyku (dalej: „Obiekt”) i jest integralną częścią umowy, do której zawarcia dochodzi poprzez dokonanie rezerwacji lub zapłatę zadatku/zaliczki.</p><p>Dokonanie rezerwacji jest jednoznaczne z zapoznaniem się i akceptacją postanowień niniejszego regulaminu.</p><h2>2. Doba hotelowa</h2><p>Doba hotelowa trwa od godziny 15:00 w dniu przyjazdu do godziny 10:00 w dniu wyjazdu.</p><p>Życzenie przedłużenia pobytu poza okres wskazany w dniu przybycia gość powinien zgłosić możliwie wcześniej — Obiekt uwzględni życzenie w miarę posiadanych możliwości.</p><h2>3. Rezerwacja i płatność</h2><p>Rezerwacji można dokonać telefonicznie, mailowo, poprzez formularz na stronie internetowej lub za pośrednictwem platform rezerwacyjnych (np. Booking.com).</p><p>Warunkiem potwierdzenia rezerwacji jest wpłata zadatku w wysokości i terminie wskazanym przez Obiekt. Pozostała część należności płatna jest najpóźniej w dniu przyjazdu, chyba że ustalono inaczej.</p><h2>4. Odwołanie rezerwacji</h2><p>Zasady odwołania rezerwacji i zwrotu zadatku ustalane są indywidualnie przy potwierdzeniu rezerwacji i mogą się różnić w zależności od terminu i długości pobytu (np. w sezonie letnim).</p><p>W przypadku rezerwacji dokonanych przez zewnętrzne platformy rezerwacyjne obowiązują zasady anulacji określone przez daną platformę.</p><h2>5. Obowiązki i zasady pobytu gości</h2><p>Na terenie Obiektu obowiązuje cisza nocna w godzinach 22:00–7:00.</p><p>Gość ponosi pełną odpowiedzialność materialną za wszelkiego rodzaju uszkodzenia lub zniszczenia przedmiotów wyposażenia i urządzeń technicznych Obiektu powstałe z jego winy lub winy odwiedzających go osób.</p><p>Osoby niezameldowane w Obiekcie mogą przebywać w pokoju gościa w godzinach 7:00–22:00 za wiedzą i zgodą obsługi.</p><p>Ze względu na bezpieczeństwo przeciwpożarowe zabronione jest używanie w pokojach grzałek, żelazek i innych podobnych urządzeń niestanowiących wyposażenia pokoju.</p><h2>6. Zwierzęta domowe</h2><p>Obiekt akceptuje pobyt zwierząt domowych za dodatkową opłatą, po wcześniejszym zgłoszeniu przy rezerwacji. Właściciel zwierzęcia zobowiązany jest do sprawowania nad nim stałej opieki i ponosi pełną odpowiedzialność za wszelkie szkody wyrządzone przez zwierzę.</p><h2>7. Odpowiedzialność Obiektu</h2><p>Obiekt odpowiada za rzeczy wniesione przez gości w zakresie określonym przepisami Kodeksu Cywilnego. Odpowiedzialność za utratę lub uszkodzenie pieniędzy, papierów wartościowych, kosztowności albo przedmiotów o wartości naukowej lub artystycznej jest ograniczona, jeśli przedmioty te nie zostały oddane do depozytu.</p><p>Obiekt nie ponosi odpowiedzialności za pojazdy pozostawione na parkingu ani za znajdujące się w nich mienie.</p><h2>8. Parking</h2><p>Obiekt udostępnia gościom miejsca parkingowe na zasadach określonych w ofercie/rezerwacji. Parking jest niestrzeżony.</p><h2>9. Dzieci</h2><p>Dzieci przebywające na terenie Obiektu (w tym na przystani, przy wodzie i placu zabaw) powinny znajdować się pod stałą opieką i nadzorem opiekunów prawnych, którzy ponoszą za nie pełną odpowiedzialność.</p><h2>10. Reklamacje</h2><p>Reklamacje dotyczące usług należy zgłaszać niezwłocznie w recepcji Obiektu, co umożliwi bieżącą reakcję i poprawę jakości świadczonych usług.</p><h2>11. Postanowienia końcowe</h2><p>W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy Kodeksu Cywilnego oraz innych obowiązujących przepisów prawa polskiego.</p><p>Obiekt zastrzega sobie prawo do zmiany niniejszego regulaminu. Aktualna wersja regulaminu dostępna jest zawsze na stronie internetowej Obiektu oraz w recepcji.</p>",
+      "pdf": "/dokumenty/regulamin-przystan-carynska.pdf",
+      "pdfLabel": "Pobierz regulamin (PDF)",
+      "cta": "",
+      "ctaHref": ""
+    },
+    "regulamin-wypozyczalni": {
+      "kicker": "Informacje",
+      "title": "Regulamin wypożyczalni",
+      "heroImage": "/images/galeria-sup.png",
+      "lead": "Regulamin wypożyczalni sprzętu wodnego w ośrodku Przystań Caryńska w Polańczyku.",
+      "body": "<ol><li><p>Wypożyczalnia sprzętu wodnego czynna jest codziennie w wyznaczonych godzinach w sezonie letnim.</p></li><li><p>Sprzęt wodny wypożycza się:</p><ul><li><p>osobom pełnoletnim po podpisaniu „Oświadczenia o zapoznaniu się z regulaminem sprzętu wodnego” (załącznik do regulaminu);</p></li><li><p>osoba pełnoletnia dysponująca sprzętem pływającym może zabrać na pokład tylko jedną osobę nieumiejącą pływać.</p></li></ul></li><li><p>Osoby nieletnie mogą korzystać z wypożyczonego sprzętu tylko pod opieką osób pełnoletnich, które ponoszą odpowiedzialność za nie, za ich zachowanie i ewentualne szkody.</p></li><li><p>Osoby korzystające ze sprzętu pływającego muszą być wyposażone w kapoki lub kamizelki asekuracyjne (ratunkowe).</p></li><li><p>Osoba wynajmująca sprzęt pływający ponosi odpowiedzialność materialną za ewentualne uszkodzenia oraz braki w wyposażeniu sprzętu wynikłe z winy użytkownika.</p></li><li><p>Osoby w stanie nietrzeźwym nie mogą korzystać ze sprzętu.</p></li><li><p>Użytkownikom sprzętu zabrania się:</p><ul><li><p>kąpieli podczas pływania (w tym skoków ze sprzętu do wody);</p></li><li><p>wędkowania (z wyjątkiem łodzi do tego przeznaczonych);</p></li><li><p>odstępowania sprzętu pływającego;</p></li><li><p>zachowania w sposób zagrażający bezpieczeństwu własnemu oraz pasażerów;</p></li><li><p>picia alkoholu w czasie dysponowania jednostką pływającą;</p></li><li><p>wykorzystywania sprzętu pływającego niezgodnie z jego przeznaczeniem.</p></li></ul></li><li><p>Wypożyczanie sprzętu jest odpłatne wg cennika obowiązującego na dzień wypożyczenia sprzętu (na żądanie cennik do wglądu).</p></li><li><p>Wypożyczenie sprzętu następuje po podpisaniu przez wypożyczającego oświadczenia o zapoznaniu się z niniejszym regulaminem, który stanowi załącznik do regulaminu.</p></li><li><p>Osoby korzystające ze sprzętu pływającego mogą poruszać się tylko w granicach Zalewu Solińskiego.</p></li><li><p>W przypadku dużej fali i silnego wiatru wypożyczanie sprzętu może zostać wstrzymane.</p></li><li><p>Odbiór i zwrot sprzętu odbywają się w miejscu i czasie ustalonym wcześniej przez wypożyczającego i wypożyczalnię.</p></li><li><p>Nieprzestrzeganie postanowień regulaminu może stanowić podstawę do wyciągnięcia sankcji przewidzianych odpowiednimi przepisami prawa.</p></li></ol><p><em>Właściciel Ośrodka „Przystań Caryńska” w Polańczyku</em></p>",
+      "pdf": "/dokumenty/regulamin-wypozyczalni.pdf",
+      "pdfLabel": "Pobierz regulamin (PDF)",
+      "cta": "",
+      "ctaHref": ""
+    },
+    "wzor-umowy-jachtu": {
+      "kicker": "Dokumenty",
+      "title": "Wzór umowy najmu jachtu",
+      "heroImage": "/images/saturn25-jezero.webp",
+      "lead": "",
+      "body": "<blockquote><p><strong>Dokument poglądowy</strong></p><p>Poniższy dokument to <strong>przykładowy wzór</strong> umowy najmu jachtu — służy wyłącznie do zapoznania się z warunkami przed rezerwacją. Ostateczną umowę, z aktualnymi cenami i danymi, podpisuje się na miejscu przy odbiorze jachtu.</p></blockquote><p>We wzorze umowy znajdziesz m.in.:</p><ul><li><p>Okres najmu, dane jachtu i załogi oraz warunki ubezpieczenia (OC i NNW).</p></li><li><p>Odpowiedzialność najemcy, kaucja gwarancyjna i zasady jej zwrotu.</p></li><li><p>Zasady rezerwacji, zaliczki oraz anulowania rezerwacji.</p></li><li><p>Obowiązki przy odbiorze i zwrocie jachtu (protokół, sprzątanie).</p></li></ul>",
+      "pdf": "/dokumenty/wzor-umowy-najmu-jachtu.pdf",
+      "pdfLabel": "Pobierz wzór umowy (PDF)",
+      "cta": "Zobacz jachty",
+      "ctaHref": "/noclegi/jacht"
+    }
+  }
+}

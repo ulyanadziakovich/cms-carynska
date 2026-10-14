@@ -48,6 +48,14 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           },
+          "showDzialy": {
+            "type": "checkbox",
+            "options": {
+              "required": false,
+              "label": "Podmenu: działy z telefonami",
+              "description": "Zaznacz przy „Kontakt” — podmenu pokaże wszystkie działy z „Działy i telefony” (bez przepisywania numerów)."
+            }
+          },
           "children": {
             "type": "repeater",
             "options": {

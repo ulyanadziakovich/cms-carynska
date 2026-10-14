@@ -121,6 +121,7 @@ export default [
       'Pozycje menu': {
         links: repeater('Pozycje menu', 'Kolejność jak w menu na stronie.', 'Dodaj pozycję', {
           label: text('Nazwa'), href: link('Dokąd prowadzi'),
+          showDzialy: checkbox('Podmenu: działy z telefonami', 'Zaznacz przy „Kontakt” — podmenu pokaże wszystkie działy z „Działy i telefony” (bez przepisywania numerów).'),
           children: repeater('Podmenu', 'Rozwijana lista pod pozycją (opcjonalnie).', 'Dodaj podpozycję', {
             label: text('Nazwa'), href: link('Dokąd prowadzi'), subtitle: text('Podpis (opcjonalnie)'),
             external: checkbox('Otwórz w nowej karcie'),
@@ -327,7 +328,7 @@ export default [
     tabs: {
       'Nagłówek': { ...hero('strony Galeria') },
       'Zdjęcia': {
-        allLabel: text('Filtr „wszystkie”'), emptyText: text('Gdy brak zdjęć'),
+        photosKicker: text('Napis nad zdjęciami', 'Np. „Zdjęcia”.'), allLabel: text('Filtr „wszystkie”'), emptyText: text('Gdy brak zdjęć'),
         categories: repeater('Kategorie zdjęć', 'Każda kategoria to przycisk filtra nad zdjęciami.', 'Dodaj kategorię', {
           label: text('Nazwa kategorii'),
           photos: gallery('Zdjęcia', 'Opis zdjęcia = podpis widoczny na zdjęciu.', 'galeria/'),
@@ -363,7 +364,7 @@ export default [
         extrasTitle: text('Nagłówek'), mealsLabel: text('Etykieta wyżywienia', 'Np. „Wyżywienie”.'),
         extras: repeater('Grupy opcji', '', 'Dodaj grupę', {
           category: text('Nazwa grupy'), note: text('Uwaga (opcjonalnie)'),
-          items: repeater('Opcje', '', 'Dodaj opcję', { name: text('Nazwa'), desc: area('Opis', '', 2), price: text('Cena') }),
+          items: repeater('Opcje', '', 'Dodaj opcję', { name: text('Nazwa'), desc: area('Opis', '', 2), price: text('Cena'), note: text('Dopisek (opcjonalnie)') }),
         }),
       },
       'Baza noclegowa': {
@@ -391,7 +392,7 @@ export default [
         fundsLinks: repeater('Linki', '', 'Dodaj link', { label: text('Napis'), href: link('Adres') }),
       },
       'Harmonogram': {
-        timelineTitle: text('Tytuł'), timelineSubtitle: text('Podtytuł'),
+        timelineKicker: text('Napis nad tytułem'), timelineTitle: text('Tytuł'), timelineSubtitle: text('Podtytuł'),
         milestones: repeater('Etapy', 'Od najstarszego.', 'Dodaj etap', { date: text('Data'), title: text('Tytuł'), body: area('Opis', '', 3) }),
       },
     },
@@ -406,7 +407,7 @@ export default [
     name, label, url, icon: 'FileText',
     tabs: {
       'Treść': {
-        title: text('Tytuł'), kicker: text('Napis nad tytułem (opcjonalnie)'), lead: area('Wstęp pod tytułem', '', 3),
+        title: text('Tytuł'), kicker: text('Napis nad tytułem'), heroImage: image('Zdjęcie w nagłówku'), lead: area('Wstęp pod tytułem', '', 3),
         body: editor('Treść dokumentu', 'Śródtytuły ustaw jako „Nagłówek 2”.'),
       },
       'Plik i przyciski': {

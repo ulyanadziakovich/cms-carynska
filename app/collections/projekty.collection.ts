@@ -38,6 +38,7 @@ export default defineCollection({
           "fundsLinks"
         ],
         "Harmonogram": [
+          "timelineKicker",
           "timelineTitle",
           "timelineSubtitle",
           "milestones"
@@ -180,6 +181,13 @@ export default defineCollection({
             }
           }
         }
+      }
+    },
+    "timelineKicker": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Napis nad tytułem"
       }
     },
     "timelineTitle": {

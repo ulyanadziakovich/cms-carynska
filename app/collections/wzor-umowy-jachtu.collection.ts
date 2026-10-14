@@ -21,6 +21,7 @@ export default defineCollection({
         "Treść": [
           "title",
           "kicker",
+          "heroImage",
           "lead",
           "body"
         ],
@@ -45,7 +46,14 @@ export default defineCollection({
       "type": "text",
       "options": {
         "required": false,
-        "label": "Napis nad tytułem (opcjonalnie)"
+        "label": "Napis nad tytułem"
+      }
+    },
+    "heroImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Zdjęcie w nagłówku"
       }
     },
     "lead": {
