@@ -20,7 +20,9 @@ export default [
     name: 'ustawienia', label: 'Logo, rezerwacje i teksty wspólne', url: '/', icon: 'Settings',
     tabs: {
       'Logo i nazwa': {
-        logo: image('Logo', 'W menu i w stopce.'),
+        logo: image('Logo w menu'),
+        footerLogo: image('Logo w stopce', 'W sekcji Kontakt na dole każdej strony.'),
+        menuBackground: image('Tło rozwiniętego menu', 'Zdjęcie za listą pozycji po otwarciu menu.'),
         siteName: text('Nazwa obiektu', 'Np. w menu i na okładce karty dań.'),
         tagline: text('Hasło pod logo', 'W rozwiniętym menu, np. „Luksus w sercu Bieszczad”.'),
         regionLine: text('Linia z lokalizacją', 'Na dole stopki, np. „Polańczyk · Jezioro Solińskie · Bieszczady”.'),
@@ -35,6 +37,8 @@ export default [
         widgetDeparture: text('Widżet: wyjazd (w okienku)', 'Np. „Wyjazd”.'),
         widgetPickDate: text('Widżet: podpowiedź daty', 'Np. „Wybierz datę”.'),
         widgetGuests: text('Widżet: goście', 'Np. „Goście”.'),
+        widgetGuestOne: text('Widżet: „1 Gość”', 'Słowo po liczbie 1.'),
+        widgetGuestMany: text('Widżet: „2 Gości”', 'Słowo po liczbie większej niż 1.'),
         widgetLess: text('Widżet: przycisk „mniej” (dla czytników)'),
         widgetMore: text('Widżet: przycisk „więcej” (dla czytników)'),
         widgetReserve: text('Widżet: przycisk w pasku', 'Np. „Rezerwuj”.'),
@@ -85,6 +89,7 @@ export default [
         formPhone: text('Formularz: telefon'),
         formMessage: text('Formularz: wiadomość'),
         formSubmit: text('Formularz: przycisk wysyłania'),
+        formSending: text('Formularz: napis podczas wysyłania', 'Np. „Wysyłanie…”.'),
         formThanks: text('Po wysłaniu: tytuł', 'Np. „Dziękujemy!”.'),
         formThanksText: text('Po wysłaniu: tekst'),
       },

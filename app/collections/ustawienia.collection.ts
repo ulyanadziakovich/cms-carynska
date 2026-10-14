@@ -20,6 +20,8 @@ export default defineCollection({
       {
         "Logo i nazwa": [
           "logo",
+          "footerLogo",
+          "menuBackground",
           "siteName",
           "tagline",
           "regionLine"
@@ -34,6 +36,8 @@ export default defineCollection({
           "widgetDeparture",
           "widgetPickDate",
           "widgetGuests",
+          "widgetGuestOne",
+          "widgetGuestMany",
           "widgetLess",
           "widgetMore",
           "widgetReserve",
@@ -70,8 +74,23 @@ export default defineCollection({
       "type": "image",
       "options": {
         "required": false,
-        "label": "Logo",
-        "description": "W menu i w stopce."
+        "label": "Logo w menu"
+      }
+    },
+    "footerLogo": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Logo w stopce",
+        "description": "W sekcji Kontakt na dole każdej strony."
+      }
+    },
+    "menuBackground": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Tło rozwiniętego menu",
+        "description": "Zdjęcie za listą pozycji po otwarciu menu."
       }
     },
     "siteName": {
@@ -169,6 +188,22 @@ export default defineCollection({
         "required": false,
         "label": "Widżet: goście",
         "description": "Np. „Goście”."
+      }
+    },
+    "widgetGuestOne": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: „1 Gość”",
+        "description": "Słowo po liczbie 1."
+      }
+    },
+    "widgetGuestMany": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: „2 Gości”",
+        "description": "Słowo po liczbie większej niż 1."
       }
     },
     "widgetLess": {

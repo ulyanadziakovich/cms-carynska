@@ -33,6 +33,7 @@ export default defineCollection({
           "formPhone",
           "formMessage",
           "formSubmit",
+          "formSending",
           "formThanks",
           "formThanksText"
         ],
@@ -144,6 +145,14 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Formularz: przycisk wysyłania"
+      }
+    },
+    "formSending": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: napis podczas wysyłania",
+        "description": "Np. „Wysyłanie…”."
       }
     },
     "formThanks": {

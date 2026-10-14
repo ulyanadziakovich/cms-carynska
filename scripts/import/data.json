@@ -1725,7 +1725,9 @@
       "prevPhoto": "Poprzednie zdjęcie",
       "nextPhoto": "Następne zdjęcie",
       "openMenu": "Otwórz menu",
-      "closeMenu": "Zamknij menu"
+      "closeMenu": "Zamknij menu",
+      "widgetGuestOne": "Gość",
+      "widgetGuestMany": "Gości"
     },
     "badges": [
       {
@@ -1758,14 +1760,15 @@
       "formEmail": "Email",
       "formPhone": "Telefon",
       "formMessage": "Wiadomość",
-      "formSubmit": "",
+      "formSubmit": "Wyślij wiadomość",
       "formThanks": "Dziękujemy!",
       "formThanksText": "Odezwiemy się wkrótce.",
       "bankTitle": "Dane do przelewu",
       "bankLabel": "Bank",
       "accountLabel": "Nr rachunku",
       "swiftLabel": "SWIFT / BIC",
-      "sisterTitle": "Nasze obiekty"
+      "sisterTitle": "Nasze obiekty",
+      "formSending": "Wysyłanie…"
     },
     "sisters": [
       {
