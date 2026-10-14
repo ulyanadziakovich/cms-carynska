@@ -19,6 +19,7 @@ Grupy w menu panelu: `app/config/menuGroups.ts`. Działy z telefonami: `app/coll
 `scripts/import/data.json` + pliki w `scripts/import/files/`. Logowanie w `.env.import` (`CMS_EMAIL`, `CMS_PASSWORD`, poza repo).
 
 ```bash
-npm run import                          # można powtarzać — bez duplikatów
+npm run import                          # tylko na pustej bazie
+npm run import -- --force               # UWAGA: nadpisuje wszystkie zmiany z panelu treścią startową
 node --test scripts/import/map.test.mjs # testy mapowania
 ```

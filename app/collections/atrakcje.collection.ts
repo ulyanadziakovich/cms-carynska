@@ -63,8 +63,6 @@ export default defineCollection({
         "Dla grup": [
           "groupsTag",
           "groupsTitle",
-          "groupsBody",
-          "groupsCta",
           "groupsDzial"
         ]
       }
@@ -552,21 +550,6 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Tytuł"
-      }
-    },
-    "groupsBody": {
-      "type": "text-area",
-      "options": {
-        "required": false,
-        "label": "Tekst",
-        "rows": 3
-      }
-    },
-    "groupsCta": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Przycisk"
       }
     },
     "groupsDzial": {

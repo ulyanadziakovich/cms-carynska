@@ -23,9 +23,9 @@ export function buildForms(d, templates, ctx) {
       badges: t.badges.map((b) => ({ image: ctx.img(b.src), alt: b.alt, href: b.href ?? '' })) },
     kontakt: {
       ...t.kontakt, address: c.kontakt.address, mapQuery: c.kontakt.mapQuery.replace(/\+/g, ' '), email: c.kontakt.email,
-      bankName: c.kontakt.bank.name, account: c.kontakt.bank.account, swift: c.kontakt.bank.swift, bankNote: c.kontakt.bank.note,
+      bankName: c.kontakt.bank.name, account: c.kontakt.bank.account, swift: c.kontakt.bank.swift,
       social: c.kontakt.social, platforms: c.kontakt.platforms,
-      sisters: c.kontakt.siostrzaneObiekty.map(({ desc, ...s }, i) => ({ ...s, shortDesc: desc, ...t.sisters[i], image: ctx.img(t.sisters[i].image) })),
+      sisters: c.kontakt.siostrzaneObiekty.map(({ desc, ...s }, i) => ({ ...s, ...t.sisters[i], image: ctx.img(t.sisters[i].image) })),
     },
     'menu-strony': { links: t.menu },
     'strona-glowna': {
@@ -53,7 +53,7 @@ export function buildForms(d, templates, ctx) {
     'noclegi-jacht': {
       ...t['noclegi-jacht'], ...hero(d.jacht.hero), intro: d.jacht.intro, includes: ls(d.jacht.includes), note: d.jacht.note,
       yachts: d.jacht.yachts.map((y) => ({
-        name: y.name, tag: y.tag, units: y.units, capacity: y.capacity, cabins: y.cabins, price: y.price ?? '', desc: y.desc,
+        name: y.name, tag: y.tag, units: y.units, capacity: y.capacity, price: y.price ?? '', desc: y.desc,
         gallery: ctx.gallery((y.gallery ?? [y.image]).map((src) => ({ src, alt: y.name }))),
         features: ls(y.features.filter((f) => typeof f === 'string')),
         specs: [...(y.specs ?? []), ...y.features.filter((f) => typeof f === 'object')],
@@ -71,13 +71,12 @@ export function buildForms(d, templates, ctx) {
       marinaAmenities: ls(d.atrakcje.marina.amenities), marinaPricing: priceGroups(d.atrakcje.marina.pricing),
       marinaImages: ctx.gallery(d.atrakcje.marina.images), marinaDzial: ctx.dzial('Bosmanat'),
       landTag: d.atrakcje.land.tag, landTitle: d.atrakcje.land.title, landBody: d.atrakcje.land.body, landItems: d.atrakcje.land.items,
-      groupsTag: d.atrakcje.groups.tag, groupsTitle: d.atrakcje.groups.title, groupsBody: d.atrakcje.groups.body,
-      groupsCta: d.atrakcje.groups.cta.label, groupsDzial: ctx.dzial('Bosmanat'),
+      groupsTag: d.atrakcje.groups.tag, groupsTitle: d.atrakcje.groups.title, groupsDzial: ctx.dzial('Bosmanat'),
     },
     'zaplanuj-pobyt': { ...t['zaplanuj-pobyt'], tiles: t['zaplanuj-pobyt'].tiles.map((x) => ({ ...x, image: ctx.img(x.image) })) },
     tawerna: {
       ...t.tawerna, ...hero(d.tawerna.hero), intro: d.tawerna.intro,
-      menu: d.tawerna.menu.map((m) => ({ category: m.category, menuImage: m.menuImage ? ctx.img(m.menuImage) : null,
+      menu: d.tawerna.menu.map((m) => ({ category: m.category,
         items: m.items.map((i) => ({ name: i.name, note: i.note ?? '', price: i.price ?? '' })) })),
       deliveryTitle: d.tawerna.delivery.title, deliveryBody: d.tawerna.delivery.body, dzial: ctx.dzial('Tawerna'),
     },

@@ -2054,7 +2054,8 @@
       "bookSection": "Tawerna",
       "bookEnd": "Smacznego!",
       "bookPrev": "Poprzednia strona",
-      "bookNext": "Następna strona"
+      "bookNext": "Następna strona",
+      "bookContinued": "c.d."
     },
     "galeria": {
       "heroTag": "Galeria",

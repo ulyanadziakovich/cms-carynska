@@ -35,6 +35,7 @@ export default defineCollection({
           "bookName",
           "bookSection",
           "bookEnd",
+          "bookContinued",
           "bookPrev",
           "bookNext"
         ],
@@ -93,13 +94,6 @@ export default defineCollection({
             "options": {
               "required": false,
               "label": "Nazwa kategorii"
-            }
-          },
-          "menuImage": {
-            "type": "image",
-            "options": {
-              "required": false,
-              "label": "Grafika kategorii (opcjonalnie)"
             }
           },
           "items": {
@@ -171,6 +165,14 @@ export default defineCollection({
         "required": false,
         "label": "Ostatnia strona",
         "description": "Np. „Smacznego!”."
+      }
+    },
+    "bookContinued": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Dopisek, gdy kategoria ciągnie się na kolejnej stronie",
+        "description": "Np. „c.d.”."
       }
     },
     "bookPrev": {

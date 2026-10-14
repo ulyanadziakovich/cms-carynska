@@ -125,13 +125,6 @@ export default defineCollection({
               "label": "Liczba osób"
             }
           },
-          "cabins": {
-            "type": "number",
-            "options": {
-              "required": false,
-              "label": "Liczba kabin"
-            }
-          },
           "price": {
             "type": "text",
             "options": {

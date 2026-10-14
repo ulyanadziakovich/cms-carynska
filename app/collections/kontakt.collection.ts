@@ -44,8 +44,7 @@ export default defineCollection({
           "accountLabel",
           "account",
           "swiftLabel",
-          "swift",
-          "bankNote"
+          "swift"
         ],
         "Social media i portale": [
           "social",
@@ -219,14 +218,6 @@ export default defineCollection({
         "label": "SWIFT / BIC"
       }
     },
-    "bankNote": {
-      "type": "text-area",
-      "options": {
-        "required": false,
-        "label": "Uwaga do przelewu",
-        "rows": 2
-      }
-    },
     "social": {
       "type": "repeater",
       "options": {
@@ -340,13 +331,6 @@ export default defineCollection({
             "options": {
               "required": false,
               "label": "E-mail"
-            }
-          },
-          "shortDesc": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Krótki opis (stopka)"
             }
           },
           "longDesc": {

@@ -1,12 +1,15 @@
 // Wgrywa zdjęcia/pliki z scripts/import/files i wypełnia wszystkie formularze.
-//   npm run import [-- http://localhost:4322]   (logowanie z .env.import: CMS_EMAIL, CMS_PASSWORD)
+//   npm run import [-- http://localhost:4322] [--force]   (logowanie z .env.import: CMS_EMAIL, CMS_PASSWORD)
+// Na bazie, w której są już teksty, import NADPISUJE zmiany z panelu — dlatego wymaga --force.
 // Można uruchamiać wielokrotnie: pliki i działy są dopasowywane po nazwie.
 import { existsSync, readFileSync } from 'node:fs'
 import { basename, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { DZIALY, buildForms } from './map.mjs'
 
-const base = process.argv[2] ?? 'http://localhost:4322'
+const args = process.argv.slice(2)
+const force = args.includes('--force')
+const base = args.find((a) => !a.startsWith('--')) ?? 'http://localhost:4322'
 // Pliki startowe (dawne public/ strony) — ścieżki w data.json są względem tego katalogu.
 const site = fileURLToPath(new URL('./files', import.meta.url))
 const d = JSON.parse(readFileSync(new URL('./data.json', import.meta.url), 'utf8'))
@@ -21,6 +24,14 @@ const api = async (path, init = {}) => {
   return res.json()
 }
 const json = (method, body) => ({ method, headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
+
+// Baza już wypełniona (np. ktoś edytował w panelu)? Bez --force nie nadpisujemy.
+const filled = (await api('collections/ustawienia')).siteName
+if (filled && !force) {
+  console.error('CMS ma już treść — import nadpisałby wszystkie zmiany zrobione w panelu.')
+  console.error('Jeśli na pewno chcesz wrócić do treści startowej: npm run import -- --force')
+  process.exit(1)
+}
 
 // — pliki: dedup po nazwie pliku w katalogu import/
 // Pruvious zapisuje nazwy plików małymi literami — porównujemy bez względu na wielkość liter.

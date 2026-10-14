@@ -100,7 +100,6 @@ export default [
         bankLabel: text('Podpis: bank'), bankName: text('Nazwa banku'),
         accountLabel: text('Podpis: numer rachunku'), account: text('Numer rachunku'),
         swiftLabel: text('Podpis: SWIFT'), swift: text('SWIFT / BIC'),
-        bankNote: area('Uwaga do przelewu', '', 2),
       },
       'Social media i portale': {
         social: repeater('Media społecznościowe', '', 'Dodaj profil', {
@@ -113,7 +112,6 @@ export default [
         sisters: repeater('Obiekty siostrzane', 'Pokazywane w stopce i na stronie Zaplanuj pobyt.', 'Dodaj obiekt', {
           name: text('Nazwa'), location: text('Miejscowość'), href: link('Strona internetowa'),
           phone: text('Telefon'), email: text('E-mail'),
-          shortDesc: text('Krótki opis (stopka)'),
           longDesc: area('Dłuższy opis (Zaplanuj pobyt)', '', 3),
           image: image('Zdjęcie (Zaplanuj pobyt)'),
           imageAlt: text('Opis zdjęcia'),
@@ -242,7 +240,7 @@ export default [
       'Jachty': {
         yachts: repeater('Jachty', '', 'Dodaj jacht', {
           name: text('Nazwa'), tag: text('Napis nad nazwą'), units: number('Liczba jednostek'),
-          capacity: number('Liczba osób'), cabins: number('Liczba kabin'), price: text('Cena od', 'Np. „od 380 zł / noc”.'),
+          capacity: number('Liczba osób'), price: text('Cena od', 'Np. „od 380 zł / noc”.'),
           desc: area('Opis', '', 4), gallery: gallery('Zdjęcia', 'Pierwsze zdjęcie to okładka.', 'jachty/'),
           features: lines('Wyposażenie'),
           specs: repeater('Dane techniczne', '', 'Dodaj parametr', { label: text('Parametr'), value: text('Wartość') }),
@@ -293,8 +291,7 @@ export default [
         landImages: gallery('Zdjęcia obok opisu', '', 'atrakcje/'),
       },
       'Dla grup': {
-        groupsTag: text('Napis nad tytułem'), groupsTitle: text('Tytuł'), groupsBody: area('Tekst', '', 3),
-        groupsCta: text('Przycisk'), groupsDzial: dzial(),
+        groupsTag: text('Napis nad tytułem'), groupsTitle: text('Tytuł'), groupsDzial: dzial(),
       },
     },
   },
@@ -325,13 +322,14 @@ export default [
       'Wstęp': { intro: area('Tekst wstępu', '', 4) },
       'Menu': {
         menu: repeater('Kategorie menu', 'Kategorie w kolejności jak w karcie dań.', 'Dodaj kategorię', {
-          category: text('Nazwa kategorii'), menuImage: image('Grafika kategorii (opcjonalnie)'),
+          category: text('Nazwa kategorii'),
           items: repeater('Dania', '', 'Dodaj danie', { name: text('Nazwa'), note: text('Dopisek (opcjonalnie)'), price: text('Cena (opcjonalnie)') }),
         }),
       },
       'Karta dań (książka)': {
         bookKicker: text('Okładka: napis nad tytułem'), bookTitle: area('Okładka: tytuł', '', 2),
         bookName: text('Okładka: nazwa'), bookSection: text('Napis w nagłówku stron'), bookEnd: text('Ostatnia strona', 'Np. „Smacznego!”.'),
+        bookContinued: text('Dopisek, gdy kategoria ciągnie się na kolejnej stronie', 'Np. „c.d.”.'),
         bookPrev: text('Poprzednia strona (dla czytników)'), bookNext: text('Następna strona (dla czytników)'),
       },
       'Dostawa': { deliveryTitle: text('Tytuł'), deliveryBody: area('Tekst', '', 2), dzial: dzial() },
