@@ -1,0 +1,20 @@
+{
+  "name": "carynska-cms",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "pruvious dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "forms": "node scripts/forms/generate.mjs",
+    "postinstall": "npm rebuild sqlite3 --build-from-source && nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^4.4.6",
+    "pruvious": "3.16.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "engines": { "node": ">=20" },
+  "overrides": { "tar": "^7.5.21", "brace-expansion": "^5.0.8", "nanoid": "^5.1.6", "sharp": "^0.35.4" }
+}
