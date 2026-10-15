@@ -12,6 +12,9 @@ npm run dev          # panel: http://localhost:4322/dashboard
 ## Formularze
 
 Wszystkie formularze opisuje `scripts/forms/spec.mjs`. Po zmianie: `npm run forms`, potem restart `npm run dev` (nowe formularze wymagają restartu).
+Generator sam układa krótkie pola obok siebie i przenosi drobne napisy (dla czytników, okruszki, podpisy formularza) do ostatniej zakładki „Drobne napisy (rzadko zmieniane)”.
+
+Polskie napisy panelu (przyciski, komunikaty) są w `scripts/dashboard-pl/pl.mjs`. Po zmianie albo po aktualizacji Pruviousa: `npm run dashboard-pl`, potem restart `npm run dev`.
 Grupy w menu panelu: `app/config/menuGroups.ts`. Działy z telefonami: `app/collections/dzialy.collection.ts`.
 
 ## Import treści startowej
