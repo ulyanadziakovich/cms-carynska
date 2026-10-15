@@ -1,6 +1,4 @@
 // data.json → rekordy formularzy. ctx dostarcza id wgranych plików i działów.
-/** Zdjęcie z opisem (alt) — gdy pliku brak, pole zostaje puste. */
-const withAlt = (uploadId, alt) => (uploadId == null ? null : { uploadId, alt })
 const paras = (a) => (Array.isArray(a) ? a.join('\n\n') : a ?? '')
 const ls = (a) => (a ?? []).join('\n')
 
@@ -43,10 +41,10 @@ export function buildForms(d, templates, ctx) {
       noclegiCards: [
         { title: 'Pokoje i apartamenty', linkLabel: 'Zobacz pokoje', href: '/noclegi/pokoje',
           desc: 'Pokoje 1- i 2-osobowe, studia oraz apartament 5-osobowy — wiele z widokiem na jezioro.',
-          image: withAlt(ctx.img('/images/2os-sypialnia.png'), 'Jasny pokój 2-osobowy z dużym oknem') },
+          image: ctx.img('/images/2os-sypialnia.png') },
         { title: 'Hotel na wodzie', linkLabel: 'Zobacz jachty', href: '/noclegi/jacht',
           desc: 'Zaśnij kołysany falami Jeziora Solińskiego — nocleg na pokładzie jachtu, bez patentu.',
-          image: withAlt(ctx.img('/images/saturn25-jezero.webp'), 'Jacht Saturn 25 na jeziorze') },
+          image: ctx.img('/images/saturn25-jezero.webp') },
       ],
       atrakcjeTag: c.atrakcje.tag, atrakcjeTitle: c.atrakcje.title, atrakcjeBody: c.atrakcje.body,
       atrakcjeImage: ctx.img(c.atrakcje.image.src), atrakcjeImageAlt: c.atrakcje.image.alt,
