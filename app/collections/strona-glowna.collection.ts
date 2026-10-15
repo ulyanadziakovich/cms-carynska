@@ -174,7 +174,10 @@ export default defineCollection({
                 "obiad": "Obiad / talerz ze sztućcami",
                 "pizza": "Pizza",
                 "impreza": "Impreza / kieliszki",
-                "ryba": "Ryba"
+                "ryba": "Ryba",
+                "ognisko": "Ognisko / grill",
+                "gry": "Gry / rozrywka",
+                "sala": "Sala / konferencja"
               },
               "clearable": true
             }
@@ -481,7 +484,10 @@ export default defineCollection({
                 "obiad": "Obiad / talerz ze sztućcami",
                 "pizza": "Pizza",
                 "impreza": "Impreza / kieliszki",
-                "ryba": "Ryba"
+                "ryba": "Ryba",
+                "ognisko": "Ognisko / grill",
+                "gry": "Gry / rozrywka",
+                "sala": "Sala / konferencja"
               },
               "clearable": true
             }

@@ -25,7 +25,8 @@ export default defineCollection({
           "heroSubtitle"
         ],
         "Wstęp": [
-          "intro"
+          "intro",
+          "introFeatures"
         ],
         "Pokoje": [
           "rooms"
@@ -96,8 +97,57 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Tekst wstępu",
-        "description": "Akapity oddziel pustą linią.",
-        "rows": 8
+        "description": "Najlepiej 1–2 zdania. Akapity oddziel pustą linią.",
+        "rows": 4
+      }
+    },
+    "introFeatures": {
+      "type": "repeater",
+      "options": {
+        "required": false,
+        "label": "Na miejscu (lista z ikonkami)",
+        "description": "Pod tekstem wstępu.",
+        "addLabel": "Dodaj pozycję",
+        "subfields": {
+          "icon": {
+            "type": "select",
+            "options": {
+              "required": false,
+              "label": "Ikonka",
+              "choices": {
+                "balkon": "Balkon / taras",
+                "lazienka": "Łazienka / prysznic",
+                "wifi": "WiFi",
+                "parking": "Parking",
+                "widok": "Widok na jezioro",
+                "sniadanie": "Śniadanie / kawa",
+                "klimatyzacja": "Klimatyzacja",
+                "zwierzeta": "Zwierzęta",
+                "obiad": "Obiad / talerz ze sztućcami",
+                "pizza": "Pizza",
+                "impreza": "Impreza / kieliszki",
+                "ryba": "Ryba",
+                "ognisko": "Ognisko / grill",
+                "gry": "Gry / rozrywka",
+                "sala": "Sala / konferencja"
+              },
+              "clearable": true
+            }
+          },
+          "label": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Napis"
+            }
+          }
+        },
+        "fieldLayout": [
+          [
+            "icon",
+            "label"
+          ]
+        ]
       }
     },
     "rooms": {

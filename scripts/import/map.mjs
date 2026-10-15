@@ -1,6 +1,12 @@
 // data.json → rekordy formularzy. ctx dostarcza id wgranych plików i działów.
 /** Ikonki kafelków atrakcji (stara strona miała tu pliki SVG, których nie było). */
 const TILE_ICONS = ['zaglowka', 'impreza', 'zapora', 'grupy']
+const POKOJE_FEATURES = [
+  { icon: 'widok', label: 'Ok. 200 m od jeziora' }, { icon: 'obiad', label: 'Klimatyzowana jadalnia' },
+  { icon: 'sniadanie', label: 'Kawiarnia z kominkiem' }, { icon: 'ognisko', label: 'Wiata, ognisko i grill' },
+  { icon: 'gry', label: 'Bilard, ping-pong, plac zabaw' }, { icon: 'sala', label: 'Sala konferencyjna' },
+  { icon: 'wifi', label: 'Bezpłatne WiFi' }, { icon: 'parking', label: 'Darmowy, monitorowany parking' },
+]
 const paras = (a) => (Array.isArray(a) ? a.join('\n\n') : a ?? '')
 const ls = (a) => (a ?? []).join('\n')
 
@@ -70,7 +76,9 @@ export function buildForms(d, templates, ctx) {
       googleUrl: c.reviews.googleUrl, reviews: c.reviews.items.map((r) => ({ ...r, badge: r.badge ?? '' })),
     },
     'noclegi-pokoje': {
-      ...hero(d.noclegi.hero), heroSubtitle: d.noclegi.hero.subtitle, ...t['noclegi-pokoje'], intro: paras(d.noclegi.intro),
+      ...hero(d.noclegi.hero), heroSubtitle: d.noclegi.hero.subtitle, ...t['noclegi-pokoje'],
+      // Pierwszy akapit; drugi (co jest na miejscu) to lista z ikonkami
+      intro: paras(d.noclegi.intro).split('\n\n')[0], introFeatures: POKOJE_FEATURES,
       rooms: d.noclegi.rooms.map((r) => ({ slug: r.slug, tag: r.tag, title: r.title, size: r.size, occupancy: r.occupancy, desc: r.desc,
         amenities: ls(r.amenities), images: ctx.gallery(r.images.map((src) => ({ src, alt: `${r.tag} ${r.title}` }))) })),
       dzial: ctx.dzial('Noclegi'),

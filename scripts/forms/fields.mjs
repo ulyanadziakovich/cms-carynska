@@ -30,4 +30,5 @@ export const FEATURE_ICONS = {
   balkon: 'Balkon / taras', lazienka: 'Łazienka / prysznic', wifi: 'WiFi', parking: 'Parking',
   widok: 'Widok na jezioro', sniadanie: 'Śniadanie / kawa', klimatyzacja: 'Klimatyzacja', zwierzeta: 'Zwierzęta',
   obiad: 'Obiad / talerz ze sztućcami', pizza: 'Pizza', impreza: 'Impreza / kieliszki', ryba: 'Ryba',
+  ognisko: 'Ognisko / grill', gry: 'Gry / rozrywka', sala: 'Sala / konferencja',
 }

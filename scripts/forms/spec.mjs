@@ -203,7 +203,12 @@ export default [
     name: 'noclegi-pokoje', label: 'Pokoje i apartamenty', url: '/noclegi/pokoje', icon: 'Building',
     tabs: {
       'Nagłówek': { ...hero('strony Pokoje'), heroSubtitle: text('Podtytuł') },
-      'Wstęp': { intro: area('Tekst wstępu', 'Akapity oddziel pustą linią.', 8) },
+      'Wstęp': {
+        intro: area('Tekst wstępu', 'Najlepiej 1–2 zdania. Akapity oddziel pustą linią.', 4),
+        introFeatures: repeater('Na miejscu (lista z ikonkami)', 'Pod tekstem wstępu.', 'Dodaj pozycję', {
+          icon: select('Ikonka', '', FEATURE_ICONS), label: text('Napis'),
+        }),
+      },
       'Pokoje': {
         rooms: repeater('Pokoje', 'Kolejność jak na stronie.', 'Dodaj pokój', {
           slug: text('Identyfikator w adresie', 'Małe litery i myślniki, np. „pokoj-2-osobowy”. Nie zmieniaj bez potrzeby — linki do pokoju przestaną działać.'),
