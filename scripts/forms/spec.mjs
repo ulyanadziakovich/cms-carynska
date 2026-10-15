@@ -29,7 +29,7 @@ export default [
       },
       'Rezerwacje online': {
         bookingUrl: link('Link do systemu rezerwacji (hotres)', 'Wszystkie przyciski „Rezerwuj” i „Sprawdź dostępność” prowadzą tutaj.'),
-        bookingCta: text('Przycisk w menu', 'Np. „Booking now”.'),
+        bookingCta: text('Przycisk w menu', 'Np. „Zarezerwuj”. Prowadzi do systemu rezerwacji (link powyżej), ikonę kalendarza strona dodaje sama.'),
         widgetTitle: text('Widżet: przycisk główny', 'Np. „Sprawdź dostępność”.'),
         widgetCheckIn: text('Widżet: przyjazd (krótko)', 'Np. „Check-in”.'),
         widgetCheckOut: text('Widżet: wyjazd (krótko)', 'Np. „Check-out”.'),
@@ -48,7 +48,7 @@ export default [
         topbarLabel: text('Pasek górny: napis przed numerami', 'Np. „Rezerwacje:”. Numery to działy z zaznaczonym „Pokaż w pasku górnym”.'),
         callTitle: text('Przycisk „Zadzwoń”: tytuł'),
         callSubtitle: text('Przycisk „Zadzwoń”: podtytuł', 'Np. „Wybierz dział”.'),
-        pizzaLabel: text('Przycisk zamawiania pizzy', 'Na zdjęciu strony głównej i na stronie Tawerny, np. „🍕 Zamów pizzę”.'),
+        pizzaLabel: text('Przycisk zamawiania pizzy', 'Na zdjęciu strony głównej i na stronie Tawerny, np. „Zamów pizzę” (ikonę pizzy strona dodaje sama).'),
         pizzaUrl: link('Przycisk pizzy: link do zamówień online'),
       },
       'Stopka': {

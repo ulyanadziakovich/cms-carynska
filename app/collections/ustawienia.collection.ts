@@ -165,7 +165,7 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Przycisk w menu",
-        "description": "Np. „Booking now”."
+        "description": "Np. „Zarezerwuj”. Prowadzi do systemu rezerwacji (link powyżej), ikonę kalendarza strona dodaje sama."
       }
     },
     "widgetTitle": {
@@ -204,7 +204,7 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Przycisk zamawiania pizzy",
-        "description": "Na zdjęciu strony głównej i na stronie Tawerny, np. „🍕 Zamów pizzę”."
+        "description": "Na zdjęciu strony głównej i na stronie Tawerny, np. „Zamów pizzę” (ikonę pizzy strona dodaje sama)."
       }
     },
     "pizzaUrl": {
