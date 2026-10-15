@@ -1,35 +1,35 @@
 <template>
-  <div class="nb-gallery">
-    <div v-if="options.label || options.description" class="nb-gallery-head">
-      <span class="nb-gallery-label">
-        <span v-if="options.required" class="nb-required">*</span>
+  <div class="nb-gallery" :style="S.root">
+    <div v-if="options.label || options.description" :style="S.head">
+      <span :style="S.label">
+        <span v-if="options.required" style="color: #ef4444">*</span>
         {{ options.label }}
-        <span class="nb-gallery-count">{{ countLabel }}</span>
+        <span :style="S.count">{{ countLabel }}</span>
       </span>
-      <PruviousIconHelp v-if="options.description" v-pruvious-tooltip="description" class="nb-help" />
+      <PruviousIconHelp v-if="options.description" v-pruvious-tooltip="description" :style="S.help" />
     </div>
 
-    <div class="nb-gallery-actions">
-      <label class="button button-white" :class="{ 'nb-disabled': disabled || uploading }">
-        <PruviousIconUpload class="nb-btn-icon" />
+    <div :style="S.actions">
+      <label class="button button-white button-small" :style="[S.upload, disabled || uploading ? S.disabled : null]">
+        <PruviousIconUpload :style="S.btnIcon" />
         Wgraj zdjęcia z komputera
         <input
           ref="fileInput"
           type="file"
           accept="image/*"
           multiple
-          class="nb-file-input"
+          :style="S.fileInput"
           :disabled="disabled || uploading"
           @change="onFilesChosen"
         />
       </label>
-      <button type="button" class="button button-white" :disabled="disabled || uploading" @click="pickFromLibrary">
+      <button type="button" class="button button-white button-small" :disabled="disabled || uploading" @click="pickFromLibrary">
         Dodaj z biblioteki mediów
       </button>
       <button
         v-if="items.length"
         type="button"
-        class="button button-white-red"
+        class="button button-white-red button-small"
         :disabled="disabled || uploading"
         @click="clearAll"
       >
@@ -37,19 +37,20 @@
       </button>
     </div>
 
-    <p v-if="uploading" class="nb-gallery-progress">Wgrywanie zdjęć… {{ uploadDone }}/{{ uploadTotal }}</p>
-    <p v-else-if="items.length > 1" class="nb-gallery-hint">Przeciągnij zdjęcie, aby zmienić kolejność. Pierwsze zdjęcie jest pierwsze na stronie.</p>
-    <p v-else-if="!items.length" class="nb-gallery-hint">Brak zdjęć. Możesz zaznaczyć wiele plików naraz.</p>
+    <p v-if="uploading" :style="[S.hint, S.progress]">Wgrywanie zdjęć… {{ uploadDone }}/{{ uploadTotal }}</p>
+    <p v-else-if="items.length > 1" :style="S.hint">Przeciągnij zdjęcie, aby zmienić kolejność. Pierwsze zdjęcie jest pierwsze na stronie.</p>
+    <p v-else-if="!items.length" :style="S.hint">Brak zdjęć. Możesz zaznaczyć wiele plików naraz.</p>
 
-    <div ref="gridEl" class="nb-gallery-grid">
-      <div v-for="(item, i) in items" :key="item.uploadId + '-' + i" class="nb-gallery-tile" :data-index="i">
-        <img v-if="thumbs[item.uploadId]" :src="thumbs[item.uploadId]" alt="" draggable="false" />
-        <span v-else class="nb-gallery-missing">…</span>
-        <span class="nb-gallery-pos">{{ i + 1 }}</span>
+    <div ref="gridEl" :style="S.grid">
+      <div v-for="(item, i) in items" :key="item.uploadId + '-' + i" class="nb-gallery-tile" :style="S.tile" :data-index="i" :title="`Zdjęcie ${i + 1} — przeciągnij, aby przestawić`">
+        <img v-if="thumbs[item.uploadId]" :src="thumbs[item.uploadId]" alt="" draggable="false" :style="S.img" />
+        <span v-else :style="S.missing">…</span>
+        <span :style="S.pos">{{ i + 1 }}</span>
         <button
           v-if="!disabled"
           type="button"
           class="nb-gallery-remove nb-no-drag"
+          :style="S.remove"
           title="Usuń z galerii (zdjęcie zostaje w mediach)"
           @click="remove(i)"
         >
@@ -81,6 +82,38 @@ const props = defineProps<{
 const emit = defineEmits<{ 'update:modelValue': [Item[]] }>()
 
 const runtimeConfig = useRuntimeConfig()
+
+// Wygląd wpisany w elementy: Pruvious nie wczytuje <style> z komponentów pól.
+// Małe, subtelne kafelki (72 px), żeby galeria nie rozciągała formularza.
+const S = {
+  root: { display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' },
+  head: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' },
+  label: { fontSize: '0.8125rem', fontWeight: 500, color: '#111827' },
+  count: { marginLeft: '0.25rem', color: '#9ca3af', fontWeight: 400 },
+  help: { width: '1rem', height: '1rem', color: '#9ca3af', flexShrink: 0 },
+  actions: { display: 'flex', flexWrap: 'wrap', gap: '0.4rem' },
+  upload: { position: 'relative', cursor: 'pointer', overflow: 'hidden' },
+  disabled: { opacity: 0.5, pointerEvents: 'none' },
+  btnIcon: { width: '0.9rem', height: '0.9rem', marginRight: '0.35rem' },
+  fileInput: { position: 'absolute', inset: 0, opacity: 0, cursor: 'pointer', width: '100%' },
+  hint: { margin: 0, fontSize: '0.75rem', color: '#9ca3af' },
+  progress: { color: '#a9541f', fontWeight: 600 },
+  grid: { display: 'flex', flexWrap: 'wrap', gap: '0.375rem' },
+  tile: {
+    position: 'relative', width: '72px', height: '72px', flexShrink: 0, overflow: 'hidden',
+    border: '1px solid #e5e7eb', borderRadius: '0.375rem', background: '#f3f4f6', cursor: 'grab', userSelect: 'none',
+  },
+  img: { display: 'block', width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' },
+  missing: { display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#9ca3af' },
+  pos: {
+    position: 'absolute', left: '3px', bottom: '3px', padding: '0 5px', borderRadius: '999px',
+    background: 'rgba(17, 24, 39, 0.6)', color: '#fff', fontSize: '10px', fontWeight: 600, lineHeight: '15px',
+  },
+  remove: {
+    position: 'absolute', top: '3px', right: '3px', width: '18px', height: '18px', border: 'none', borderRadius: '50%',
+    background: 'rgba(17, 24, 39, 0.6)', color: '#fff', fontSize: '13px', lineHeight: '18px', cursor: 'pointer', padding: 0,
+  },
+} as const
 const items = computed<Item[]>(() => (Array.isArray(props.modelValue) ? props.modelValue : []))
 const description = computed(() => [props.options.description ?? []].flat().join('\n'))
 const countLabel = computed(() => {
@@ -199,150 +232,4 @@ onMounted(async () => {
 onBeforeUnmount(() => sortable?.destroy())
 </script>
 
-<style scoped>
-.nb-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  width: 100%;
-}
-
-.nb-gallery-head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.nb-gallery-label {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #111827;
-}
-
-.nb-required {
-  color: #ef4444;
-}
-
-.nb-gallery-count {
-  margin-left: 0.25rem;
-  color: #6b7280;
-  font-weight: 400;
-}
-
-.nb-help {
-  width: 1rem;
-  height: 1rem;
-  color: #9ca3af;
-}
-
-.nb-gallery-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.nb-gallery-actions label {
-  position: relative;
-  cursor: pointer;
-}
-
-.nb-btn-icon {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.35rem;
-}
-
-.nb-file-input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.nb-disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.nb-gallery-progress,
-.nb-gallery-hint {
-  margin: 0;
-  font-size: 0.75rem;
-  color: #6b7280;
-}
-
-.nb-gallery-progress {
-  color: #a9541f;
-  font-weight: 600;
-}
-
-.nb-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-  gap: 0.4rem;
-}
-
-.nb-gallery-tile {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.4375rem;
-  background: #f3f4f6;
-  cursor: grab;
-  user-select: none;
-}
-
-.nb-gallery-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-.nb-gallery-missing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #9ca3af;
-}
-
-.nb-gallery-pos {
-  position: absolute;
-  left: 0.3rem;
-  bottom: 0.3rem;
-  padding: 0 0.35rem;
-  border-radius: 999px;
-  background: rgba(17, 24, 39, 0.7);
-  color: #fff;
-  font-size: 0.6875rem;
-  font-weight: 600;
-}
-
-.nb-gallery-remove {
-  position: absolute;
-  top: 0.25rem;
-  right: 0.25rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: none;
-  border-radius: 50%;
-  background: rgba(17, 24, 39, 0.7);
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-
-.nb-gallery-tile:hover .nb-gallery-remove {
-  opacity: 1;
-}
-
-.nb-gallery-remove:hover {
-  background: #dc2626;
-}
-</style>
+<!-- Wygląd galerii: w app/dashboard/Base.vue (Pruvious nie wczytuje <style> z komponentów pól). -->

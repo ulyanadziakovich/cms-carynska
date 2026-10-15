@@ -32,10 +32,6 @@ export default defineCollection({
         ],
         "Napisy": [
           [
-            "crumbParent",
-            "crumbCurrent"
-          ],
-          [
             "labelSize",
             "labelMax"
           ],
@@ -52,6 +48,12 @@ export default defineCollection({
             "ctaHref"
           ],
           "dzial"
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
+          [
+            "crumbParent",
+            "crumbCurrent"
+          ]
         ]
       }
     ]
@@ -186,21 +188,6 @@ export default defineCollection({
         ]
       }
     },
-    "crumbParent": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Okruszki: nazwa działu",
-        "description": "Mały link nad treścią, np. „Noclegi”."
-      }
-    },
-    "crumbCurrent": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Okruszki: ta strona"
-      }
-    },
     "labelSize": {
       "type": "text",
       "options": {
@@ -279,6 +266,21 @@ export default defineCollection({
         },
         "recordLabel": "name",
         "clearable": true
+      }
+    },
+    "crumbParent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: nazwa działu",
+        "description": "Mały link nad treścią, np. „Noclegi”."
+      }
+    },
+    "crumbCurrent": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Okruszki: ta strona"
       }
     }
   }

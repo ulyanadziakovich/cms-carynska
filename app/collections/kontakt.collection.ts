@@ -33,7 +33,27 @@ export default defineCollection({
           [
             "reservationsTitle",
             "formTitle"
+          ]
+        ],
+        "Dane do przelewu": [
+          [
+            "bankTitle",
+            "bankName"
           ],
+          [
+            "account",
+            "swift"
+          ]
+        ],
+        "Social media i portale": [
+          "social",
+          "platforms"
+        ],
+        "Nasze obiekty": [
+          "sisterTitle",
+          "sisters"
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
           [
             "formName",
             "formEmail"
@@ -49,30 +69,12 @@ export default defineCollection({
           [
             "formThanks",
             "formThanksText"
-          ]
-        ],
-        "Dane do przelewu": [
-          [
-            "bankTitle",
-            "bankLabel"
           ],
           [
-            "bankName",
+            "bankLabel",
             "accountLabel"
           ],
-          [
-            "account",
-            "swiftLabel"
-          ],
-          "swift"
-        ],
-        "Social media i portale": [
-          "social",
-          "platforms"
-        ],
-        "Nasze obiekty": [
-          "sisterTitle",
-          "sisters"
+          "swiftLabel"
         ]
       }
     ]
@@ -131,76 +133,11 @@ export default defineCollection({
         "description": "Np. „Napisz do nas”."
       }
     },
-    "formName": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: imię i nazwisko"
-      }
-    },
-    "formEmail": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: e-mail"
-      }
-    },
-    "formPhone": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: telefon"
-      }
-    },
-    "formMessage": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: wiadomość"
-      }
-    },
-    "formSubmit": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: przycisk wysyłania"
-      }
-    },
-    "formSending": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Formularz: napis podczas wysyłania",
-        "description": "Np. „Wysyłanie…”."
-      }
-    },
-    "formThanks": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Po wysłaniu: tytuł",
-        "description": "Np. „Dziękujemy!”."
-      }
-    },
-    "formThanksText": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Po wysłaniu: tekst"
-      }
-    },
     "bankTitle": {
       "type": "text",
       "options": {
         "required": false,
         "label": "Nagłówek"
-      }
-    },
-    "bankLabel": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Podpis: bank"
       }
     },
     "bankName": {
@@ -210,25 +147,11 @@ export default defineCollection({
         "label": "Nazwa banku"
       }
     },
-    "accountLabel": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Podpis: numer rachunku"
-      }
-    },
     "account": {
       "type": "text",
       "options": {
         "required": false,
         "label": "Numer rachunku"
-      }
-    },
-    "swiftLabel": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Podpis: SWIFT"
       }
     },
     "swift": {
@@ -412,6 +335,85 @@ export default defineCollection({
             "cta"
           ]
         ]
+      }
+    },
+    "formName": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: imię i nazwisko"
+      }
+    },
+    "formEmail": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: e-mail"
+      }
+    },
+    "formPhone": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: telefon"
+      }
+    },
+    "formMessage": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: wiadomość"
+      }
+    },
+    "formSubmit": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: przycisk wysyłania"
+      }
+    },
+    "formSending": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Formularz: napis podczas wysyłania",
+        "description": "Np. „Wysyłanie…”."
+      }
+    },
+    "formThanks": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Po wysłaniu: tytuł",
+        "description": "Np. „Dziękujemy!”."
+      }
+    },
+    "formThanksText": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Po wysłaniu: tekst"
+      }
+    },
+    "bankLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: bank"
+      }
+    },
+    "accountLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: numer rachunku"
+      }
+    },
+    "swiftLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis: SWIFT"
       }
     }
   }

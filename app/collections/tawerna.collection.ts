@@ -34,21 +34,23 @@ export default defineCollection({
           "bookTitle",
           [
             "bookName",
-            "bookSection"
-          ],
-          [
-            "bookEnd",
-            "bookContinued"
-          ],
-          [
-            "bookPrev",
-            "bookNext"
+            "bookEnd"
           ]
         ],
         "Dostawa": [
           "deliveryTitle",
           "deliveryBody",
           "dzial"
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
+          [
+            "bookSection",
+            "bookContinued"
+          ],
+          [
+            "bookPrev",
+            "bookNext"
+          ]
         ]
       }
     ]
@@ -169,41 +171,12 @@ export default defineCollection({
         "label": "Okładka: nazwa"
       }
     },
-    "bookSection": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Napis w nagłówku stron"
-      }
-    },
     "bookEnd": {
       "type": "text",
       "options": {
         "required": false,
         "label": "Ostatnia strona",
         "description": "Np. „Smacznego!”."
-      }
-    },
-    "bookContinued": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Dopisek, gdy kategoria ciągnie się na kolejnej stronie",
-        "description": "Np. „c.d.”."
-      }
-    },
-    "bookPrev": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Poprzednia strona (dla czytników)"
-      }
-    },
-    "bookNext": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Następna strona (dla czytników)"
       }
     },
     "deliveryTitle": {
@@ -239,6 +212,35 @@ export default defineCollection({
         },
         "recordLabel": "name",
         "clearable": true
+      }
+    },
+    "bookSection": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Napis w nagłówku stron"
+      }
+    },
+    "bookContinued": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Dopisek, gdy kategoria ciągnie się na kolejnej stronie",
+        "description": "Np. „c.d.”."
+      }
+    },
+    "bookPrev": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Poprzednia strona (dla czytników)"
+      }
+    },
+    "bookNext": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Następna strona (dla czytników)"
       }
     }
   }

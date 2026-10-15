@@ -61,27 +61,40 @@
           <!-- Menu pogrupowane według stron witryny (app/config/menuGroups.ts). -->
           <ul class="flex flex-col items-start pt-0.5">
             <li v-for="group of groupedMenu.groups" :key="group.label" class="w-full">
-              <button
-                type="button"
-                class="nb-menu-group inline-flex w-full items-center gap-2 py-1.5 text-[0.9375rem] font-medium text-gray-700"
-                @click="toggleGroup(group.label)"
+              <!-- Grupa z jedną pozycją = zwykły link (bez rozwijania). -->
+              <NuxtLink
+                v-if="group.items.length === 1"
+                :title="group.items[0].label"
+                :to="menuLink(group.items[0])"
+                class="inline-flex w-full items-center gap-2 py-1.5 text-[0.9375rem] font-medium text-gray-700 transition hocus:text-primary-700"
+                :class="{ '!text-primary-700': isActive(group.items[0]) }"
               >
-                <span class="nb-menu-chevron" :class="{ 'nb-menu-chevron-open': isGroupOpen(group) }">›</span>
+                <span class="nb-menu-chevron"></span>
                 <span class="truncate">{{ group.label }}</span>
-              </button>
-              <ul v-show="isGroupOpen(group)" class="nb-menu-items">
-                <li v-for="item of group.items" :key="item.path" class="w-full">
-                  <NuxtLink
-                    :title="item.label"
-                    :to="menuLink(item)"
-                    class="inline-flex items-center gap-2 py-1 text-[0.875rem] text-gray-400 transition hocus:text-primary-700"
-                    :class="{ 'font-medium !text-gray-700': isActive(item) }"
-                  >
-                    <span v-html="item.icon" class="pointer-events-none -mt-px h-4 w-4 shrink-0"></span>
-                    <span class="pointer-events-none truncate">{{ item.label }}</span>
-                  </NuxtLink>
-                </li>
-              </ul>
+              </NuxtLink>
+              <template v-else>
+                <button
+                  type="button"
+                  class="nb-menu-group inline-flex w-full items-center gap-2 py-1.5 text-[0.9375rem] font-medium text-gray-700"
+                  @click="toggleGroup(group.label)"
+                >
+                  <span class="nb-menu-chevron" :class="{ 'nb-menu-chevron-open': isGroupOpen(group) }">›</span>
+                  <span class="truncate">{{ group.label }}</span>
+                </button>
+                <ul v-show="isGroupOpen(group)" class="nb-menu-items">
+                  <li v-for="item of group.items" :key="item.path" class="w-full">
+                    <NuxtLink
+                      :title="item.label"
+                      :to="menuLink(item)"
+                      class="inline-flex items-center gap-2 py-1 text-[0.875rem] text-gray-400 transition hocus:text-primary-700"
+                      :class="{ 'font-medium !text-gray-700': isActive(item) }"
+                    >
+                      <span v-html="item.icon" class="pointer-events-none -mt-px h-4 w-4 shrink-0"></span>
+                      <span class="pointer-events-none truncate">{{ item.label }}</span>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
             </li>
             <li v-if="groupedMenu.rest.length" class="nb-menu-divider w-full"></li>
             <li v-for="item of groupedMenu.rest" :key="item.path" class="w-full">
@@ -192,7 +205,10 @@ const groupedMenu = computed(() => {
         return { ...byCollection.get(it.collection), label: it.label };
       }),
   })).filter((group) => group.items.length);
-  const rest = dashboard.value.menu.filter((m) => !m.collection || !used.has(m.collection));
+  // Poza grupami tylko biblioteka zdjęć i plików. Techniczne pozycje Pruviousa
+  // (Pages, Presets, Users, Roles, Redirection, SEO) są ukryte — nie są używane,
+  // a tylko mieszały. Nadal działają pod swoimi adresami.
+  const rest = dashboard.value.menu.filter((m) => m.collection === "uploads");
   return { groups, rest };
 });
 // Akordeon: otwarta jest tylko jedna grupa — ta, w której jest otwarta strona,
@@ -218,6 +234,13 @@ function toggleGroup(label) {
 
 <style>
 @font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:url(../../assets/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Roboto;font-style:italic;font-weight:400;src:url(../../assets/KFOkCnqEu92Fr1Mu51xIIzIXKMny.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:url(../../assets/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-display:swap;font-family:Roboto;font-style:italic;font-weight:500;src:url(../../assets/KFOjCnqEu92Fr1Mu51S7ACc6CsTYl4BO.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}
+</style>
+
+<style>
+/* Pole „Galeria”: przycisk × widać dopiero po najechaniu na kafelek (reszta wyglądu w GalleryField.vue). */
+.nb-gallery-tile .nb-gallery-remove { opacity: 0; transition: opacity 0.15s; }
+.nb-gallery-tile:hover .nb-gallery-remove { opacity: 1; }
+.nb-gallery-remove:hover { background: #dc2626 !important; }
 </style>
 
 <style scoped>

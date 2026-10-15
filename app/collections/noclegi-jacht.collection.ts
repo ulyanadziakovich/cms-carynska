@@ -47,7 +47,9 @@ export default defineCollection({
           [
             "callCta",
             "dzial"
-          ],
+          ]
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
           [
             "crumbParent",
             "crumbCurrent"

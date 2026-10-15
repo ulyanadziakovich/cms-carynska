@@ -8,7 +8,8 @@
     "preview": "nuxt preview",
     "forms": "node scripts/forms/generate.mjs",
     "postinstall": "npm rebuild sqlite3 --build-from-source && nuxt prepare",
-    "import": "node --env-file=.env.import scripts/import/run.mjs"
+    "import": "node --env-file=.env.import scripts/import/run.mjs",
+    "dashboard-pl": "node scripts/dashboard-pl/generate.mjs"
   },
   "dependencies": {
     "nuxt": "^4.4.6",

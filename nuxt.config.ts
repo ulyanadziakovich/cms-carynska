@@ -20,6 +20,8 @@ export default defineNuxtConfig({
         },
       },
     },
+    // Polskie napisy panelu: własny zestaw w app/translatable-strings (npm run dashboard-pl)
+    standardTranslatableStrings: { dashboard: false },
     database: process.env.NUXT_PRUVIOUS_DATABASE ?? 'sqlite:./pruvious.db',
     uploads: {
       drive: { type: 'local', path: process.env.NUXT_PRUVIOUS_UPLOADS_DRIVE_PATH ?? './.uploads' },

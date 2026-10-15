@@ -57,7 +57,7 @@ export default defineCollection({
             "dzial"
           ]
         ],
-        "Okruszki": [
+        "Drobne napisy (rzadko zmieniane)": [
           [
             "crumbParent",
             "crumbCurrent"

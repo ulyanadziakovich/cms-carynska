@@ -35,6 +35,34 @@ export function compactLayout(fields, perRow) {
   return out
 }
 
+/**
+ * Drobne, prawie nigdy nie zmieniane napisy (dla czytników ekranu, okruszki,
+ * podpisy pól formularza…) trafiają do ostatniej zakładki, żeby nie zasłaniać
+ * tego, co edytuje się na co dzień.
+ */
+export const RARE_TAB = 'Drobne napisy (rzadko zmieniane)'
+const RARE_KEYS = new Set([
+  'formName', 'formEmail', 'formPhone', 'formMessage', 'formSubmit', 'formSending', 'formThanks', 'formThanksText',
+  'bankLabel', 'accountLabel', 'swiftLabel',
+  'widgetCheckIn', 'widgetCheckOut', 'widgetArrival', 'widgetDeparture', 'widgetPickDate',
+  'widgetGuests', 'widgetGuestOne', 'widgetGuestMany', 'widgetReserve', 'widgetReserveNow',
+  'bookSection', 'bookContinued',
+])
+export const isRare = (key, f) => f.rare || RARE_KEYS.has(key) || /^crumb/.test(key) || /\(dla czytników\)/.test(f.label ?? '')
+
+/** Przenosi rzadkie pola do ostatniej zakładki; puste zakładki znikają. */
+export function arrangeTabs(tabs) {
+  const out = {}
+  const rare = {}
+  for (const [tab, fields] of Object.entries(tabs)) {
+    const keep = {}
+    for (const [key, f] of Object.entries(fields)) (isRare(key, f) ? rare : keep)[key] = f
+    if (Object.keys(keep).length) out[tab] = keep
+  }
+  if (Object.keys(rare).length) out[RARE_TAB] = rare
+  return out
+}
+
 export function fieldDef(f) {
   const options = { required: false, label: f.label }
   if (f.hint) options.description = f.hint
@@ -67,7 +95,7 @@ for (const form of spec) {
   urls[form.name] = form.url ?? null
   const fields = {}
   const layout = {}
-  for (const [tab, tabFields] of Object.entries(form.tabs)) {
+  for (const [tab, tabFields] of Object.entries(arrangeTabs(form.tabs))) {
     layout[tab] = compactLayout(tabFields, 2)
     for (const [key, f] of Object.entries(tabFields)) {
       if (fields[key]) throw new Error(`${form.name}: pole „${key}” występuje dwa razy`)

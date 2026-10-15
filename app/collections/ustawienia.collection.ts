@@ -33,31 +33,7 @@ export default defineCollection({
             "bookingUrl",
             "bookingCta"
           ],
-          [
-            "widgetTitle",
-            "widgetCheckIn"
-          ],
-          [
-            "widgetCheckOut",
-            "widgetArrival"
-          ],
-          [
-            "widgetDeparture",
-            "widgetPickDate"
-          ],
-          [
-            "widgetGuests",
-            "widgetGuestOne"
-          ],
-          [
-            "widgetGuestMany",
-            "widgetLess"
-          ],
-          [
-            "widgetMore",
-            "widgetReserve"
-          ],
-          "widgetReserveNow"
+          "widgetTitle"
         ],
         "Telefony w menu": [
           [
@@ -83,15 +59,41 @@ export default defineCollection({
           ],
           [
             "details",
-            "close"
-          ],
-          [
-            "prevPhoto",
-            "nextPhoto"
-          ],
-          [
-            "photoN",
             "maxPersons"
+          ]
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
+          [
+            "widgetCheckIn",
+            "widgetCheckOut"
+          ],
+          [
+            "widgetArrival",
+            "widgetDeparture"
+          ],
+          [
+            "widgetPickDate",
+            "widgetGuests"
+          ],
+          [
+            "widgetGuestOne",
+            "widgetGuestMany"
+          ],
+          [
+            "widgetLess",
+            "widgetMore"
+          ],
+          [
+            "widgetReserve",
+            "widgetReserveNow"
+          ],
+          [
+            "close",
+            "prevPhoto"
+          ],
+          [
+            "nextPhoto",
+            "photoN"
           ],
           [
             "openMenu",
@@ -172,100 +174,6 @@ export default defineCollection({
         "required": false,
         "label": "Widżet: przycisk główny",
         "description": "Np. „Sprawdź dostępność”."
-      }
-    },
-    "widgetCheckIn": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przyjazd (krótko)",
-        "description": "Np. „Check-in”."
-      }
-    },
-    "widgetCheckOut": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: wyjazd (krótko)",
-        "description": "Np. „Check-out”."
-      }
-    },
-    "widgetArrival": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przyjazd (w okienku)",
-        "description": "Np. „Przyjazd”."
-      }
-    },
-    "widgetDeparture": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: wyjazd (w okienku)",
-        "description": "Np. „Wyjazd”."
-      }
-    },
-    "widgetPickDate": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: podpowiedź daty",
-        "description": "Np. „Wybierz datę”."
-      }
-    },
-    "widgetGuests": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: goście",
-        "description": "Np. „Goście”."
-      }
-    },
-    "widgetGuestOne": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: „1 Gość”",
-        "description": "Słowo po liczbie 1."
-      }
-    },
-    "widgetGuestMany": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: „2 Gości”",
-        "description": "Słowo po liczbie większej niż 1."
-      }
-    },
-    "widgetLess": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przycisk „mniej” (dla czytników)"
-      }
-    },
-    "widgetMore": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przycisk „więcej” (dla czytników)"
-      }
-    },
-    "widgetReserve": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przycisk w pasku",
-        "description": "Np. „Rezerwuj”."
-      }
-    },
-    "widgetReserveNow": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Widżet: przycisk w okienku",
-        "description": "Np. „Rezerwuj teraz”."
       }
     },
     "topbarLabel": {
@@ -379,6 +287,108 @@ export default defineCollection({
         "label": "Przycisk „Szczegóły”"
       }
     },
+    "maxPersons": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Etykieta liczby osób na zdjęciu",
+        "description": "Strona wstawi liczbę w miejsce {liczba}, np. „max {liczba} os.”."
+      }
+    },
+    "widgetCheckIn": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przyjazd (krótko)",
+        "description": "Np. „Check-in”."
+      }
+    },
+    "widgetCheckOut": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: wyjazd (krótko)",
+        "description": "Np. „Check-out”."
+      }
+    },
+    "widgetArrival": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przyjazd (w okienku)",
+        "description": "Np. „Przyjazd”."
+      }
+    },
+    "widgetDeparture": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: wyjazd (w okienku)",
+        "description": "Np. „Wyjazd”."
+      }
+    },
+    "widgetPickDate": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: podpowiedź daty",
+        "description": "Np. „Wybierz datę”."
+      }
+    },
+    "widgetGuests": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: goście",
+        "description": "Np. „Goście”."
+      }
+    },
+    "widgetGuestOne": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: „1 Gość”",
+        "description": "Słowo po liczbie 1."
+      }
+    },
+    "widgetGuestMany": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: „2 Gości”",
+        "description": "Słowo po liczbie większej niż 1."
+      }
+    },
+    "widgetLess": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przycisk „mniej” (dla czytników)"
+      }
+    },
+    "widgetMore": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przycisk „więcej” (dla czytników)"
+      }
+    },
+    "widgetReserve": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przycisk w pasku",
+        "description": "Np. „Rezerwuj”."
+      }
+    },
+    "widgetReserveNow": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Widżet: przycisk w okienku",
+        "description": "Np. „Rezerwuj teraz”."
+      }
+    },
     "close": {
       "type": "text",
       "options": {
@@ -407,14 +417,6 @@ export default defineCollection({
         "required": false,
         "label": "Numer zdjęcia (dla czytników)",
         "description": "Strona wstawi numer w miejsce {liczba}, np. „Zdjęcie {liczba}”."
-      }
-    },
-    "maxPersons": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Etykieta liczby osób na zdjęciu",
-        "description": "Strona wstawi liczbę w miejsce {liczba}, np. „max {liczba} os.”."
       }
     },
     "openMenu": {
