@@ -27,12 +27,12 @@ export default defineCollection({
           "noclegiTag",
           "noclegiTitle",
           "noclegiBody",
-          "noclegiImage",
+          "noclegiFeatures",
           [
-            "noclegiImageAlt",
-            "noclegiCta"
+            "noclegiCta",
+            "noclegiCtaHref"
           ],
-          "noclegiCtaHref"
+          "noclegiCards"
         ],
         "Atrakcje (kafelki)": [
           "atrakcjeTag",
@@ -141,18 +141,46 @@ export default defineCollection({
         "rows": 6
       }
     },
-    "noclegiImage": {
-      "type": "image",
+    "noclegiFeatures": {
+      "type": "repeater",
       "options": {
         "required": false,
-        "label": "Zdjęcie"
-      }
-    },
-    "noclegiImageAlt": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Opis zdjęcia"
+        "label": "Udogodnienia (lista z ikonkami)",
+        "description": "Pod tekstem, po lewej.",
+        "addLabel": "Dodaj udogodnienie",
+        "subfields": {
+          "icon": {
+            "type": "select",
+            "options": {
+              "required": false,
+              "label": "Ikonka",
+              "choices": {
+                "balkon": "Balkon / taras",
+                "lazienka": "Łazienka / prysznic",
+                "wifi": "WiFi",
+                "parking": "Parking",
+                "widok": "Widok na jezioro",
+                "sniadanie": "Śniadanie / kawa",
+                "klimatyzacja": "Klimatyzacja",
+                "zwierzeta": "Zwierzęta"
+              },
+              "clearable": true
+            }
+          },
+          "label": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Napis"
+            }
+          }
+        },
+        "fieldLayout": [
+          [
+            "icon",
+            "label"
+          ]
+        ]
       }
     },
     "noclegiCta": {
@@ -168,6 +196,64 @@ export default defineCollection({
         "required": false,
         "label": "Dokąd prowadzi przycisk",
         "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
+    "noclegiCards": {
+      "type": "repeater",
+      "options": {
+        "required": false,
+        "label": "Karty ze zdjęciami (po prawej)",
+        "description": "Np. „Pokoje i apartamenty” i „Hotel na wodzie”.",
+        "addLabel": "Dodaj kartę",
+        "subfields": {
+          "title": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Tytuł"
+            }
+          },
+          "linkLabel": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Link na karcie",
+              "description": "Np. „Zobacz pokoje →”."
+            }
+          },
+          "href": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Dokąd prowadzi",
+              "placeholder": "np. /atrakcje albo https://…"
+            }
+          },
+          "desc": {
+            "type": "text-area",
+            "options": {
+              "required": false,
+              "label": "Krótki opis",
+              "rows": 2
+            }
+          },
+          "image": {
+            "type": "image",
+            "options": {
+              "required": false,
+              "label": "Zdjęcie"
+            }
+          }
+        },
+        "fieldLayout": [
+          [
+            "title",
+            "linkLabel",
+            "href"
+          ],
+          "desc",
+          "image"
+        ]
       }
     },
     "atrakcjeTag": {

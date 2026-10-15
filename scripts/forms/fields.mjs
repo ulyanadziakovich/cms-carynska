@@ -23,3 +23,9 @@ export const ICONS = {
   zaglowka: 'Żaglówka', elektryczna: 'Łódź elektryczna', kajak: 'Kajak', jacht: 'Jacht',
   trekking: 'Góry / sport', plaza: 'Plaża / basen', koncert: 'Koncert / atrakcje', grupy: 'Grupa ludzi',
 }
+
+/** Ikonki udogodnień (sekcja Noclegi na stronie głównej). */
+export const FEATURE_ICONS = {
+  balkon: 'Balkon / taras', lazienka: 'Łazienka / prysznic', wifi: 'WiFi', parking: 'Parking',
+  widok: 'Widok na jezioro', sniadanie: 'Śniadanie / kawa', klimatyzacja: 'Klimatyzacja', zwierzeta: 'Zwierzęta',
+}

@@ -1,7 +1,7 @@
 // Jedno źródło prawdy dla wszystkich formularzy panelu. Każdy wpis = jeden
 // formularz, zakładki = sekcje strony w kolejności, w jakiej widać je na stronie.
 // Po zmianie: npm run forms
-import { ICONS, area, checkbox, dzial, editor, file, gallery, image, lines, link, number, repeater, select, text } from './fields.mjs'
+import { FEATURE_ICONS, ICONS, area, checkbox, dzial, editor, file, gallery, image, lines, link, number, repeater, select, text } from './fields.mjs'
 
 const hero = (where) => ({
   heroTag: text('Napis nad tytułem', `Mały złoty napis nad tytułem ${where}.`),
@@ -148,8 +148,14 @@ export default [
       'Noclegi': {
         noclegiTag: text('Napis nad tytułem'), noclegiTitle: area('Tytuł', '', 2),
         noclegiBody: area('Tekst', 'Akapity oddziel pustą linią.', 6),
-        noclegiImage: image('Zdjęcie'), noclegiImageAlt: text('Opis zdjęcia'),
+        noclegiFeatures: repeater('Udogodnienia (lista z ikonkami)', 'Pod tekstem, po lewej.', 'Dodaj udogodnienie', {
+          icon: select('Ikonka', '', FEATURE_ICONS), label: text('Napis'),
+        }),
         noclegiCta: text('Przycisk'), noclegiCtaHref: link('Dokąd prowadzi przycisk'),
+        noclegiCards: repeater('Karty ze zdjęciami (po prawej)', 'Np. „Pokoje i apartamenty” i „Hotel na wodzie”.', 'Dodaj kartę', {
+          title: text('Tytuł'), linkLabel: text('Link na karcie', 'Np. „Zobacz pokoje →”.'), href: link('Dokąd prowadzi'),
+          desc: area('Krótki opis', '', 2), image: image('Zdjęcie'),
+        }),
       },
       'Atrakcje (kafelki)': {
         atrakcjeTag: text('Napis nad tytułem'), atrakcjeTitle: area('Tytuł', '', 2), atrakcjeBody: area('Tekst', '', 3),

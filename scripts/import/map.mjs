@@ -1,4 +1,6 @@
 // data.json → rekordy formularzy. ctx dostarcza id wgranych plików i działów.
+/** Zdjęcie z opisem (alt) — gdy pliku brak, pole zostaje puste. */
+const withAlt = (uploadId, alt) => (uploadId == null ? null : { uploadId, alt })
 const paras = (a) => (Array.isArray(a) ? a.join('\n\n') : a ?? '')
 const ls = (a) => (a ?? []).join('\n')
 
@@ -31,9 +33,21 @@ export function buildForms(d, templates, ctx) {
     'strona-glowna': {
       ...t['strona-glowna'],
       heroTitle: c.hero.title, heroSubtitle: c.hero.subtitle, heroImages: ctx.gallery(c.hero.images.map((src) => ({ src, alt: '' }))),
-      noclegiTag: c.noclegi.tag, noclegiTitle: c.noclegi.title, noclegiBody: paras(c.noclegi.body),
-      noclegiImage: ctx.img(c.noclegi.rooms[0].image), noclegiImageAlt: c.noclegi.rooms[0].type,
+      // Pierwszy akapit; drugi (udogodnienia) to lista z ikonkami w noclegiFeatures.
+      noclegiTag: c.noclegi.tag, noclegiTitle: c.noclegi.title, noclegiBody: paras(c.noclegi.body).split('\n\n')[0],
+      noclegiFeatures: [
+        { icon: 'balkon', label: 'Balkon lub taras' }, { icon: 'lazienka', label: 'Łazienka z prysznicem' },
+        { icon: 'wifi', label: 'Bezpłatne WiFi' }, { icon: 'parking', label: 'Prywatny parking' },
+      ],
       noclegiCta: c.noclegi.cta.label, noclegiCtaHref: c.noclegi.cta.href,
+      noclegiCards: [
+        { title: 'Pokoje i apartamenty', linkLabel: 'Zobacz pokoje', href: '/noclegi/pokoje',
+          desc: 'Pokoje 1- i 2-osobowe, studia oraz apartament 5-osobowy — wiele z widokiem na jezioro.',
+          image: withAlt(ctx.img('/images/2os-sypialnia.png'), 'Jasny pokój 2-osobowy z dużym oknem') },
+        { title: 'Hotel na wodzie', linkLabel: 'Zobacz jachty', href: '/noclegi/jacht',
+          desc: 'Zaśnij kołysany falami Jeziora Solińskiego — nocleg na pokładzie jachtu, bez patentu.',
+          image: withAlt(ctx.img('/images/saturn25-jezero.webp'), 'Jacht Saturn 25 na jeziorze') },
+      ],
       atrakcjeTag: c.atrakcje.tag, atrakcjeTitle: c.atrakcje.title, atrakcjeBody: c.atrakcje.body,
       atrakcjeImage: ctx.img(c.atrakcje.image.src), atrakcjeImageAlt: c.atrakcje.image.alt,
       atrakcjeCta: c.atrakcje.cta.label, atrakcjeCtaHref: c.atrakcje.cta.href,
