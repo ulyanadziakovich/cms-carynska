@@ -53,12 +53,12 @@ export default defineCollection({
           "kuchniaTag",
           "kuchniaTitle",
           "kuchniaBody",
-          "kuchniaImage",
+          "kuchniaFeatures",
+          "kuchniaImages",
           [
-            "kuchniaImageAlt",
-            "kuchniaCta"
-          ],
-          "kuchniaCtaHref"
+            "kuchniaCta",
+            "kuchniaCtaHref"
+          ]
         ],
         "Opinie gości": [
           [
@@ -162,7 +162,11 @@ export default defineCollection({
                 "widok": "Widok na jezioro",
                 "sniadanie": "Śniadanie / kawa",
                 "klimatyzacja": "Klimatyzacja",
-                "zwierzeta": "Zwierzęta"
+                "zwierzeta": "Zwierzęta",
+                "obiad": "Obiad / talerz ze sztućcami",
+                "pizza": "Pizza",
+                "impreza": "Impreza / kieliszki",
+                "ryba": "Ryba"
               },
               "clearable": true
             }
@@ -444,18 +448,59 @@ export default defineCollection({
         "rows": 5
       }
     },
-    "kuchniaImage": {
-      "type": "image",
+    "kuchniaFeatures": {
+      "type": "repeater",
       "options": {
         "required": false,
-        "label": "Zdjęcie"
+        "label": "Co serwujemy (lista z ikonkami)",
+        "description": "Pod tekstem, po lewej.",
+        "addLabel": "Dodaj pozycję",
+        "subfields": {
+          "icon": {
+            "type": "select",
+            "options": {
+              "required": false,
+              "label": "Ikonka",
+              "choices": {
+                "balkon": "Balkon / taras",
+                "lazienka": "Łazienka / prysznic",
+                "wifi": "WiFi",
+                "parking": "Parking",
+                "widok": "Widok na jezioro",
+                "sniadanie": "Śniadanie / kawa",
+                "klimatyzacja": "Klimatyzacja",
+                "zwierzeta": "Zwierzęta",
+                "obiad": "Obiad / talerz ze sztućcami",
+                "pizza": "Pizza",
+                "impreza": "Impreza / kieliszki",
+                "ryba": "Ryba"
+              },
+              "clearable": true
+            }
+          },
+          "label": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Napis"
+            }
+          }
+        },
+        "fieldLayout": [
+          [
+            "icon",
+            "label"
+          ]
+        ]
       }
     },
-    "kuchniaImageAlt": {
-      "type": "text",
+    "kuchniaImages": {
+      "type": "gallery",
       "options": {
         "required": false,
-        "label": "Opis zdjęcia"
+        "label": "Zdjęcia (zmieniają się same)",
+        "description": "Co kilka sekund następne zdjęcie; kropki pod zdjęciem przełączają ręcznie. Kolejność przeciąganiem. Najlepiej poziome zdjęcia potraw. Opis zdjęcia = tekst dla niewidomych.",
+        "directory": "strona-glowna/"
       }
     },
     "kuchniaCta": {

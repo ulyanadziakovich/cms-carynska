@@ -172,7 +172,10 @@ export default [
       },
       'Tawerna': {
         kuchniaTag: text('Napis nad tytułem'), kuchniaTitle: area('Tytuł', '', 2), kuchniaBody: area('Tekst', 'Akapity oddziel pustą linią.', 5),
-        kuchniaImage: image('Zdjęcie'), kuchniaImageAlt: text('Opis zdjęcia'),
+        kuchniaFeatures: repeater('Co serwujemy (lista z ikonkami)', 'Pod tekstem, po lewej.', 'Dodaj pozycję', {
+          icon: select('Ikonka', '', FEATURE_ICONS), label: text('Napis'),
+        }),
+        kuchniaImages: gallery('Zdjęcia (zmieniają się same)', 'Co kilka sekund następne zdjęcie; kropki pod zdjęciem przełączają ręcznie. Kolejność przeciąganiem. Najlepiej poziome zdjęcia potraw. Opis zdjęcia = tekst dla niewidomych.', 'strona-glowna/'),
         kuchniaCta: text('Przycisk'), kuchniaCtaHref: link('Dokąd prowadzi przycisk'),
       },
       'Opinie gości': {

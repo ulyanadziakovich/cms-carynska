@@ -49,12 +49,23 @@ export function buildForms(d, templates, ctx) {
           image: ctx.img('/images/saturn25-jezero.webp') },
       ],
       atrakcjeTag: c.atrakcje.tag, atrakcjeTitle: c.atrakcje.title, atrakcjeBody: c.atrakcje.body,
-      atrakcjeImage: ctx.img(c.atrakcje.image.src), atrakcjeImageAlt: c.atrakcje.image.alt,
+      // Ostre, poziome zdjęcie (stare solina3 było małe i pionowe — rozmyte na całą szerokość)
+      atrakcjeImage: ctx.img('/images/galeria-sup.png'), atrakcjeImageAlt: 'Żaglówki i deska SUP przy pomoście na jeziorze Solina',
       atrakcjeCta: c.atrakcje.cta.label, atrakcjeCtaHref: c.atrakcje.cta.href,
       tiles: c.atrakcje.tiles.map((x, i) => ({ tag: x.tag, title: x.title, icon: TILE_ICONS[i] ?? null, image: ctx.img(x.image), from: x.from,
         modalTitle: x.modalTitle, modalBody: paras(x.modalBody), highlights: ls(x.highlights) })),
-      kuchniaTag: c.kuchnia.tag, kuchniaTitle: c.kuchnia.title, kuchniaBody: paras(c.kuchnia.body),
-      kuchniaImage: ctx.img(c.kuchnia.image.src), kuchniaImageAlt: c.kuchnia.image.alt, kuchniaCta: c.kuchnia.cta.label, kuchniaCtaHref: c.kuchnia.cta.href,
+      // Pierwszy akapit; drugi (co serwujemy) to lista z ikonkami w kuchniaFeatures. Zdjęcie potrawy zamiast baru.
+      kuchniaTag: c.kuchnia.tag, kuchniaTitle: c.kuchnia.title, kuchniaBody: paras(c.kuchnia.body).split('\n\n')[0],
+      kuchniaFeatures: [
+        { icon: 'sniadanie', label: 'Śniadania' }, { icon: 'obiad', label: 'Obiady i kolacje' },
+        { icon: 'pizza', label: 'Pizza z pieca' }, { icon: 'impreza', label: 'Imprezy okolicznościowe' },
+      ],
+      kuchniaImages: ctx.gallery([
+        { src: '/images/galeria-pizza.png', alt: 'Pizza z pieca w Tawernie' },
+        { src: '/images/galeria-pstrag.png', alt: 'Pstrąg z frytkami' },
+        { src: '/images/galeria-sniadanie.png', alt: 'Bufet śniadaniowy' },
+      ]),
+      kuchniaCta: c.kuchnia.cta.label, kuchniaCtaHref: c.kuchnia.cta.href,
       googleUrl: c.reviews.googleUrl, reviews: c.reviews.items.map((r) => ({ ...r, badge: r.badge ?? '' })),
     },
     'noclegi-pokoje': {
