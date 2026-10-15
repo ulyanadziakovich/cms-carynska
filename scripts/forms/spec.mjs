@@ -164,7 +164,7 @@ export default [
         tileHint: text('Podpowiedź na kafelku', 'Np. „Kliknij, aby dowiedzieć się więcej”.'),
         tiles: repeater('Kafelki', 'Kliknięcie kafelka otwiera okienko ze szczegółami.', 'Dodaj kafelek', {
           tag: text('Napis nad tytułem'), title: text('Tytuł'),
-          icon: image('Ikona'), image: image('Zdjęcie'),
+          icon: select('Ikonka na kafelku', 'Złota ikonka w rogu kafelka.', ICONS), image: image('Zdjęcie'),
           from: select('Skąd wjeżdża przy przewijaniu', '', { left: 'Z lewej', right: 'Z prawej' }),
           modalTitle: text('Okienko: tytuł'), modalBody: area('Okienko: tekst', 'Akapity oddziel pustą linią.', 8),
           highlights: lines('Okienko: wyróżniki'),

@@ -157,7 +157,9 @@ export default defineCollection({
                 "trekking": "Góry / sport",
                 "plaza": "Plaża / basen",
                 "koncert": "Koncert / atrakcje",
-                "grupy": "Grupa ludzi"
+                "grupy": "Grupa ludzi",
+                "impreza": "Impreza / kieliszki",
+                "zapora": "Zapora / tama"
               },
               "clearable": true
             }
@@ -567,7 +569,9 @@ export default defineCollection({
                 "trekking": "Góry / sport",
                 "plaza": "Plaża / basen",
                 "koncert": "Koncert / atrakcje",
-                "grupy": "Grupa ludzi"
+                "grupy": "Grupa ludzi",
+                "impreza": "Impreza / kieliszki",
+                "zapora": "Zapora / tama"
               },
               "clearable": true
             }

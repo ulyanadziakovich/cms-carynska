@@ -339,10 +339,24 @@ export default defineCollection({
             }
           },
           "icon": {
-            "type": "image",
+            "type": "select",
             "options": {
               "required": false,
-              "label": "Ikona"
+              "label": "Ikonka na kafelku",
+              "description": "Złota ikonka w rogu kafelka.",
+              "choices": {
+                "zaglowka": "Żaglówka",
+                "elektryczna": "Łódź elektryczna",
+                "kajak": "Kajak",
+                "jacht": "Jacht",
+                "trekking": "Góry / sport",
+                "plaza": "Plaża / basen",
+                "koncert": "Koncert / atrakcje",
+                "grupy": "Grupa ludzi",
+                "impreza": "Impreza / kieliszki",
+                "zapora": "Zapora / tama"
+              },
+              "clearable": true
             }
           },
           "image": {
@@ -393,9 +407,9 @@ export default defineCollection({
         "fieldLayout": [
           [
             "tag",
-            "title"
+            "title",
+            "icon"
           ],
-          "icon",
           "image",
           [
             "from",

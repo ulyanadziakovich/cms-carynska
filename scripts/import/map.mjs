@@ -1,4 +1,6 @@
 // data.json → rekordy formularzy. ctx dostarcza id wgranych plików i działów.
+/** Ikonki kafelków atrakcji (stara strona miała tu pliki SVG, których nie było). */
+const TILE_ICONS = ['zaglowka', 'impreza', 'zapora', 'grupy']
 const paras = (a) => (Array.isArray(a) ? a.join('\n\n') : a ?? '')
 const ls = (a) => (a ?? []).join('\n')
 
@@ -49,7 +51,7 @@ export function buildForms(d, templates, ctx) {
       atrakcjeTag: c.atrakcje.tag, atrakcjeTitle: c.atrakcje.title, atrakcjeBody: c.atrakcje.body,
       atrakcjeImage: ctx.img(c.atrakcje.image.src), atrakcjeImageAlt: c.atrakcje.image.alt,
       atrakcjeCta: c.atrakcje.cta.label, atrakcjeCtaHref: c.atrakcje.cta.href,
-      tiles: c.atrakcje.tiles.map((x) => ({ tag: x.tag, title: x.title, icon: ctx.img(x.icon), image: ctx.img(x.image), from: x.from,
+      tiles: c.atrakcje.tiles.map((x, i) => ({ tag: x.tag, title: x.title, icon: TILE_ICONS[i] ?? null, image: ctx.img(x.image), from: x.from,
         modalTitle: x.modalTitle, modalBody: paras(x.modalBody), highlights: ls(x.highlights) })),
       kuchniaTag: c.kuchnia.tag, kuchniaTitle: c.kuchnia.title, kuchniaBody: paras(c.kuchnia.body),
       kuchniaImage: ctx.img(c.kuchnia.image.src), kuchniaImageAlt: c.kuchnia.image.alt, kuchniaCta: c.kuchnia.cta.label, kuchniaCtaHref: c.kuchnia.cta.href,

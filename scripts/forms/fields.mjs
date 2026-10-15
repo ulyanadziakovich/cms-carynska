@@ -22,6 +22,7 @@ export const repeater = (label, hint, addLabel, subfields) => ({ type: 'repeater
 export const ICONS = {
   zaglowka: 'Żaglówka', elektryczna: 'Łódź elektryczna', kajak: 'Kajak', jacht: 'Jacht',
   trekking: 'Góry / sport', plaza: 'Plaża / basen', koncert: 'Koncert / atrakcje', grupy: 'Grupa ludzi',
+  impreza: 'Impreza / kieliszki', zapora: 'Zapora / tama',
 }
 
 /** Ikonki udogodnień (sekcja Noclegi na stronie głównej). */
