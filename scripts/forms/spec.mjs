@@ -181,6 +181,9 @@ export default [
       'Opinie gości': {
         reviewsTag: text('Napis nad tytułem'), reviewsTitle: text('Tytuł'),
         reviewsAll: text('Link do wszystkich opinii'), googleUrl: link('Adres opinii w Google'),
+        reviewsRating: text('Ocena w Google', 'Np. „4,8”. Puste = plakietka z oceną się nie pokazuje. Wpisuj prawdziwą ocenę z Google.'),
+        reviewsRatingNote: text('Podpis przy ocenie', 'Np. „230 opinii w Google”.'),
+        reviewsMore: text('Rozwiń długą opinię', 'Np. „Czytaj całość”.'), reviewsLess: text('Zwiń opinię', 'Np. „Zwiń”.'),
         reviews: repeater('Opinie', '', 'Dodaj opinię', {
           name: text('Autor'), badge: text('Odznaka autora', 'Np. „Lokalny przewodnik”.'), date: text('Kiedy', 'Np. „3 tygodnie temu”.'),
           stars: number('Gwiazdki (1–5)'), text: area('Treść', '', 4),

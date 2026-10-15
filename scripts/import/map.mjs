@@ -50,7 +50,7 @@ export function buildForms(d, templates, ctx) {
       ],
       atrakcjeTag: c.atrakcje.tag, atrakcjeTitle: c.atrakcje.title, atrakcjeBody: c.atrakcje.body,
       // Ostre, poziome zdjęcie (stare solina3 było małe i pionowe — rozmyte na całą szerokość)
-      atrakcjeImage: ctx.img('/images/galeria-sup.png'), atrakcjeImageAlt: 'Żaglówki i deska SUP przy pomoście na jeziorze Solina',
+      atrakcjeImage: ctx.img('/images/solina1.avif'), atrakcjeImageAlt: 'Przystań nad Jeziorem Solińskim z lotu ptaka',
       atrakcjeCta: c.atrakcje.cta.label, atrakcjeCtaHref: c.atrakcje.cta.href,
       tiles: c.atrakcje.tiles.map((x, i) => ({ tag: x.tag, title: x.title, icon: TILE_ICONS[i] ?? null, image: ctx.img(x.image), from: x.from,
         modalTitle: x.modalTitle, modalBody: paras(x.modalBody), highlights: ls(x.highlights) })),
@@ -66,6 +66,7 @@ export function buildForms(d, templates, ctx) {
         { src: '/images/galeria-sniadanie.png', alt: 'Bufet śniadaniowy' },
       ]),
       kuchniaCta: c.kuchnia.cta.label, kuchniaCtaHref: c.kuchnia.cta.href,
+      reviewsMore: 'Czytaj całość', reviewsLess: 'Zwiń',
       googleUrl: c.reviews.googleUrl, reviews: c.reviews.items.map((r) => ({ ...r, badge: r.badge ?? '' })),
     },
     'noclegi-pokoje': {

@@ -69,6 +69,14 @@ export default defineCollection({
             "reviewsAll",
             "googleUrl"
           ],
+          [
+            "reviewsRating",
+            "reviewsRatingNote"
+          ],
+          [
+            "reviewsMore",
+            "reviewsLess"
+          ],
           "reviews"
         ],
         "Facebook": [
@@ -545,6 +553,38 @@ export default defineCollection({
         "required": false,
         "label": "Adres opinii w Google",
         "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
+    "reviewsRating": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Ocena w Google",
+        "description": "Np. „4,8”. Puste = plakietka z oceną się nie pokazuje. Wpisuj prawdziwą ocenę z Google."
+      }
+    },
+    "reviewsRatingNote": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Podpis przy ocenie",
+        "description": "Np. „230 opinii w Google”."
+      }
+    },
+    "reviewsMore": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Rozwiń długą opinię",
+        "description": "Np. „Czytaj całość”."
+      }
+    },
+    "reviewsLess": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Zwiń opinię",
+        "description": "Np. „Zwiń”."
       }
     },
     "reviews": {
