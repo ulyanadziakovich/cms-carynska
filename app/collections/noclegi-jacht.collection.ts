@@ -36,14 +36,22 @@ export default defineCollection({
           "note"
         ],
         "Napisy": [
-          "seeDetails",
-          "detailsLink",
-          "onBoard",
-          "seasonPricing",
-          "callCta",
-          "dzial",
-          "crumbParent",
-          "crumbCurrent"
+          [
+            "seeDetails",
+            "detailsLink"
+          ],
+          [
+            "onBoard",
+            "seasonPricing"
+          ],
+          [
+            "callCta",
+            "dzial"
+          ],
+          [
+            "crumbParent",
+            "crumbCurrent"
+          ]
         ]
       }
     ]
@@ -180,7 +188,13 @@ export default defineCollection({
                     "label": "Wartość"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "label",
+                  "value"
+                ]
+              ]
             }
           },
           "pricing": {
@@ -204,10 +218,30 @@ export default defineCollection({
                     "label": "Cena"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "label",
+                  "value"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "name",
+            "tag",
+            "units",
+            "capacity"
+          ],
+          "price",
+          "desc",
+          "gallery",
+          "features",
+          "specs",
+          "pricing"
+        ]
       }
     },
     "includesTitle": {

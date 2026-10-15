@@ -19,31 +19,51 @@ export default defineCollection({
     "fieldLayout": [
       {
         "Adres": [
-          "address",
-          "mapQuery",
+          [
+            "address",
+            "mapQuery"
+          ],
           "email"
         ],
         "Sekcja Kontakt": [
-          "kicker",
-          "title",
-          "reservationsTitle",
-          "formTitle",
-          "formName",
-          "formEmail",
-          "formPhone",
-          "formMessage",
-          "formSubmit",
-          "formSending",
-          "formThanks",
-          "formThanksText"
+          [
+            "kicker",
+            "title"
+          ],
+          [
+            "reservationsTitle",
+            "formTitle"
+          ],
+          [
+            "formName",
+            "formEmail"
+          ],
+          [
+            "formPhone",
+            "formMessage"
+          ],
+          [
+            "formSubmit",
+            "formSending"
+          ],
+          [
+            "formThanks",
+            "formThanksText"
+          ]
         ],
         "Dane do przelewu": [
-          "bankTitle",
-          "bankLabel",
-          "bankName",
-          "accountLabel",
-          "account",
-          "swiftLabel",
+          [
+            "bankTitle",
+            "bankLabel"
+          ],
+          [
+            "bankName",
+            "accountLabel"
+          ],
+          [
+            "account",
+            "swiftLabel"
+          ],
           "swift"
         ],
         "Social media i portale": [
@@ -252,7 +272,14 @@ export default defineCollection({
               "clearable": true
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "href",
+            "icon"
+          ]
+        ]
       }
     },
     "platforms": {
@@ -278,7 +305,13 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "href"
+          ]
+        ]
       }
     },
     "sisterTitle": {
@@ -363,7 +396,22 @@ export default defineCollection({
               "description": "Np. „Zobacz Zajazd”."
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "name",
+            "location",
+            "href",
+            "phone"
+          ],
+          "email",
+          "longDesc",
+          "image",
+          [
+            "imageAlt",
+            "cta"
+          ]
+        ]
       }
     }
   }

@@ -19,18 +19,24 @@ export default defineCollection({
     "fieldLayout": [
       {
         "Treść": [
-          "title",
-          "kicker",
+          [
+            "title",
+            "kicker"
+          ],
           "heroImage",
           "lead",
           "body"
         ],
         "Plik i przyciski": [
           "pdf",
-          "pdfLabel",
-          "cta",
-          "ctaHref",
-          "buttonsAtEnd"
+          [
+            "pdfLabel",
+            "cta"
+          ],
+          [
+            "ctaHref",
+            "buttonsAtEnd"
+          ]
         ]
       }
     ]

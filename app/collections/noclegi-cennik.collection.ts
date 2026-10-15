@@ -24,14 +24,22 @@ export default defineCollection({
           "heroImage"
         ],
         "Ceny pokoi": [
-          "kicker",
-          "tableTitle",
-          "colType",
-          "col1",
-          "col2",
-          "col3",
-          "col4",
-          "colApt",
+          [
+            "kicker",
+            "tableTitle"
+          ],
+          [
+            "colType",
+            "col1"
+          ],
+          [
+            "col2",
+            "col3"
+          ],
+          [
+            "col4",
+            "colApt"
+          ],
           "rows",
           "note"
         ],
@@ -40,14 +48,20 @@ export default defineCollection({
           "extras"
         ],
         "Kontakt": [
-          "contactTitle",
-          "cta",
-          "ctaHref",
-          "dzial"
+          [
+            "contactTitle",
+            "cta"
+          ],
+          [
+            "ctaHref",
+            "dzial"
+          ]
         ],
         "Okruszki": [
-          "crumbParent",
-          "crumbCurrent"
+          [
+            "crumbParent",
+            "crumbCurrent"
+          ]
         ]
       }
     ]
@@ -185,7 +199,19 @@ export default defineCollection({
               "label": "Apartament"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "type",
+            "p1",
+            "p2",
+            "p3"
+          ],
+          [
+            "p4",
+            "apt"
+          ]
+        ]
       }
     },
     "note": {
@@ -224,7 +250,13 @@ export default defineCollection({
               "label": "Cena"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "price"
+          ]
+        ]
       }
     },
     "contactTitle": {

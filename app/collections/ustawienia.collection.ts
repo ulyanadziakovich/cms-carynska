@@ -22,32 +22,52 @@ export default defineCollection({
           "logo",
           "footerLogo",
           "menuBackground",
-          "siteName",
-          "tagline",
+          [
+            "siteName",
+            "tagline"
+          ],
           "regionLine"
         ],
         "Rezerwacje online": [
-          "bookingUrl",
-          "bookingCta",
-          "widgetTitle",
-          "widgetCheckIn",
-          "widgetCheckOut",
-          "widgetArrival",
-          "widgetDeparture",
-          "widgetPickDate",
-          "widgetGuests",
-          "widgetGuestOne",
-          "widgetGuestMany",
-          "widgetLess",
-          "widgetMore",
-          "widgetReserve",
+          [
+            "bookingUrl",
+            "bookingCta"
+          ],
+          [
+            "widgetTitle",
+            "widgetCheckIn"
+          ],
+          [
+            "widgetCheckOut",
+            "widgetArrival"
+          ],
+          [
+            "widgetDeparture",
+            "widgetPickDate"
+          ],
+          [
+            "widgetGuests",
+            "widgetGuestOne"
+          ],
+          [
+            "widgetGuestMany",
+            "widgetLess"
+          ],
+          [
+            "widgetMore",
+            "widgetReserve"
+          ],
           "widgetReserveNow"
         ],
         "Telefony w menu": [
-          "topbarLabel",
-          "callTitle",
-          "callSubtitle",
-          "pizzaLabel",
+          [
+            "topbarLabel",
+            "callTitle"
+          ],
+          [
+            "callSubtitle",
+            "pizzaLabel"
+          ],
           "pizzaUrl"
         ],
         "Stopka": [
@@ -57,16 +77,26 @@ export default defineCollection({
           "badges"
         ],
         "Teksty wspólne": [
-          "breadcrumbHome",
-          "seeMore",
-          "details",
-          "close",
-          "prevPhoto",
-          "nextPhoto",
-          "photoN",
-          "maxPersons",
-          "openMenu",
-          "closeMenu"
+          [
+            "breadcrumbHome",
+            "seeMore"
+          ],
+          [
+            "details",
+            "close"
+          ],
+          [
+            "prevPhoto",
+            "nextPhoto"
+          ],
+          [
+            "photoN",
+            "maxPersons"
+          ],
+          [
+            "openMenu",
+            "closeMenu"
+          ]
         ]
       }
     ]
@@ -316,7 +346,14 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          "image",
+          [
+            "alt",
+            "href"
+          ]
+        ]
       }
     },
     "breadcrumbHome": {

@@ -31,16 +31,26 @@ export default defineCollection({
           "rooms"
         ],
         "Napisy": [
-          "crumbParent",
-          "crumbCurrent",
-          "labelSize",
-          "labelMax",
-          "labelAmenities",
-          "occupancyValue",
-          "amenitiesCount",
-          "questions",
-          "cta",
-          "ctaHref",
+          [
+            "crumbParent",
+            "crumbCurrent"
+          ],
+          [
+            "labelSize",
+            "labelMax"
+          ],
+          [
+            "labelAmenities",
+            "occupancyValue"
+          ],
+          [
+            "amenitiesCount",
+            "questions"
+          ],
+          [
+            "cta",
+            "ctaHref"
+          ],
           "dzial"
         ]
       }
@@ -161,7 +171,19 @@ export default defineCollection({
               "directory": "pokoje/"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "slug",
+            "tag",
+            "title",
+            "size"
+          ],
+          "occupancy",
+          "desc",
+          "amenities",
+          "images"
+        ]
       }
     },
     "crumbParent": {

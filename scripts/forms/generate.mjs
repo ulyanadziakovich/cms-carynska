@@ -10,6 +10,31 @@ import spec from './spec.mjs'
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
 const EDITOR_TOOLBAR = ['heading2', 'heading3', 'paragraph', 'bold', 'italic', 'link', 'bulletList', 'orderedList', 'blockquote', 'clear', 'undo', 'redo']
 
+/** Krótkie pola (jedna linijka) mogą stać obok siebie w jednym rzędzie. */
+const SHORT = new Set(['text', 'number', 'select', 'checkbox', 'record'])
+
+/**
+ * Układ pól: kolejne krótkie pola łączone w rzędy (po `perRow`), żeby formularz
+ * był niski i nie trzeba było długo przewijać. Duże pola (tekst, zdjęcia) — osobno.
+ * Tablica w fieldLayout Pruviousa = pola obok siebie.
+ */
+export function compactLayout(fields, perRow) {
+  const out = []
+  let row = []
+  const flush = () => { if (row.length) out.push(row.length === 1 ? row[0] : row); row = [] }
+  for (const [key, f] of Object.entries(fields)) {
+    if (SHORT.has(f.type)) {
+      row.push(key)
+      if (row.length === perRow) flush()
+    } else {
+      flush()
+      out.push(key)
+    }
+  }
+  flush()
+  return out
+}
+
 export function fieldDef(f) {
   const options = { required: false, label: f.label }
   if (f.hint) options.description = f.hint
@@ -30,6 +55,8 @@ export function fieldDef(f) {
     case 'repeater':
       options.addLabel = f.addLabel
       options.subfields = Object.fromEntries(Object.entries(f.subfields).map(([k, sf]) => [k, fieldDef(sf)]))
+      // Wszystkie krótkie pola wpisu w jednym rzędzie (np. danie: nazwa | dopisek | cena)
+      options.fieldLayout = compactLayout(f.subfields, 4)
       break
   }
   return { type: f.type, options }
@@ -41,7 +68,7 @@ for (const form of spec) {
   const fields = {}
   const layout = {}
   for (const [tab, tabFields] of Object.entries(form.tabs)) {
-    layout[tab] = Object.keys(tabFields)
+    layout[tab] = compactLayout(tabFields, 2)
     for (const [key, f] of Object.entries(tabFields)) {
       if (fields[key]) throw new Error(`${form.name}: pole „${key}” występuje dwa razy`)
       fields[key] = fieldDef(f)

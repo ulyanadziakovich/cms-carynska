@@ -29,44 +29,62 @@ export default defineCollection({
           "sections"
         ],
         "Cennik grupowy": [
-          "pricingTag",
-          "minPersons",
+          [
+            "pricingTag",
+            "minPersons"
+          ],
           "minPersonsLabel",
           "bonuses",
           "colRate",
           "cols",
           "rows",
-          "hbCode",
-          "hbLabel",
+          [
+            "hbCode",
+            "hbLabel"
+          ],
           "includesHb",
-          "fbCode",
-          "fbLabel",
+          [
+            "fbCode",
+            "fbLabel"
+          ],
           "includesFb",
-          "footnote",
-          "notesTitle",
+          [
+            "footnote",
+            "notesTitle"
+          ],
           "notes",
           "legal"
         ],
         "Opcje dodatkowe": [
-          "extrasTitle",
-          "itemsOne",
+          [
+            "extrasTitle",
+            "itemsOne"
+          ],
           "itemsMany",
           "extras"
         ],
         "Baza noclegowa": [
           "capacityTitle",
           "capacityRooms",
-          "totalRooms",
-          "totalRoomsLabel",
-          "beds",
-          "bedsLabel",
-          "maxOccupancy",
-          "maxOccupancyLabel",
+          [
+            "totalRooms",
+            "totalRoomsLabel"
+          ],
+          [
+            "beds",
+            "bedsLabel"
+          ],
+          [
+            "maxOccupancy",
+            "maxOccupancyLabel"
+          ],
           "halls"
         ],
         "Zapytanie": [
-          "inquiryTitle",
-          "inquiryCta",
+          [
+            "inquiryTitle",
+            "inquiryCta"
+          ],
           "dzial"
         ]
       }
@@ -119,7 +137,13 @@ export default defineCollection({
               "label": "Podpis"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "value",
+            "label"
+          ]
+        ]
       }
     },
     "offerKicker": {
@@ -159,7 +183,12 @@ export default defineCollection({
               "label": "Wyróżniona uwaga (opcjonalnie)"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          "title",
+          "body",
+          "note"
+        ]
       }
     },
     "pricingTag": {
@@ -206,7 +235,13 @@ export default defineCollection({
               "label": "Gratis"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "threshold",
+            "reward"
+          ]
+        ]
       }
     },
     "colRate": {
@@ -249,7 +284,11 @@ export default defineCollection({
               "rows": 5
             }
           }
-        }
+        },
+        "fieldLayout": [
+          "type",
+          "values"
+        ]
       }
     },
     "hbCode": {
@@ -428,10 +467,26 @@ export default defineCollection({
                     "label": "Dopisek (opcjonalnie)"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                "name",
+                "desc",
+                [
+                  "price",
+                  "note"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "category",
+            "note",
+            "icon"
+          ],
+          "items"
+        ]
       }
     },
     "capacityTitle": {
@@ -462,7 +517,13 @@ export default defineCollection({
               "label": "Rodzaj"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "count",
+            "label"
+          ]
+        ]
       }
     },
     "totalRooms": {
@@ -528,7 +589,13 @@ export default defineCollection({
               "label": "Pojemność"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "name",
+            "seats"
+          ]
+        ]
       }
     },
     "inquiryTitle": {

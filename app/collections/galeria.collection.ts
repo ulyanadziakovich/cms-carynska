@@ -24,8 +24,10 @@ export default defineCollection({
           "heroImage"
         ],
         "Zdjęcia": [
-          "photosKicker",
-          "allLabel",
+          [
+            "photosKicker",
+            "allLabel"
+          ],
           "emptyText",
           "categories"
         ]
@@ -104,7 +106,11 @@ export default defineCollection({
               "directory": "galeria/"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          "label",
+          "photos"
+        ]
       }
     }
   }

@@ -28,16 +28,20 @@ export default defineCollection({
           "aboutBody"
         ],
         "Obiekty przystani": [
-          "tilesTitle",
-          "tileCta",
+          [
+            "tilesTitle",
+            "tileCta"
+          ],
           "tiles"
         ],
         "Nasze obiekty w Bieszczadach": [
           "sistersTitle"
         ],
         "W okolicy": [
-          "nearbyText",
-          "nearbyCta",
+          [
+            "nearbyText",
+            "nearbyCta"
+          ],
           "nearbyHref"
         ]
       }
@@ -157,7 +161,16 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "title",
+            "tag"
+          ],
+          "desc",
+          "image",
+          "href"
+        ]
       }
     },
     "sistersTitle": {

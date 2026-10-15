@@ -27,8 +27,10 @@ export default defineCollection({
           "intro"
         ],
         "Wypożyczalnia": [
-          "waterTag",
-          "waterTitle",
+          [
+            "waterTag",
+            "waterTitle"
+          ],
           "waterBody",
           "waterItems",
           "waterImages",
@@ -36,16 +38,22 @@ export default defineCollection({
           "waterPricing"
         ],
         "Flota": [
-          "fleetTitle",
-          "noPatentLabel",
-          "unitsLabel",
-          "specLink",
+          [
+            "fleetTitle",
+            "noPatentLabel"
+          ],
+          [
+            "unitsLabel",
+            "specLink"
+          ],
           "unitsCount",
           "fleet"
         ],
         "Bosmanat": [
-          "marinaTag",
-          "marinaTitle",
+          [
+            "marinaTag",
+            "marinaTitle"
+          ],
           "marinaBody",
           "marinaAmenities",
           "marinaPricingTitle",
@@ -54,15 +62,19 @@ export default defineCollection({
           "marinaDzial"
         ],
         "Aktywny dzień": [
-          "landTag",
-          "landTitle",
+          [
+            "landTag",
+            "landTitle"
+          ],
           "landBody",
           "landItems",
           "landImages"
         ],
         "Dla grup": [
-          "groupsTag",
-          "groupsTitle",
+          [
+            "groupsTag",
+            "groupsTitle"
+          ],
           "groupsDzial"
         ]
       }
@@ -165,7 +177,14 @@ export default defineCollection({
               "rows": 2
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "icon",
+            "label"
+          ],
+          "desc"
+        ]
       }
     },
     "waterImages": {
@@ -227,10 +246,23 @@ export default defineCollection({
                     "label": "Cena"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "label",
+                  "price"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "category",
+            "note"
+          ],
+          "items"
+        ]
       }
     },
     "fleetTitle": {
@@ -346,7 +378,22 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "type",
+            "name"
+          ],
+          "units",
+          [
+            "capacity",
+            "price",
+            "patent"
+          ],
+          "desc",
+          "specs",
+          "href"
+        ]
       }
     },
     "marinaTag": {
@@ -431,10 +478,23 @@ export default defineCollection({
                     "label": "Cena"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "label",
+                  "price"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "category",
+            "note"
+          ],
+          "items"
+        ]
       }
     },
     "marinaImages": {
@@ -527,7 +587,14 @@ export default defineCollection({
               "rows": 2
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "icon",
+            "label"
+          ],
+          "desc"
+        ]
       }
     },
     "landImages": {

@@ -32,12 +32,18 @@ export default defineCollection({
         "Karta dań (książka)": [
           "bookKicker",
           "bookTitle",
-          "bookName",
-          "bookSection",
-          "bookEnd",
-          "bookContinued",
-          "bookPrev",
-          "bookNext"
+          [
+            "bookName",
+            "bookSection"
+          ],
+          [
+            "bookEnd",
+            "bookContinued"
+          ],
+          [
+            "bookPrev",
+            "bookNext"
+          ]
         ],
         "Dostawa": [
           "deliveryTitle",
@@ -124,10 +130,21 @@ export default defineCollection({
                     "label": "Cena (opcjonalnie)"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "name",
+                  "note",
+                  "price"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          "category",
+          "items"
+        ]
       }
     },
     "bookKicker": {

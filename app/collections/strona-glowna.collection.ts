@@ -28,8 +28,10 @@ export default defineCollection({
           "noclegiTitle",
           "noclegiBody",
           "noclegiImage",
-          "noclegiImageAlt",
-          "noclegiCta",
+          [
+            "noclegiImageAlt",
+            "noclegiCta"
+          ],
           "noclegiCtaHref"
         ],
         "Atrakcje (kafelki)": [
@@ -37,10 +39,14 @@ export default defineCollection({
           "atrakcjeTitle",
           "atrakcjeBody",
           "atrakcjeImage",
-          "atrakcjeImageAlt",
-          "atrakcjeCta",
-          "atrakcjeCtaHref",
-          "tileHint",
+          [
+            "atrakcjeImageAlt",
+            "atrakcjeCta"
+          ],
+          [
+            "atrakcjeCtaHref",
+            "tileHint"
+          ],
           "tiles"
         ],
         "Tawerna": [
@@ -48,27 +54,39 @@ export default defineCollection({
           "kuchniaTitle",
           "kuchniaBody",
           "kuchniaImage",
-          "kuchniaImageAlt",
-          "kuchniaCta",
+          [
+            "kuchniaImageAlt",
+            "kuchniaCta"
+          ],
           "kuchniaCtaHref"
         ],
         "Opinie gości": [
-          "reviewsTag",
-          "reviewsTitle",
-          "reviewsAll",
-          "googleUrl",
+          [
+            "reviewsTag",
+            "reviewsTitle"
+          ],
+          [
+            "reviewsAll",
+            "googleUrl"
+          ],
           "reviews"
         ],
         "Facebook": [
           "fbTag",
           "fbTitle",
           "fbBody",
-          "fbTabFacebook",
-          "fbTabInstagram",
-          "fbTabReviews",
-          "fbFollow",
-          "fbUrl",
-          "igUrl"
+          [
+            "fbTabFacebook",
+            "fbTabInstagram"
+          ],
+          [
+            "fbTabReviews",
+            "fbFollow"
+          ],
+          [
+            "fbUrl",
+            "igUrl"
+          ]
         ]
       }
     ]
@@ -285,7 +303,21 @@ export default defineCollection({
               "rows": 5
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "tag",
+            "title"
+          ],
+          "icon",
+          "image",
+          [
+            "from",
+            "modalTitle"
+          ],
+          "modalBody",
+          "highlights"
+        ]
       }
     },
     "kuchniaTag": {
@@ -415,7 +447,16 @@ export default defineCollection({
               "rows": 4
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "name",
+            "badge",
+            "date",
+            "stars"
+          ],
+          "text"
+        ]
       }
     },
     "fbTag": {

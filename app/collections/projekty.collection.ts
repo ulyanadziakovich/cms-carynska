@@ -32,14 +32,18 @@ export default defineCollection({
           "finance"
         ],
         "Fundusze EOG": [
-          "fundsKicker",
-          "fundsTitle",
+          [
+            "fundsKicker",
+            "fundsTitle"
+          ],
           "fundsBody",
           "fundsLinks"
         ],
         "Harmonogram": [
-          "timelineKicker",
-          "timelineTitle",
+          [
+            "timelineKicker",
+            "timelineTitle"
+          ],
           "timelineSubtitle",
           "milestones"
         ]
@@ -132,7 +136,13 @@ export default defineCollection({
               "label": "Kwota"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "value"
+          ]
+        ]
       }
     },
     "fundsKicker": {
@@ -180,7 +190,13 @@ export default defineCollection({
               "placeholder": "np. /atrakcje albo https://…"
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "href"
+          ]
+        ]
       }
     },
     "timelineKicker": {
@@ -234,7 +250,14 @@ export default defineCollection({
               "rows": 3
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "date",
+            "title"
+          ],
+          "body"
+        ]
       }
     }
   }

@@ -93,10 +93,26 @@ export default defineCollection({
                     "label": "Otwórz w nowej karcie"
                   }
                 }
-              }
+              },
+              "fieldLayout": [
+                [
+                  "label",
+                  "href",
+                  "subtitle",
+                  "external"
+                ]
+              ]
             }
           }
-        }
+        },
+        "fieldLayout": [
+          [
+            "label",
+            "href",
+            "showDzialy"
+          ],
+          "children"
+        ]
       }
     }
   }
