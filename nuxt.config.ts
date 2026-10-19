@@ -7,6 +7,9 @@ export default defineNuxtConfig({
 
   // Adres strony, na którą prowadzi przycisk „Zobacz na stronie” w panelu.
   runtimeConfig: {
+    // Wspólny sekret ze stroną: tylko jej serwer może dodawać wiadomości (server/api/kontakt.post.ts).
+    // Z NUXT_CONTACT_SECRET (.env, poza repo) — ta sama wartość musi być w .env strony.
+    contactSecret: '',
     public: { siteUrl: 'http://localhost:4000' },
   },
 

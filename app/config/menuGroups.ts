@@ -6,6 +6,7 @@ export interface MenuGroup {
 }
 
 export const MENU_GROUPS: MenuGroup[] = [
+  { label: 'Skrzynka', items: [{ collection: 'wiadomosci', label: 'Wiadomości z formularza' }] },
   { label: 'Strona główna', items: [{ collection: 'strona-glowna', label: 'Baner, sekcje, opinie' }] },
   {
     label: 'Noclegi',
@@ -25,7 +26,13 @@ export const MENU_GROUPS: MenuGroup[] = [
   { label: 'Tawerna', items: [{ collection: 'tawerna', label: 'Teksty i menu' }] },
   { label: 'Galeria', items: [{ collection: 'galeria', label: 'Zdjęcia' }] },
   { label: 'Grupy', items: [{ collection: 'grupy', label: 'Oferta i cennik dla grup' }] },
-  { label: 'Projekty', items: [{ collection: 'projekty', label: 'Fundusze i harmonogram' }] },
+  {
+    label: 'Projekty',
+    items: [
+      { collection: 'projekty-lista', label: 'Lista projektów' },
+      { collection: 'projekty', label: 'Strona i logotypy' },
+    ],
+  },
   {
     label: 'Dokumenty',
     items: [

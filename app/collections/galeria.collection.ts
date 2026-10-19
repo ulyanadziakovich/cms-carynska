@@ -21,7 +21,8 @@ export default defineCollection({
         "Nagłówek": [
           "heroTag",
           "heroTitle",
-          "heroImage"
+          "heroImage",
+          "heroSubtitle"
         ],
         "Zdjęcia": [
           [
@@ -30,6 +31,11 @@ export default defineCollection({
           ],
           "emptyText",
           "categories"
+        ],
+        "Google i udostępnianie": [
+          "seoTitle",
+          "seoDescription",
+          "seoImage"
         ]
       }
     ]
@@ -58,6 +64,15 @@ export default defineCollection({
         "required": false,
         "label": "Zdjęcie w tle",
         "description": "Duże zdjęcie na górze podstrony."
+      }
+    },
+    "heroSubtitle": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Zdanie pod tytułem",
+        "description": "Krótko, 1–2 zdania. Obok zdjęcia, pod tytułem. Puste = sam tytuł.",
+        "rows": 2
       }
     },
     "photosKicker": {
@@ -111,6 +126,31 @@ export default defineCollection({
           "label",
           "photos"
         ]
+      }
+    },
+    "seoTitle": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tytuł w Google i w karcie przeglądarki",
+        "description": "Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu."
+      }
+    },
+    "seoDescription": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Opis w Google",
+        "description": "Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.",
+        "rows": 3
+      }
+    },
+    "seoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu",
+        "description": "Np. na Facebooku. Puste = zdjęcie z nagłówka strony."
       }
     }
   }

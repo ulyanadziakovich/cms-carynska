@@ -5,7 +5,7 @@ import { defineCollection } from '#pruvious'
 export default defineCollection({
   name: 'dzialy',
   mode: 'multi',
-  label: { collection: { plural: 'Działy i telefony', singular: 'dział' } },
+  label: { collection: { plural: 'Działy i telefony', singular: 'dział' }, record: { plural: 'działy', singular: 'dział' } },
   translatable: false,
   apiRoutes: { read: 'public', readMany: 'public' },
   dashboard: {

@@ -71,10 +71,13 @@ export default defineCollection({
             "formThanksText"
           ],
           [
-            "bankLabel",
-            "accountLabel"
+            "formError",
+            "bankLabel"
           ],
-          "swiftLabel"
+          [
+            "accountLabel",
+            "swiftLabel"
+          ]
         ]
       }
     ]
@@ -393,6 +396,14 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Po wysłaniu: tekst"
+      }
+    },
+    "formError": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Gdy wysyłka się nie uda",
+        "description": "Np. „Nie udało się wysłać wiadomości. Spróbuj ponownie albo zadzwoń.”"
       }
     },
     "bankLabel": {

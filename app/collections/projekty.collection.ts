@@ -6,8 +6,8 @@ export default defineCollection({
   "mode": "single",
   "label": {
     "collection": {
-      "plural": "Projekty i fundusze",
-      "singular": "Projekty i fundusze"
+      "plural": "Strona Projekty i logotypy",
+      "singular": "Strona Projekty i logotypy"
     }
   },
   "apiRoutes": {
@@ -21,31 +21,30 @@ export default defineCollection({
         "Nagłówek": [
           "heroTag",
           "heroTitle",
-          "heroImage"
+          "heroImage",
+          "heroSubtitle"
         ],
-        "Projekt": [
-          "programName",
-          "projectTitle",
-          "contract",
-          "projectBody",
-          "readMore",
-          "finance"
+        "Logotypy": [
+          "logos"
         ],
-        "Fundusze EOG": [
+        "Google i udostępnianie": [
+          "seoTitle",
+          "seoDescription",
+          "seoImage"
+        ],
+        "Drobne napisy (rzadko zmieniane)": [
           [
-            "fundsKicker",
-            "fundsTitle"
+            "readMore",
+            "aboutLabel"
           ],
-          "fundsBody",
-          "fundsLinks"
-        ],
-        "Harmonogram": [
           [
-            "timelineKicker",
-            "timelineTitle"
+            "scheduleLabel",
+            "schedulePlaceLabel"
           ],
-          "timelineSubtitle",
-          "milestones"
+          [
+            "scheduleParticipantsLabel",
+            "scheduleExecutorLabel"
+          ]
         ]
       }
     ]
@@ -76,36 +75,80 @@ export default defineCollection({
         "description": "Duże zdjęcie na górze podstrony."
       }
     },
-    "programName": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Nazwa programu"
-      }
-    },
-    "projectTitle": {
+    "heroSubtitle": {
       "type": "text-area",
       "options": {
         "required": false,
-        "label": "Tytuł projektu",
+        "label": "Zdanie pod tytułem",
+        "description": "Krótko, 1–2 zdania. Obok zdjęcia, pod tytułem. Puste = sam tytuł.",
         "rows": 2
       }
     },
-    "contract": {
-      "type": "text-area",
+    "logos": {
+      "type": "repeater",
       "options": {
         "required": false,
-        "label": "Umowa",
-        "rows": 4
+        "label": "Logotypy",
+        "description": "Pasek pod zdjęciem na górze strony: logotypy programów, partnerów i certyfikaty. Kolejność zmieniasz przeciąganiem.",
+        "addLabel": "Dodaj logo",
+        "subfields": {
+          "image": {
+            "type": "image",
+            "options": {
+              "required": false,
+              "label": "Logo"
+            }
+          },
+          "alt": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Nazwa",
+              "description": "Np. „Fundusze Europejskie” — dla osób niewidomych i wyszukiwarek."
+            }
+          },
+          "href": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Link (opcjonalnie)",
+              "description": "Po kliknięciu w logo.",
+              "placeholder": "np. /atrakcje albo https://…"
+            }
+          }
+        },
+        "fieldLayout": [
+          "image",
+          [
+            "alt",
+            "href"
+          ]
+        ]
       }
     },
-    "projectBody": {
+    "seoTitle": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tytuł w Google i w karcie przeglądarki",
+        "description": "Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu."
+      }
+    },
+    "seoDescription": {
       "type": "text-area",
       "options": {
         "required": false,
-        "label": "Opis",
-        "description": "Akapity oddziel pustą linią.",
-        "rows": 8
+        "label": "Opis w Google",
+        "description": "Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.",
+        "rows": 3
+      }
+    },
+    "seoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu",
+        "description": "Np. na Facebooku. Puste = zdjęcie z nagłówka strony."
       }
     },
     "readMore": {
@@ -115,149 +158,41 @@ export default defineCollection({
         "label": "Przycisk „Czytaj więcej”"
       }
     },
-    "finance": {
-      "type": "repeater",
-      "options": {
-        "required": false,
-        "label": "Finansowanie",
-        "addLabel": "Dodaj pozycję",
-        "subfields": {
-          "label": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Nazwa"
-            }
-          },
-          "value": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Kwota"
-            }
-          }
-        },
-        "fieldLayout": [
-          [
-            "label",
-            "value"
-          ]
-        ]
-      }
-    },
-    "fundsKicker": {
+    "aboutLabel": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Napis nad tytułem"
+        "label": "Tytuł karty z opisem projektu",
+        "description": "Np. „O projekcie”."
       }
     },
-    "fundsTitle": {
+    "scheduleLabel": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Tytuł"
+        "label": "Tytuł karty z harmonogramem",
+        "description": "Gdy projekt nie ma własnego, np. „Harmonogram wsparcia”."
       }
     },
-    "fundsBody": {
-      "type": "text-area",
-      "options": {
-        "required": false,
-        "label": "Tekst",
-        "description": "Akapity oddziel pustą linią.",
-        "rows": 8
-      }
-    },
-    "fundsLinks": {
-      "type": "repeater",
-      "options": {
-        "required": false,
-        "label": "Linki",
-        "addLabel": "Dodaj link",
-        "subfields": {
-          "label": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Napis"
-            }
-          },
-          "href": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Adres",
-              "placeholder": "np. /atrakcje albo https://…"
-            }
-          }
-        },
-        "fieldLayout": [
-          [
-            "label",
-            "href"
-          ]
-        ]
-      }
-    },
-    "timelineKicker": {
+    "schedulePlaceLabel": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Napis nad tytułem"
+        "label": "Harmonogram: etykieta „Miejsce”"
       }
     },
-    "timelineTitle": {
+    "scheduleParticipantsLabel": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Tytuł"
+        "label": "Harmonogram: etykieta „Uczestnicy”"
       }
     },
-    "timelineSubtitle": {
+    "scheduleExecutorLabel": {
       "type": "text",
       "options": {
         "required": false,
-        "label": "Podtytuł"
-      }
-    },
-    "milestones": {
-      "type": "repeater",
-      "options": {
-        "required": false,
-        "label": "Etapy",
-        "description": "Od najstarszego.",
-        "addLabel": "Dodaj etap",
-        "subfields": {
-          "date": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Data"
-            }
-          },
-          "title": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Tytuł"
-            }
-          },
-          "body": {
-            "type": "text-area",
-            "options": {
-              "required": false,
-              "label": "Opis",
-              "rows": 3
-            }
-          }
-        },
-        "fieldLayout": [
-          [
-            "date",
-            "title"
-          ],
-          "body"
-        ]
+        "label": "Harmonogram: etykieta „Prowadzi”"
       }
     }
   }

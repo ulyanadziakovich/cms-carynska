@@ -28,7 +28,7 @@ export default defineCollection({
           "intro",
           "introFeatures"
         ],
-        "Pokoje": [
+        "Kafelki": [
           "rooms"
         ],
         "Napisy": [
@@ -42,19 +42,28 @@ export default defineCollection({
           ],
           [
             "amenitiesCount",
-            "questions"
+            "filterAll"
           ],
           [
-            "cta",
-            "ctaHref"
+            "questions",
+            "cta"
           ],
-          "dzial"
+          [
+            "ctaHref",
+            "dzial"
+          ]
+        ],
+        "Google i udostępnianie": [
+          "seoTitle",
+          "seoDescription",
+          "seoImage"
         ],
         "Drobne napisy (rzadko zmieniane)": [
           [
             "crumbParent",
             "crumbCurrent"
-          ]
+          ],
+          "filterLabel"
         ]
       }
     ]
@@ -86,10 +95,12 @@ export default defineCollection({
       }
     },
     "heroSubtitle": {
-      "type": "text",
+      "type": "text-area",
       "options": {
         "required": false,
-        "label": "Podtytuł"
+        "label": "Zdanie pod tytułem",
+        "description": "Krótko, 1 zdanie. Obok tytułu, nad przyciskiem rezerwacji.",
+        "rows": 2
       }
     },
     "intro": {
@@ -154,16 +165,24 @@ export default defineCollection({
       "type": "repeater",
       "options": {
         "required": false,
-        "label": "Pokoje",
-        "description": "Kolejność jak na stronie.",
-        "addLabel": "Dodaj pokój",
+        "label": "Kafelki: pokoje, apartamenty, domki",
+        "description": "Każdy kafelek to jedna karta na stronie (zdjęcie + opis, po kliknięciu szczegóły). Kolejność jak na stronie — przeciągnij za numer po lewej. Nowy kafelek, np. domek: „Dodaj kafelek” na dole listy.",
+        "addLabel": "Dodaj kafelek",
         "subfields": {
           "slug": {
             "type": "text",
             "options": {
               "required": false,
               "label": "Identyfikator w adresie",
-              "description": "Małe litery i myślniki, np. „pokoj-2-osobowy”. Nie zmieniaj bez potrzeby — linki do pokoju przestaną działać."
+              "description": "Małe litery i myślniki, np. „pokoj-2-osobowy” albo „domek-1”. Nie zmieniaj bez potrzeby — linki do kafelka przestaną działać."
+            }
+          },
+          "category": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Kategoria (filtr)",
+              "description": "Np. „Pokoje”, „Studia”, „Apartamenty”, „Domki”. Kafelki z tą samą kategorią trafiają pod jeden przycisk nad listą — wpisuj identycznie."
             }
           },
           "tag": {
@@ -171,15 +190,15 @@ export default defineCollection({
             "options": {
               "required": false,
               "label": "Rodzaj",
-              "description": "Np. „Pokój 2-osobowy”."
+              "description": "Np. „Pokój 2-osobowy”, „Apartament”, „Domek”."
             }
           },
           "title": {
             "type": "text",
             "options": {
               "required": false,
-              "label": "Standard",
-              "description": "Np. „Standard Plus”."
+              "label": "Nazwa / standard",
+              "description": "Np. „Standard Plus” albo „Domek pod lasem”."
             }
           },
           "size": {
@@ -222,19 +241,32 @@ export default defineCollection({
               "description": "Pierwsze zdjęcie to okładka.",
               "directory": "pokoje/"
             }
+          },
+          "link": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Link zamiast okna ze szczegółami",
+              "description": "Opcjonalnie. Np. „/noclegi/jacht” — kliknięcie kafelka prowadzi wtedy na tę podstronę (jachty mają tam ceny i dane techniczne). Puste = okno ze szczegółami.",
+              "placeholder": "np. /atrakcje albo https://…"
+            }
           }
         },
         "fieldLayout": [
           [
             "slug",
+            "category",
             "tag",
-            "title",
-            "size"
+            "title"
           ],
-          "occupancy",
+          [
+            "size",
+            "occupancy"
+          ],
           "desc",
           "amenities",
-          "images"
+          "images",
+          "link"
         ]
       }
     },
@@ -273,6 +305,14 @@ export default defineCollection({
         "required": false,
         "label": "Liczba udogodnień na karcie",
         "description": "Strona wstawi liczbę w miejsce {liczba}."
+      }
+    },
+    "filterAll": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Filtr: przycisk „wszystkie”",
+        "description": "Pierwszy przycisk nad kafelkami, np. „Wszystkie”. Pozostałe przyciski to kategorie wpisane w kafelkach."
       }
     },
     "questions": {
@@ -318,6 +358,31 @@ export default defineCollection({
         "clearable": true
       }
     },
+    "seoTitle": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tytuł w Google i w karcie przeglądarki",
+        "description": "Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu."
+      }
+    },
+    "seoDescription": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Opis w Google",
+        "description": "Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.",
+        "rows": 3
+      }
+    },
+    "seoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu",
+        "description": "Np. na Facebooku. Puste = zdjęcie z nagłówka strony."
+      }
+    },
     "crumbParent": {
       "type": "text",
       "options": {
@@ -331,6 +396,14 @@ export default defineCollection({
       "options": {
         "required": false,
         "label": "Okruszki: ta strona"
+      }
+    },
+    "filterLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Filtr: opis dla czytników",
+        "description": "Np. „Pokaż rodzaj noclegu”."
       }
     }
   }

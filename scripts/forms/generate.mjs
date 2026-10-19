@@ -42,7 +42,7 @@ export function compactLayout(fields, perRow) {
  */
 export const RARE_TAB = 'Drobne napisy (rzadko zmieniane)'
 const RARE_KEYS = new Set([
-  'formName', 'formEmail', 'formPhone', 'formMessage', 'formSubmit', 'formSending', 'formThanks', 'formThanksText',
+  'formName', 'formEmail', 'formPhone', 'formMessage', 'formSubmit', 'formSending', 'formThanks', 'formThanksText', 'formError',
   'bankLabel', 'accountLabel', 'swiftLabel',
   'widgetCheckIn', 'widgetCheckOut', 'widgetArrival', 'widgetDeparture', 'widgetPickDate',
   'widgetGuests', 'widgetGuestOne', 'widgetGuestMany', 'widgetReserve', 'widgetReserveNow',

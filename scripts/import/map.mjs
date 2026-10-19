@@ -76,7 +76,9 @@ export function buildForms(d, templates, ctx) {
       googleUrl: c.reviews.googleUrl, reviews: c.reviews.items.map((r) => ({ ...r, badge: r.badge ?? '' })),
     },
     'noclegi-pokoje': {
-      ...hero(d.noclegi.hero), heroSubtitle: d.noclegi.hero.subtitle, ...t['noclegi-pokoje'],
+      ...hero(d.noclegi.hero), ...t['noclegi-pokoje'],
+      // Góra strony: tekst obok zdjęcia budynku w ramce
+      heroSubtitle: 'Komfortowe pokoje i apartamenty w Polańczyku, ok. 200 m od Jeziora Solińskiego.',
       // Pierwszy akapit; drugi (co jest na miejscu) to lista z ikonkami
       intro: paras(d.noclegi.intro).split('\n\n')[0], introFeatures: POKOJE_FEATURES,
       rooms: d.noclegi.rooms.map((r) => ({ slug: r.slug, tag: r.tag, title: r.title, size: r.size, occupancy: r.occupancy, desc: r.desc,

@@ -8,13 +8,26 @@ const hero = (where) => ({
   heroTitle: area('Tytuł', 'Duży tytuł na zdjęciu. Nowa linia = łamanie wiersza.', 2),
   heroImage: image('Zdjęcie w tle', 'Duże zdjęcie na górze podstrony.'),
 })
+/** Nagłówek w układzie „tekst obok zdjęcia” (PageHero na stronie) — z miejscem na zdanie pod tytułem. */
+const heroWithText = (where) => ({
+  ...hero(where),
+  heroSubtitle: area('Zdanie pod tytułem', 'Krótko, 1–2 zdania. Obok zdjęcia, pod tytułem. Puste = sam tytuł.', 2),
+})
 const priceGroups = (label, hint) => repeater(label, hint, 'Dodaj grupę cen', {
   category: text('Nazwa grupy', 'Np. „Sprzęt niesilnikowy”.'),
   note: text('Uwaga pod nazwą', 'Opcjonalnie, np. godziny sesji.'),
   items: repeater('Pozycje', '', 'Dodaj pozycję', { label: text('Nazwa'), price: text('Cena') }),
 })
+/** Wygląd podstrony w Google i przy udostępnianiu — dokładany do każdego formularza podstrony (na dole pliku). */
+const seo = () => ({
+  seoTitle: text('Tytuł w Google i w karcie przeglądarki', 'Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu.'),
+  seoDescription: area('Opis w Google', 'Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.', 3),
+  seoImage: image('Obrazek przy udostępnianiu', 'Np. na Facebooku. Puste = zdjęcie z nagłówka strony.'),
+})
+/** Formularze, które nie są osobną podstroną — bez zakładki SEO. */
+const NOT_PAGES = new Set(['ustawienia', 'kontakt', 'menu-strony'])
 
-export default [
+const forms = [
   // ───────── Ustawienia wspólne ─────────
   {
     name: 'ustawienia', label: 'Logo, rezerwacje i teksty wspólne', url: '/', icon: 'Settings',
@@ -54,10 +67,12 @@ export default [
       'Stopka': {
         copyright: text('Prawa autorskie', 'Strona wstawi bieżący rok w miejsce {rok}.'),
       },
-      'Odznaki i certyfikaty': {
-        badges: repeater('Odznaki', 'Logotypy i certyfikaty na stronie Projekty.', 'Dodaj odznakę', {
-          image: image('Obrazek'), alt: text('Opis obrazka', 'Dla osób niewidomych i wyszukiwarek.'), href: link('Link (opcjonalnie)'),
-        }),
+      'Google i wyszukiwarki': {
+        favicon: image('Ikona strony (favicon)', 'Kwadratowy PNG, najlepiej 512×512. Widać ją w karcie przeglądarki i na ekranie telefonu.'),
+        defaultSeoDescription: area('Opis ogólny w Google', 'Ok. 150 znaków. Dla podstron, które nie mają własnego opisu.', 3),
+        defaultSeoImage: image('Obrazek przy udostępnianiu (ogólny)', 'Dla podstron bez własnego obrazka i bez zdjęcia w nagłówku.'),
+        gaId: text('Google Analytics: identyfikator', 'Np. G-KSRW79Y4C6. Puste = bez statystyk.'),
+        robotsTxt: area('robots.txt', 'Zasady dla wyszukiwarek. Zostaw tak, jak jest, chyba że wiesz, co zmieniasz.', 4),
       },
       'Teksty wspólne': {
         breadcrumbHome: text('Okruszki: strona startowa', 'Np. „Start”.'),
@@ -94,6 +109,7 @@ export default [
         formSending: text('Formularz: napis podczas wysyłania', 'Np. „Wysyłanie…”.'),
         formThanks: text('Po wysłaniu: tytuł', 'Np. „Dziękujemy!”.'),
         formThanksText: text('Po wysłaniu: tekst'),
+        formError: text('Gdy wysyłka się nie uda', 'Np. „Nie udało się wysłać wiadomości. Spróbuj ponownie albo zadzwoń.”'),
       },
       'Dane do przelewu': {
         bankTitle: text('Nagłówek'),
@@ -202,20 +218,25 @@ export default [
   {
     name: 'noclegi-pokoje', label: 'Pokoje i apartamenty', url: '/noclegi/pokoje', icon: 'Building',
     tabs: {
-      'Nagłówek': { ...hero('strony Pokoje'), heroSubtitle: text('Podtytuł') },
+      'Nagłówek': {
+        ...hero('strony Pokoje'),
+        heroSubtitle: area('Zdanie pod tytułem', 'Krótko, 1 zdanie. Obok tytułu, nad przyciskiem rezerwacji.', 2),
+      },
       'Wstęp': {
         intro: area('Tekst wstępu', 'Najlepiej 1–2 zdania. Akapity oddziel pustą linią.', 4),
         introFeatures: repeater('Na miejscu (lista z ikonkami)', 'Pod tekstem wstępu.', 'Dodaj pozycję', {
           icon: select('Ikonka', '', FEATURE_ICONS), label: text('Napis'),
         }),
       },
-      'Pokoje': {
-        rooms: repeater('Pokoje', 'Kolejność jak na stronie.', 'Dodaj pokój', {
-          slug: text('Identyfikator w adresie', 'Małe litery i myślniki, np. „pokoj-2-osobowy”. Nie zmieniaj bez potrzeby — linki do pokoju przestaną działać.'),
-          tag: text('Rodzaj', 'Np. „Pokój 2-osobowy”.'), title: text('Standard', 'Np. „Standard Plus”.'),
+      'Kafelki': {
+        rooms: repeater('Kafelki: pokoje, apartamenty, domki', 'Każdy kafelek to jedna karta na stronie (zdjęcie + opis, po kliknięciu szczegóły). Kolejność jak na stronie — przeciągnij za numer po lewej. Nowy kafelek, np. domek: „Dodaj kafelek” na dole listy.', 'Dodaj kafelek', {
+          slug: text('Identyfikator w adresie', 'Małe litery i myślniki, np. „pokoj-2-osobowy” albo „domek-1”. Nie zmieniaj bez potrzeby — linki do kafelka przestaną działać.'),
+          category: text('Kategoria (filtr)', 'Np. „Pokoje”, „Studia”, „Apartamenty”, „Domki”. Kafelki z tą samą kategorią trafiają pod jeden przycisk nad listą — wpisuj identycznie.'),
+          tag: text('Rodzaj', 'Np. „Pokój 2-osobowy”, „Apartament”, „Domek”.'), title: text('Nazwa / standard', 'Np. „Standard Plus” albo „Domek pod lasem”.'),
           size: text('Powierzchnia', 'Np. „22 m²”.'), occupancy: number('Maks. liczba osób'),
           desc: area('Opis', '', 3), amenities: lines('Wyposażenie'),
           images: gallery('Zdjęcia', 'Pierwsze zdjęcie to okładka.', 'pokoje/'),
+          link: link('Link zamiast okna ze szczegółami', 'Opcjonalnie. Np. „/noclegi/jacht” — kliknięcie kafelka prowadzi wtedy na tę podstronę (jachty mają tam ceny i dane techniczne). Puste = okno ze szczegółami.'),
         }),
       },
       'Napisy': {
@@ -223,6 +244,8 @@ export default [
         labelSize: text('Podpis: powierzchnia'), labelMax: text('Podpis: maks. osób'), labelAmenities: text('Podpis: wyposażenie'),
         occupancyValue: text('Liczba osób w szczegółach', 'Strona wstawi liczbę w miejsce {liczba}, np. „{liczba} osoby”.'),
         amenitiesCount: text('Liczba udogodnień na karcie', 'Strona wstawi liczbę w miejsce {liczba}.'),
+        filterAll: text('Filtr: przycisk „wszystkie”', 'Pierwszy przycisk nad kafelkami, np. „Wszystkie”. Pozostałe przyciski to kategorie wpisane w kafelkach.'),
+        filterLabel: { ...text('Filtr: opis dla czytników', 'Np. „Pokaż rodzaj noclegu”.'), rare: true },
         questions: text('Pytanie nad przyciskiem', 'Np. „Masz pytania o pokoje lub dostępność?”.'),
         cta: text('Przycisk rezerwacji'), ctaHref: link('Dokąd prowadzi przycisk rezerwacji'), dzial: dzial(),
       },
@@ -231,7 +254,7 @@ export default [
   {
     name: 'noclegi-cennik', label: 'Cennik noclegów', url: '/noclegi/cennik', icon: 'Receipt',
     tabs: {
-      'Nagłówek': { ...hero('strony Cennik') },
+      'Nagłówek': { ...heroWithText('strony Cennik') },
       'Ceny pokoi': {
         kicker: text('Napis nad tabelą'), tableTitle: text('Tytuł tabeli', 'Np. „Cennik pokoi 2026”.'),
         colType: text('Kolumna: rodzaj pokoju'), col1: text('Kolumna: 1 osoba'), col2: text('Kolumna: 2 osoby'),
@@ -252,7 +275,7 @@ export default [
   {
     name: 'noclegi-jacht', label: 'Hotel na wodzie', url: '/noclegi/jacht', icon: 'Anchor',
     tabs: {
-      'Nagłówek': { ...hero('strony Hotel na wodzie') },
+      'Nagłówek': { ...heroWithText('strony Hotel na wodzie') },
       'Wstęp': { kicker: text('Napis nad wstępem', 'Np. „Unikalne doświadczenie”.'), intro: area('Tekst wstępu', '', 4) },
       'Jachty': {
         yachts: repeater('Jachty', '', 'Dodaj jacht', {
@@ -278,7 +301,7 @@ export default [
   {
     name: 'atrakcje', label: 'Atrakcje', url: '/atrakcje', icon: 'Sun',
     tabs: {
-      'Nagłówek': { ...hero('strony Atrakcje') },
+      'Nagłówek': { ...heroWithText('strony Atrakcje') },
       'Wstęp': { intro: area('Tekst wstępu', 'Akapity oddziel pustą linią.', 8) },
       'Wypożyczalnia': {
         waterTag: text('Napis nad tytułem'), waterTitle: text('Tytuł'), waterBody: area('Tekst', '', 4),
@@ -315,7 +338,7 @@ export default [
   {
     name: 'zaplanuj-pobyt', label: 'Zaplanuj pobyt', url: '/zaplanuj-pobyt', icon: 'Map',
     tabs: {
-      'Nagłówek': { ...hero('strony Zaplanuj pobyt') },
+      'Nagłówek': { ...heroWithText('strony Zaplanuj pobyt') },
       'O ośrodku': { aboutTitle: text('Tytuł'), aboutBody: editor('Tekst', 'Zaznacz słowo i wstaw link, aby prowadziło do podstrony.') },
       'Obiekty przystani': {
         tilesTitle: text('Nagłówek'), tileCta: text('Link na kafelku', 'Np. „Zobacz →”.'),
@@ -335,7 +358,7 @@ export default [
   {
     name: 'tawerna', label: 'Tawerna', url: '/tawerna', icon: 'ChefHat',
     tabs: {
-      'Nagłówek': { ...hero('strony Tawerna') },
+      'Nagłówek': { ...heroWithText('strony Tawerna') },
       'Wstęp': { intro: area('Tekst wstępu', '', 4) },
       'Menu': {
         menu: repeater('Kategorie menu', 'Kategorie w kolejności jak w karcie dań.', 'Dodaj kategorię', {
@@ -357,7 +380,7 @@ export default [
   {
     name: 'galeria', label: 'Galeria', url: '/galeria', icon: 'Photo',
     tabs: {
-      'Nagłówek': { ...hero('strony Galeria') },
+      'Nagłówek': { ...heroWithText('strony Galeria') },
       'Zdjęcia': {
         photosKicker: text('Napis nad zdjęciami', 'Np. „Zdjęcia”.'), allLabel: text('Filtr „wszystkie”'), emptyText: text('Gdy brak zdjęć'),
         categories: repeater('Kategorie zdjęć', 'Każda kategoria to przycisk filtra nad zdjęciami.', 'Dodaj kategorię', {
@@ -373,7 +396,7 @@ export default [
     name: 'grupy', label: 'Grupy i eventy', url: '/grupy', icon: 'Users',
     tabs: {
       'Nagłówek': {
-        ...hero('strony Grupy'),
+        ...heroWithText('strony Grupy'),
         stats: repeater('Liczby pod tytułem', '', 'Dodaj liczbę', { value: text('Liczba'), label: text('Podpis') }),
       },
       'Oferta': {
@@ -383,12 +406,18 @@ export default [
       'Cennik grupowy': {
         pricingTag: text('Napis nad cennikiem', 'Np. „Cennik 2026”.'), minPersons: number('Minimalna liczba osób'), minPersonsLabel: text('Podpis min. liczby osób', 'Strona wstawi liczbę w miejsce {liczba}.'),
         bonuses: repeater('Gratisy', '', 'Dodaj gratis', { threshold: text('Od ilu osób'), reward: text('Gratis') }),
-        colRate: text('Kolumna: stawka'), cols: lines('Kolumny cennika'),
-        rows: repeater('Wiersze cennika', 'Ceny w kolejności kolumn, jedna w linii.', 'Dodaj wiersz', { type: text('Nazwa'), values: lines('Ceny') }),
-        hbCode: text('Skrót HB', 'Duże litery na karcie, np. „HB”.'), hbLabel: text('Podpis HB', 'Np. „half board”.'), includesHb: lines('W cenie HB'),
-        fbCode: text('Skrót FB', 'Np. „FB”.'), fbLabel: text('Podpis FB', 'Np. „full board”.'), includesFb: lines('W cenie FB'),
+        seasons: repeater('Cennik: okresy i ceny', 'Jeden wiersz = jeden okres (kolumna tabeli na stronie). Brak ceny: wpisz „—”. Kolejność zmieniasz przeciąganiem.', 'Dodaj okres', {
+          period: text('Okres', 'Np. „Zielona szkoła (dzieci)”.'), hb: text('Cena HB', 'Np. „150 zł”.'), fb: text('Cena FB', 'Np. „170 zł”.'),
+        }),
+        colRate: text('Tabela: nagłówek pierwszej kolumny', 'Np. „Stawka / os. / doba”.'),
+        priceHbLabel: text('Tabela: nazwa wiersza HB', 'Np. „Cena HB”.'), priceFbLabel: text('Tabela: nazwa wiersza FB', 'Np. „Cena FB”.'),
+        hbCode: text('Skrót HB', 'Duże litery na karcie, np. „HB”.'), hbLabel: text('Podpis HB', 'Np. „half board”.'),
+        includesHbList: repeater('W cenie HB', '', 'Dodaj pozycję', { text: text('Pozycja') }),
+        fbCode: text('Skrót FB', 'Np. „FB”.'), fbLabel: text('Podpis FB', 'Np. „full board”.'),
+        includesFbList: repeater('W cenie FB', '', 'Dodaj pozycję', { text: text('Pozycja') }),
         footnote: text('Przypis o posiłkach'),
-        notesTitle: text('Nagłówek uwag'), notes: lines('Ważne informacje'),
+        notesTitle: text('Nagłówek uwag'),
+        notesList: repeater('Ważne informacje', '', 'Dodaj informację', { text: text('Informacja') }),
         legal: area('Zastrzeżenie prawne', '', 3),
       },
       'Opcje dodatkowe': {
@@ -413,21 +442,22 @@ export default [
 
   // ───────── Projekty ─────────
   {
-    name: 'projekty', label: 'Projekty i fundusze', url: '/projekty', icon: 'Certificate',
+    name: 'projekty', label: 'Strona Projekty i logotypy', url: '/projekty', icon: 'Certificate',
     tabs: {
-      'Nagłówek': { ...hero('strony Projekty') },
-      'Projekt': {
-        programName: text('Nazwa programu'), projectTitle: area('Tytuł projektu', '', 2), contract: area('Umowa', '', 4),
-        projectBody: area('Opis', 'Akapity oddziel pustą linią.', 8), readMore: text('Przycisk „Czytaj więcej”'),
-        finance: repeater('Finansowanie', '', 'Dodaj pozycję', { label: text('Nazwa'), value: text('Kwota') }),
+      'Nagłówek': { ...heroWithText('strony Projekty') },
+      'Logotypy': {
+        logos: repeater('Logotypy', 'Pasek pod zdjęciem na górze strony: logotypy programów, partnerów i certyfikaty. Kolejność zmieniasz przeciąganiem.', 'Dodaj logo', {
+          image: image('Logo'), alt: text('Nazwa', 'Np. „Fundusze Europejskie” — dla osób niewidomych i wyszukiwarek.'), href: link('Link (opcjonalnie)', 'Po kliknięciu w logo.'),
+        }),
       },
-      'Fundusze EOG': {
-        fundsKicker: text('Napis nad tytułem'), fundsTitle: text('Tytuł'), fundsBody: area('Tekst', 'Akapity oddziel pustą linią.', 8),
-        fundsLinks: repeater('Linki', '', 'Dodaj link', { label: text('Napis'), href: link('Adres') }),
-      },
-      'Harmonogram': {
-        timelineKicker: text('Napis nad tytułem'), timelineTitle: text('Tytuł'), timelineSubtitle: text('Podtytuł'),
-        milestones: repeater('Etapy', 'Od najstarszego.', 'Dodaj etap', { date: text('Data'), title: text('Tytuł'), body: area('Opis', '', 3) }),
+      // Same projekty: osobna lista „Projekty” (app/collections/projekty-lista.collection.ts).
+      'Napisy wspólne projektów': {
+        readMore: { ...text('Przycisk „Czytaj więcej”'), rare: true },
+        aboutLabel: { ...text('Tytuł karty z opisem projektu', 'Np. „O projekcie”.'), rare: true },
+        scheduleLabel: { ...text('Tytuł karty z harmonogramem', 'Gdy projekt nie ma własnego, np. „Harmonogram wsparcia”.'), rare: true },
+        schedulePlaceLabel: { ...text('Harmonogram: etykieta „Miejsce”'), rare: true },
+        scheduleParticipantsLabel: { ...text('Harmonogram: etykieta „Uczestnicy”'), rare: true },
+        scheduleExecutorLabel: { ...text('Harmonogram: etykieta „Prowadzi”'), rare: true },
       },
     },
   },
@@ -448,7 +478,10 @@ export default [
         pdf: file('Plik PDF do pobrania'), pdfLabel: text('Przycisk pobierania'),
         cta: text('Dodatkowy przycisk (opcjonalnie)'), ctaHref: link('Dokąd prowadzi dodatkowy przycisk'),
         buttonsAtEnd: checkbox('Przyciski pod treścią', 'Zaznaczone: przyciski na końcu dokumentu. Puste: nad treścią.'),
+        showInFooter: checkbox('Link w stopce', 'Zaznaczone: link do tego dokumentu jest w stopce każdej strony.'),
       },
     },
   })),
 ]
+
+export default forms.map((f) => (NOT_PAGES.has(f.name) ? f : { ...f, tabs: { ...f.tabs, 'Google i udostępnianie': seo() } }))

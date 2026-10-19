@@ -49,8 +49,12 @@ export default defineCollection({
         "Stopka": [
           "copyright"
         ],
-        "Odznaki i certyfikaty": [
-          "badges"
+        "Google i wyszukiwarki": [
+          "favicon",
+          "defaultSeoDescription",
+          "defaultSeoImage",
+          "gaId",
+          "robotsTxt"
         ],
         "Teksty wspólne": [
           [
@@ -223,45 +227,46 @@ export default defineCollection({
         "description": "Strona wstawi bieżący rok w miejsce {rok}."
       }
     },
-    "badges": {
-      "type": "repeater",
+    "favicon": {
+      "type": "image",
       "options": {
         "required": false,
-        "label": "Odznaki",
-        "description": "Logotypy i certyfikaty na stronie Projekty.",
-        "addLabel": "Dodaj odznakę",
-        "subfields": {
-          "image": {
-            "type": "image",
-            "options": {
-              "required": false,
-              "label": "Obrazek"
-            }
-          },
-          "alt": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Opis obrazka",
-              "description": "Dla osób niewidomych i wyszukiwarek."
-            }
-          },
-          "href": {
-            "type": "text",
-            "options": {
-              "required": false,
-              "label": "Link (opcjonalnie)",
-              "placeholder": "np. /atrakcje albo https://…"
-            }
-          }
-        },
-        "fieldLayout": [
-          "image",
-          [
-            "alt",
-            "href"
-          ]
-        ]
+        "label": "Ikona strony (favicon)",
+        "description": "Kwadratowy PNG, najlepiej 512×512. Widać ją w karcie przeglądarki i na ekranie telefonu."
+      }
+    },
+    "defaultSeoDescription": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Opis ogólny w Google",
+        "description": "Ok. 150 znaków. Dla podstron, które nie mają własnego opisu.",
+        "rows": 3
+      }
+    },
+    "defaultSeoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu (ogólny)",
+        "description": "Dla podstron bez własnego obrazka i bez zdjęcia w nagłówku."
+      }
+    },
+    "gaId": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Google Analytics: identyfikator",
+        "description": "Np. G-KSRW79Y4C6. Puste = bez statystyk."
+      }
+    },
+    "robotsTxt": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "robots.txt",
+        "description": "Zasady dla wyszukiwarek. Zostaw tak, jak jest, chyba że wiesz, co zmieniasz.",
+        "rows": 4
       }
     },
     "breadcrumbHome": {

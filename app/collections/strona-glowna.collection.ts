@@ -95,6 +95,11 @@ export default defineCollection({
             "fbUrl",
             "igUrl"
           ]
+        ],
+        "Google i udostępnianie": [
+          "seoTitle",
+          "seoDescription",
+          "seoImage"
         ]
       }
     ]
@@ -716,6 +721,31 @@ export default defineCollection({
         "required": false,
         "label": "Adres profilu na Instagramie",
         "placeholder": "np. /atrakcje albo https://…"
+      }
+    },
+    "seoTitle": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tytuł w Google i w karcie przeglądarki",
+        "description": "Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu."
+      }
+    },
+    "seoDescription": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Opis w Google",
+        "description": "Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.",
+        "rows": 3
+      }
+    },
+    "seoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu",
+        "description": "Np. na Facebooku. Puste = zdjęcie z nagłówka strony."
       }
     }
   }

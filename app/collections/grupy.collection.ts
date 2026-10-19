@@ -22,6 +22,7 @@ export default defineCollection({
           "heroTag",
           "heroTitle",
           "heroImage",
+          "heroSubtitle",
           "stats"
         ],
         "Oferta": [
@@ -35,24 +36,27 @@ export default defineCollection({
           ],
           "minPersonsLabel",
           "bonuses",
-          "colRate",
-          "cols",
-          "rows",
+          "seasons",
           [
-            "hbCode",
-            "hbLabel"
+            "colRate",
+            "priceHbLabel"
           ],
-          "includesHb",
+          [
+            "priceFbLabel",
+            "hbCode"
+          ],
+          "hbLabel",
+          "includesHbList",
           [
             "fbCode",
             "fbLabel"
           ],
-          "includesFb",
+          "includesFbList",
           [
             "footnote",
             "notesTitle"
           ],
-          "notes",
+          "notesList",
           "legal"
         ],
         "Opcje dodatkowe": [
@@ -86,6 +90,11 @@ export default defineCollection({
             "inquiryCta"
           ],
           "dzial"
+        ],
+        "Google i udostępnianie": [
+          "seoTitle",
+          "seoDescription",
+          "seoImage"
         ]
       }
     ]
@@ -114,6 +123,15 @@ export default defineCollection({
         "required": false,
         "label": "Zdjęcie w tle",
         "description": "Duże zdjęcie na górze podstrony."
+      }
+    },
+    "heroSubtitle": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Zdanie pod tytułem",
+        "description": "Krótko, 1–2 zdania. Obok zdjęcia, pod tytułem. Puste = sam tytuł.",
+        "rows": 2
       }
     },
     "stats": {
@@ -244,51 +262,70 @@ export default defineCollection({
         ]
       }
     },
-    "colRate": {
-      "type": "text",
-      "options": {
-        "required": false,
-        "label": "Kolumna: stawka"
-      }
-    },
-    "cols": {
-      "type": "text-area",
-      "options": {
-        "required": false,
-        "label": "Kolumny cennika",
-        "description": "Jedna pozycja w linii.",
-        "rows": 5
-      }
-    },
-    "rows": {
+    "seasons": {
       "type": "repeater",
       "options": {
         "required": false,
-        "label": "Wiersze cennika",
-        "description": "Ceny w kolejności kolumn, jedna w linii.",
-        "addLabel": "Dodaj wiersz",
+        "label": "Cennik: okresy i ceny",
+        "description": "Jeden wiersz = jeden okres (kolumna tabeli na stronie). Brak ceny: wpisz „—”. Kolejność zmieniasz przeciąganiem.",
+        "addLabel": "Dodaj okres",
         "subfields": {
-          "type": {
+          "period": {
             "type": "text",
             "options": {
               "required": false,
-              "label": "Nazwa"
+              "label": "Okres",
+              "description": "Np. „Zielona szkoła (dzieci)”."
             }
           },
-          "values": {
-            "type": "text-area",
+          "hb": {
+            "type": "text",
             "options": {
               "required": false,
-              "label": "Ceny",
-              "description": "Jedna pozycja w linii.",
-              "rows": 5
+              "label": "Cena HB",
+              "description": "Np. „150 zł”."
+            }
+          },
+          "fb": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Cena FB",
+              "description": "Np. „170 zł”."
             }
           }
         },
         "fieldLayout": [
-          "type",
-          "values"
+          [
+            "period",
+            "hb",
+            "fb"
+          ]
         ]
+      }
+    },
+    "colRate": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tabela: nagłówek pierwszej kolumny",
+        "description": "Np. „Stawka / os. / doba”."
+      }
+    },
+    "priceHbLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tabela: nazwa wiersza HB",
+        "description": "Np. „Cena HB”."
+      }
+    },
+    "priceFbLabel": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tabela: nazwa wiersza FB",
+        "description": "Np. „Cena FB”."
       }
     },
     "hbCode": {
@@ -307,13 +344,24 @@ export default defineCollection({
         "description": "Np. „half board”."
       }
     },
-    "includesHb": {
-      "type": "text-area",
+    "includesHbList": {
+      "type": "repeater",
       "options": {
         "required": false,
         "label": "W cenie HB",
-        "description": "Jedna pozycja w linii.",
-        "rows": 5
+        "addLabel": "Dodaj pozycję",
+        "subfields": {
+          "text": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Pozycja"
+            }
+          }
+        },
+        "fieldLayout": [
+          "text"
+        ]
       }
     },
     "fbCode": {
@@ -332,13 +380,24 @@ export default defineCollection({
         "description": "Np. „full board”."
       }
     },
-    "includesFb": {
-      "type": "text-area",
+    "includesFbList": {
+      "type": "repeater",
       "options": {
         "required": false,
         "label": "W cenie FB",
-        "description": "Jedna pozycja w linii.",
-        "rows": 5
+        "addLabel": "Dodaj pozycję",
+        "subfields": {
+          "text": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Pozycja"
+            }
+          }
+        },
+        "fieldLayout": [
+          "text"
+        ]
       }
     },
     "footnote": {
@@ -355,13 +414,24 @@ export default defineCollection({
         "label": "Nagłówek uwag"
       }
     },
-    "notes": {
-      "type": "text-area",
+    "notesList": {
+      "type": "repeater",
       "options": {
         "required": false,
         "label": "Ważne informacje",
-        "description": "Jedna pozycja w linii.",
-        "rows": 5
+        "addLabel": "Dodaj informację",
+        "subfields": {
+          "text": {
+            "type": "text",
+            "options": {
+              "required": false,
+              "label": "Informacja"
+            }
+          }
+        },
+        "fieldLayout": [
+          "text"
+        ]
       }
     },
     "legal": {
@@ -630,6 +700,31 @@ export default defineCollection({
         },
         "recordLabel": "name",
         "clearable": true
+      }
+    },
+    "seoTitle": {
+      "type": "text",
+      "options": {
+        "required": false,
+        "label": "Tytuł w Google i w karcie przeglądarki",
+        "description": "Puste = tytuł z nagłówka strony. Nazwa obiektu dopisze się sama na końcu."
+      }
+    },
+    "seoDescription": {
+      "type": "text-area",
+      "options": {
+        "required": false,
+        "label": "Opis w Google",
+        "description": "Ok. 150 znaków. Puste = opis ogólny z Ustawień → Google i wyszukiwarki.",
+        "rows": 3
+      }
+    },
+    "seoImage": {
+      "type": "image",
+      "options": {
+        "required": false,
+        "label": "Obrazek przy udostępnianiu",
+        "description": "Np. na Facebooku. Puste = zdjęcie z nagłówka strony."
       }
     }
   }
